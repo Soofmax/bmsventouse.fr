@@ -6,10 +6,12 @@
 <body class="{{ bodyClass }}">
   <a href="#main-content" class="skip-link">Passer au contenu</a>
   {% include "header.njk" %}
-  <main id="main-content">
+  <main id="main-content" role="main">
     {{ content | safe }}
   </main>
   {% include "footer.njk" %}
-  <script src="/js/script.js" defer></script>
+  <a href="#" class="back-to-top" aria-label="Retour en haut" title="Retour en haut">↑</a>
+  <script src="{{ '/js/script.js' | fingerprint }}" defer></script>
+  <script src="{{ '/js/sw-register.js' | fingerprint }}" defer></script>
 </body>
 </html>
