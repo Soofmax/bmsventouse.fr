@@ -7,7 +7,9 @@
 {%- set canonicalHref = canonical or canonicalComputed -%}
 {# Robust hreflang alternates computation #}
 {%- set frPath = pageUrl -%}
-{%- set enPath = '/en' + (pageUrl == '/' ? '/' : pageUrl) -%}
+{%- set enSuffix = '/' -%}
+{%- if pageUrl != '/' -%}{%- set enSuffix = pageUrl -%}{%- endif -%}
+{%- set enPath = '/en' + enSuffix -%}
 {%- if (pageUrl | replace('/en/','/')) != pageUrl -%}
   {%- set frPath = pageUrl | replace('/en/','/') -%}
   {%- set enPath = pageUrl -%}
@@ -87,23 +89,24 @@
     },
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
+      "itemListElement": [{% set items = [] %}
+        {% set _ = items.push({
           "@type": "ListItem",
           "position": 1,
           "name": "Accueil",
-          "item": "{{ site.url }}/"
-        },
-        {%- if breadcrumbs -%}
-          {%- for crumb in breadcrumbs %}
-          ,{
-            "@type": "ListItem",
-            "position": {{ loop.index + 1 }},
-            "name": "{{ crumb.name }}",
-            "item": "{{ site.url }}{{ crumb.url }}"
-          }
-          {%- endfor -%}
-        {%- endif -%}
+          "item": (site.url + "/")
+        }) %}
+        {% if breadcrumbs %}
+          {% for crumb in breadcrumbs %}
+            {% set _ = items.push({
+              "@type": "ListItem",
+              "position": (loop.index + 1),
+              "name": crumb.name,
+              "item": (site.url + crumb.url)
+            }) %}
+          {% endfor %}
+        {% endif %}
+        {{ items | dump | safe }}
       ]
     }
   ]
