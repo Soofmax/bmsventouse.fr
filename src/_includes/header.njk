@@ -32,9 +32,11 @@
         </svg>
       </button>
       <div class="lang-switcher" aria-label="Language switcher" style="margin-left:1.5rem;">
-        <a href="/" class="nav-link" aria-current="{{ lang == 'fr' ? 'true' : 'false' }}">FR</a>
+        {% set frCurrent = (lang == 'fr') %}
+        {% set enCurrent = (lang == 'en') %}
+        <a href="/" class="nav-link" aria-current="{{ frCurrent | ternary('true','false') }}">FR</a>
         <span aria-hidden="true" style="opacity:.5;margin:0 .25rem;">|</span>
-        <a href="/en/" class="nav-link" aria-current="{{ lang == 'en' ? 'true' : 'false' }}">EN</a>
+        <a href="/en/" class="nav-link" aria-current="{{ enCurrent | ternary('true','false') }}">EN</a>
       </div>
     </div>
   </div>
