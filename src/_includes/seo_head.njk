@@ -93,17 +93,13 @@
           "position": 1,
           "name": "Accueil",
           "item": "{{ site.url }}/"
-        },
-        {%- if breadcrumbs -%}
-          {%- for crumb in breadcrumbs %}
-          ,{
-            "@type": "ListItem",
-            "position": {{ loop.index + 1 }},
-            "name": "{{ crumb.name }}",
-            "item": "{{ site.url }}{{ crumb.url }}"
-          }
-          {%- endfor -%}
-        {%- endif -%}
+        }{% if breadcrumbs and breadcrumbs.length %}{% for crumb in breadcrumbs %}{% if not loop.first %},{% else %},{% endif %}
+        {
+          "@type": "ListItem",
+          "position": {{ loop.index + 1 }},
+          "name": "{{ crumb.name }}",
+          "item": "{{ site.url }}{{ crumb.url }}"
+        }{% endfor %}{% endif %}
       ]
     }
   ]
