@@ -7,7 +7,9 @@
 {%- set canonicalHref = canonical or canonicalComputed -%}
 {# Robust hreflang alternates computation #}
 {%- set frPath = pageUrl -%}
-{%- set enPath = '/en' + (pageUrl == '/' ? '/' : pageUrl) -%}
+{%- set enSuffix = '/' -%}
+{%- if pageUrl != '/' -%}{%- set enSuffix = pageUrl -%}{%- endif -%}
+{%- set enPath = '/en' + enSuffix -%}
 {%- if (pageUrl | replace('/en/','/')) != pageUrl -%}
   {%- set frPath = pageUrl | replace('/en/','/') -%}
   {%- set enPath = pageUrl -%}
