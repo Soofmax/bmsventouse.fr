@@ -6,7 +6,7 @@
 /* 1. VARIABLES GLOBALES & FONDATIONS */
 :root {
   /* Couleurs principales */
-  --color-primary: #FF8C42;
+  --color-primary: #FF8C42; /* Orange de référence (même que la barre de recherche) */
   --color-primary-dark: #c24a00;
   --color-primary-light: #ffaa70;
   --color-dark: #2c3e50;
@@ -20,7 +20,7 @@
   --color-error: #dc3545;
   --color-warning: #ffc107;
   --color-info: #17a2b8;
-  --color-link: #0A58CA;
+  --color-link: var(--color-primary);
 
   /* Typographie */
   --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -158,7 +158,7 @@ a {
   text-underline-offset: .15em;
 }
 .section-subtitle a:hover, .content-container a:hover, p a:hover {
-  color: #084298;
+  color: var(--color-primary-dark);
 }
 
 a:hover { 
@@ -584,14 +584,15 @@ body.dark-theme .header {
 }
 
 .btn-primary {
-  background-color: #D45A00;
+  background-color: var(--color-primary);
   color: var(--color-light);
-  border-color: #D45A00;
+  border-color: var(--color-primary);
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #B34A00;
+  background-color: var(--color-primary-dark);
   color: #fff;
+  border-color: var(--color-primary-dark);
 }
 
 .btn-whatsapp {
