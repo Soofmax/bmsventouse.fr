@@ -619,69 +619,86 @@
 
   {
     "slug": "solutions-packagees",
-    "metaTitle": "Solutions Packagées & Offres Partenaires | BMS Ventouse",
-    "metaDescription": "Packages sur mesure combinant logistique et sécurité à prix compétitifs.",
-    "h1": "Solutions Packagées",
+    "metaTitle": "Solutions Packagées Logistique Audiovisuelle | BMS Ventouse - Prestataire Unique",
+    "metaDescription": "Solutions packagées logistique audiovisuelle. Un seul prestataire, tous services intégrés. Économies 30%, coordination parfaite. Devis sous 2h.",
+    "h1": "Solutions Packagées Logistique Audiovisuelle | BMS Ventouse - Prestataire Unique Intégré",
     "hero": {
       "desktop": "/images/service-package.webp",
       "mobile": "/images/service-package.webp",
-      "alt": "Package de services"
+      "alt": "Schéma de logistique audiovisuelle intégrée avec services packagés"
     },
-    "summary": "Optimisez votre logistique et votre sécurité grâce à nos solutions packagées sur mesure, partout en France.",
+    "summary": "Solutions packagées tournage par un prestataire unique audiovisuel : logistique audiovisuelle intégrée, services intégrés tournage et logistique complète plateau. Une solution tout-en-un tournage pour Paris, Lyon, Marseille et France entière. Devis solution intégrée sous 2 h.",
     "sections": [
       {
-        "title": "Introduction",
-        "html": "<p>Nos solutions packagées combinent tous les atouts de BMS Ventouse pour des tournages efficaces et sans surprise à <strong>Marseille</strong>, <strong>Paris</strong>, <strong>Lyon</strong> et sur tout le territoire national.</p>"
+        "title": "La Révolution BMS Ventouse : Fini les Multiples Prestataires",
+        "html": "<h3>Le Problème du Secteur Traditionnel</h3><ul><li>Multiplicité d’interlocuteurs = coordination cauchemar : pas de <strong>logistique audiovisuelle intégrée</strong>, pas de <strong>coordination logistique globale</strong>.</li><li>Responsabilités diluées (jeu de ping‑pong) et qualité inégale entre prestataires.</li><li>Coûts cachés, dépassements budgétaires, facturation complexe avec devis/factures multiples.</li><li>Communication défaillante entre services séparés ; planning morcelé et pertes de temps.</li><li>Gestion administrative lourde et absence de vision globale empêchant toute optimisation.</li></ul><h3>La Solution BMS Ventouse Intégrée</h3><ul><li><strong>Prestataire unique audiovisuel</strong> : un interlocuteur, un contrat, une facture, une responsabilité.</li><li><strong>Solutions packagées tournage</strong> avec <strong>services intégrés tournage</strong> : ventousage, sécurité, convoyage, régie & matériel, loges & confort, catering.</li><li><strong>Logistique complète plateau</strong> : planning unifié, communication temps réel, reporting consolidé.</li><li><strong>Optimisation coûts</strong> par synergie, économies d’échelle et suppression des marges intermédiaires.</li><li>Qualité homogène et engagement de résultats grâce à l’intégration : une vraie <strong>solution tout‑en‑un tournage</strong>.</li></ul><div class=\\\"content-card cta-card\\\" style=\\\"margin-top:1rem\\\"><div class=\\\"cta-title\\\">Découvrir nos packages intégrés</div><div class=\\\"cta-subtitle\\\">Passez à la <strong>logistique audiovisuelle intégrée</strong> : un seul prestataire, zéro friction, maximum d’efficacité.</div><div class=\\\"hero-buttons\\\"><a href=\\\"/contact/\\\" class=\\\"btn btn-primary\\\">Devis solution intégrée</a><a href=\\\"/realisations/\\\" class=\\\"btn btn-secondary\\\">Voir des cas concrets</a></div></div>"
       },
       {
-        "title": "Problèmes fréquents",
-        "html": "<ul><li>Multiplication des prestataires et pertes de temps</li><li>Manque de cohérence globale (planning, reporting, équipe…)</li><li>Surcoûts liés à la sous-traitance dispersée</li><li>Manque d’un interlocuteur unique</li><li>Difficulté à gérer logistique + sécurité ensemble</li><li>Reporting morcelé ou absent</li></ul>"
+        "title": "Gamme Complète Packages Logistique Audiovisuelle",
+        "html": "<h3>Package Tournage Urbain Complet</h3><p>Conçu pour les tournages en centre‑ville, avec <strong>logistique complète plateau</strong> et <strong>coordination logistique globale</strong> en continu.</p><ul><li>Ventousage et autorisations municipales complètes (affichage riverains, signalisation).</li><li>Sécurité plateau et gardiennage matériel 24/7 (contrôle d’accès, périmètres).</li><li>Convoyage véhicules et <strong>transport matériel</strong> synchronisés au plan de neutralisation.</li><li>Régie technique et <strong>location matériel audiovisuel</strong> (éclairage, son, électricité, structures).</li><li>Coordination administrative unique, gestion riverains, communication locale, reporting temps réel.</li></ul><p><strong>Avantages spécifiques</strong> : coordination parfaite ventousage/sécurité/convoyage, installation matériel synchronisée, sécurisation immédiate dès livraison, optimisation planning et réduction des délais, économies substantielles vs prestataires séparés.</p><h3>Package Production Longue Durée Premium</h3><p>Idéal pour séries, longs métrages et multi‑sites, il matérialise une <strong>logistique audiovisuelle intégrée</strong> durable.</p><ul><li>Tous les services du package urbain <em>plus</em> : loges mobiles, espaces confort, <strong>catering</strong> quotidien.</li><li>Bureaux mobiles production et régie, maintenance continue et support technique.</li><li>Coordination logistique globale multi‑sites, gestion administrative complète.</li></ul><p><strong>Avantages spécifiques</strong> : camp de base clé en main, confort optimal équipes/talents, support technique permanent, gestion globale libérant la production créative, économies importantes sur la durée.</p><h3>Package Tournage Express Urgence</h3><p>Une <strong>solution tout‑en‑un tournage</strong> pour intervenir sous 24 h partout en France.</p><ul><li>Ventousage accéléré (dossiers et poses en priorité).</li><li>Sécurité plateau intervention immédiate.</li><li>Matériel technique essentiel disponible, régie terrain expérimentée.</li><li>Coordination express tous services et support 24/7.</li></ul><p><strong>Avantages spécifiques</strong> : intervention garantie sous 24 h, coordination ultra‑rapide, matériel de secours disponible, équipes rompues aux urgences, tarification transparente.</p>"
       },
       {
-        "title": "Notre méthode",
-        "html": "<ol><li>Analyse globale du projet et prise de brief</li><li>Construction d’un package logistique + sécurité adapté</li><li>Équipe projet dédiée (chef de projet, référents…)</li><li>Mise en place planning unifié</li><li>Coordination et reporting unique</li><li>Débriefing post-tournage</li></ol>"
+        "title": "Économies Substantielles et Efficacité Opérationnelle",
+        "html": "<h3>Optimisation Coûts Démontrée</h3><ul><li>Économies d’échelle sur tous services BMS et suppression des marges intermédiaires.</li><li>Négociation globale vs négociations séparées ; <strong>packages logistique audiovisuelle</strong> plus compétitifs.</li><li>Planning unifié et ressources optimisées : moins de pertes, moins de doublons.</li><li>Réduction coûts coordination/communication, <strong>prestataire unique audiovisuel</strong> = clarité budgétaire.</li><li>Facturation unique : fin des coûts cachés et des factures multiples.</li></ul><h3>Gains Temps et Efficacité</h3><ul><li>Un seul contact vs 5–8 prestataires ; <strong>services intégrés tournage</strong> et réactions instantanées.</li><li>Coordination native et résolution immédiate des problèmes (pas de ping‑pong).</li><li>Communication fluide temps réel, <strong>logistique complète plateau</strong> sans friction.</li><li>Gestion administrative simplifiée drastiquement ; focus sur la création.</li></ul><h3>Qualité et Fiabilité Supérieures</h3><ul><li>Standards qualité homogènes, équipes formées et coordonnées ensemble.</li><li>Responsabilité unique et engagement résultats ; amélioration continue transversale.</li><li>Innovation et retours d’expérience partagés entre services : <strong>logistique audiovisuelle intégrée</strong> qui progresse en continu.</li></ul>"
       },
       {
-        "title": "Livrables",
-        "html": "<ul><li>Package sur mesure (ventousage, sécurité, régie…)</li><li>Équipe dédiée et planning global</li><li>Reporting consolidé</li><li>Suivi budgétaire</li><li>Coordination unique</li><li>Assistance avant/pendant/après tournage</li><li>Liens internes : <a href=\"/contact/\">nous contacter</a>, <a href=\"/realisations/\">voir nos packs réalisés</a></li></ul>"
+        "title": "Solutions Sur Mesure et Flexibilité Maximale",
+        "html": "<p>Nos <strong>solutions packagées tournage</strong> sont modulables : nous adaptons l’enveloppe et la composition des <strong>services intégrés tournage</strong> à vos contraintes (géographie, calendrier, format, budget). Votre chef de projet BMS ajuste le package en temps réel : ajout/suppression de prestations, renforcement ou allègement des moyens, réallocation d’équipes. Cette <strong>coordination logistique globale</strong> permet un pilotage fin et réactif, sans coût caché ni lourdeur administrative.</p><ul><li>Configurations sur mesure selon type de production (longs, séries, pub, doc, événementiel).</li><li>Adaptation budgétaire et montée en charge progressive.</li><li>Solutions créatives pour défis logistiques complexes.</li><li>Conseil expert et optimisation continue, <strong>prestataire unique audiovisuel</strong> sur toute la chaîne.</li></ul><div class=\\\"content-card cta-card\\\" style=\\\"margin-top:1rem\\\"><div class=\\\"cta-title\\\">Construire votre package sur mesure</div><div class=\\\"cta-subtitle\\\">Parlez‑nous de votre projet : on vous propose une <strong>solution tout‑en‑un tournage</strong> en moins de 2 h.</div><div class=\\\"hero-buttons\\\"><a href=\\\"/contact/\\\" class=\\\"btn btn-primary\\\">Découvrir nos packages</a><a href=\\\"https://wa.me/33646005642?text=Bonjour,%20je%20souhaite%20une%20solution%20packag%C3%A9e%20int%C3%A9gr%C3%A9e.\\\" class=\\\"btn btn-secondary\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">WhatsApp Direct</a></div></div>"
       },
       {
-        "title": "Nos différenciants",
-        "html": "<ul><li>Un seul interlocuteur pour toute la logistique</li><li>Packages flexibles selon le budget</li><li>Équipe dédiée et reporting clair</li><li>Expérience multi-prestations France entière</li><li>Coordination totale planning & sécurité</li></ul>"
+        "title": "Retours Clients : La Différence BMS Ventouse",
+        "html": "<blockquote><p>“Enfin un seul interlocuteur pour tout !”</p></blockquote><blockquote><p>“Économies de 30 % vs prestataires séparés.”</p></blockquote><blockquote><p>“Coordination parfaite, aucun stress logistique.”</p></blockquote><blockquote><p>“Qualité homogène sur tous les services.”</p></blockquote><blockquote><p>“Réactivité exceptionnelle en cas d’imprévu.”</p></blockquote><blockquote><p>“Facturation claire et transparente.”</p></blockquote>"
       },
       {
-        "title": "Zones d’intervention",
-        "html": "<p>Packages disponibles à <strong>Marseille</strong>, <strong>Paris</strong>, <strong>Lyon</strong> et sur tout le territoire. Pour une offre personnalisée, <a href=\"/contact/\">contactez-nous</a>.</p>"
-      },
-      {
-        "title": "Liens utiles",
-        "html": "<p>Voir nos <a href=\"/realisations/\">packs réalisés</a> ou <a href=\"/contact/\">nous contacter</a> pour bâtir votre solution.</p>"
+        "title": "Liens utiles et services complémentaires",
+        "html": "<p>Composez votre package : <a href=\\\"/services/ventousage/\\\">ventousage</a>, <a href=\\\"/services/plateau-gardiennage/\\\">sécurité/gardiennage</a>, <a href=\\\"/services/convoyage/\\\">convoyage</a>, <a href=\\\"/services/regie-materiel/\\\">régie & matériel</a>, <a href=\\\"/services/loges-confort/\\\">loges & confort</a>, <a href=\\\"/services/cantine-catering/\\\">cantine & catering</a>. Ou <a href=\\\"/contact/\\\">demandez un devis</a> (réponse sous 2 h).</p>"
       }
     ],
     "features": [
-      "Combinaison logistique + sécurité",
-      "Chef de projet dédié",
-      "Reporting consolidé",
-      "Flexibilité et adaptation budget",
-      "Coordination France entière"
+      "SEUL prestataire France proposant vraie intégration services",
+      "Solutions packagées tournage et logistique audiovisuelle intégrée",
+      "Prestataire unique audiovisuel, responsabilité et engagement résultats",
+      "Économies démontrées 20–40 % vs prestataires séparés",
+      "Planning unifié, communication fluide, reporting consolidé",
+      "Packages modulables et évolutifs en temps réel",
+      "Qualité homogène et excellence opérationnelle intégrée",
+      "Innovation continue et amélioration transversale"
     ],
     "faq": [
       {
-        "q": "Quels services sont inclus dans les packages ?",
-        "a": "Ventousage, sécurité, régie, convoyage, loges, catering, coordination et reporting… selon vos besoins."
+        "q": "Quels sont les avantages des solutions packagées ?",
+        "a": "Un prestataire unique audiovisuel pour une logistique audiovisuelle intégrée : coordination native, responsabilité unique, optimisation coûts, qualité homogène, facturation simplifiée et gains de temps considérables."
       },
       {
-        "q": "Les packs sont-ils personnalisables ?",
-        "a": "Oui, chaque solution est construite sur-mesure selon le projet et le budget."
+        "q": "Peut-on moduler les packages selon nos besoins ?",
+        "a": "Oui. Nos services intégrés tournage sont modulables : ajout/suppression de prestations, montée en charge ou allègement en temps réel, adaptation aux contraintes géographiques et calendaires."
       },
       {
-        "q": "Un interlocuteur unique est-il garanti ?",
-        "a": "Oui, vous bénéficiez d’un chef de projet dédié tout au long de la prestation."
+        "q": "Les économies sont-elles réelles vs prestataires séparés ?",
+        "a": "Oui. Les packages logistique audiovisuelle suppriment des marges intermédiaires et optimisent les ressources. Les retours constatés vont de 20 à 40 % d’économies selon les formats."
       },
       {
-        "q": "Peut-on bénéficier d’un reporting unique ?",
-        "a": "Oui, tous les suivis (logistique, sécurité, budget) sont consolidés dans un seul reporting."
+        "q": "Comment gérez-vous la coordination entre tous les services ?",
+        "a": "Chef de projet unique, planning unifié, outils partagés, communication temps réel, reporting consolidé : une coordination logistique globale sans friction."
       },
+      {
+        "q": "Peut-on ajouter des services en cours de tournage ?",
+        "a": "Oui, nos solutions packagées tournage sont évolutives. Nous ajustons le package au fil des besoins, y compris en urgence."
+      },
+      {
+        "q": "La facturation est-elle vraiment simplifiée ?",
+        "a": "Oui. Un devis et une facture uniques pour l’ensemble des services intégrés tournage, avec détail transparent des postes."
+      },
+      {
+        "q": "Que se passe-t-il en cas de problème sur un service ?",
+        "a": "Responsabilité unique : nous traitons immédiatement la cause et mobilisons les équipes nécessaires. Pas de ping‑pong entre prestataires."
+      },
+      {
+        "q": "Proposez-vous des packages pour petites productions ?",
+        "a": "Oui. Des configurations légères et économiques existent pour les petites équipes, avec la même logique d’intégration et de qualité."
+      }
+    ]
+  },
       {
         "q": "Où intervenez-vous ?",
         "a": "Sur toute la France, avec un focus sur Marseille, Paris, Lyon et les grandes agglomérations."
