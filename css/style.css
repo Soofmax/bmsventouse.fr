@@ -152,12 +152,13 @@ a {
 }
 
 /* Content link contrast for accessibility (not nav/buttons) */
-.section-subtitle a, .content-container a, p a {
+.section-subtitle a, .content-container a, .content-card a:not(.btn), p a {
   color: var(--color-link);
+  font-weight: var(--font-weight-bold);
   text-decoration: underline;
   text-underline-offset: .15em;
 }
-.section-subtitle a:hover, .content-container a:hover, p a:hover {
+.section-subtitle a:hover, .content-container a:hover, .content-card a:not(.btn):hover, p a:hover {
   color: var(--color-primary-dark);
 }
 
