@@ -65,6 +65,21 @@ eleventyComputed:
 </section>
 {% endif %}
 
+<!-- Services connexes (maillage interne standardisé) -->
+<section class="band">
+  <div class="container">
+    {% sectionHeader 'Services connexes', 'Vous pourriez aussi avoir besoin de…', '' %}
+    <div class="content-cards">
+      {% set candidateSlugs = ['loges-confort','plateau-gardiennage','ventousage','cantine-catering','convoyage'] %}
+      {% for s in services %}
+        {% if s.slug != service.slug and s.slug in candidateSlugs %}
+          {% contentCard s.h1, '<p>' ~ s.summary ~ ' <a href="/services/' ~ s.slug ~ '/">Découvrir</a></p>' %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="band band--alt">
   <div class="container">
     <div class="content-cards">
