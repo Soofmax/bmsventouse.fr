@@ -312,72 +312,88 @@
   },
   {
     "slug": "cantine-catering",
-    "metaTitle": "Cantine & Catering | BMS Ventouse",
-    "metaDescription": "Traiteurs partenaires, menus variés et équilibrés, options végétariennes et véganes.",
-    "h1": "Cantine & Catering",
+    "metaTitle": "Catering Tournage & Cantine Plateau | BMS Ventouse - Restauration Audiovisuelle",
+    "metaDescription": "Catering professionnel tournages. Service 24h/24, menus variés, adaptation contraintes. Paris, Lyon, Marseille. Devis gratuit.",
+    "h1": "Cantine & Catering Tournage | BMS Ventouse - Restauration Plateau Professionnelle",
     "hero": {
       "desktop": "/images/service-cantine.webp",
       "mobile": "/images/service-cantine.webp",
-      "alt": "Service de cantine"
+      "alt": "Buffet de catering tournage et cantine plateau avec équipe cuisine en service"
     },
-    "summary": "Restauration variée et adaptée pour vos équipes de tournage à Marseille, Paris, Lyon et partout en France.",
+    "summary": "Catering tournage et cantine plateau professionnels : service catering 24h, menus variés, régimes spéciaux, cuisine mobile et traiteur audiovisuel. Paris, Lyon, Marseille et France entière. Devis catering sous 2h.",
     "sections": [
       {
-        "title": "Introduction",
-        "html": "<p>Garantir une restauration de qualité sur un tournage, c’est aussi garantir la performance de l’équipe. Nous travaillons avec des traiteurs partenaires à <strong>Marseille</strong>, <strong>Paris</strong>, <strong>Lyon</strong> et dans toute la France pour proposer des menus équilibrés, savoureux et adaptés à tous les régimes.</p>"
+        "title": "Cantine et Catering Professionnel pour Tournages",
+        "html": "<p>Chez <strong>BMS Ventouse</strong>, nous considérons la <strong>restauration tournage</strong> comme un levier de performance. Fondée par un <strong>expert reconnu de l’audiovisuel</strong>, l’entreprise apporte une approche moderne et opérationnelle au <strong>catering tournage</strong> : des <em>petits-déjeuners très tôt</em>, des <em>déjeuners</em> et <em>dîners</em> ponctuels, des <em>pauses rapides</em> et un <strong>service catering 24h</strong> capable de suivre le rythme réel d’un plateau.</p><p>Nos équipes, formées aux contraintes du plateau, conçoivent une <strong>cantine plateau</strong> qui s’adapte aux <strong>horaires atypiques</strong>, aux <strong>effectifs variables</strong> et aux <strong>imprévus</strong>. Nous mobilisons un <strong>traiteur audiovisuel</strong> aguerri, une cuisine mobile équipée, des véhicules réfrigérés et des process HACCP pour garantir qualité, sécurité et fluidité. L’objectif est simple : offrir une <strong>restauration équipes tournage</strong> généreuse, équilibrée et régulière, sans perturber la mise en scène ni la prise de son.</p><p>Disponible <strong>24/7</strong> à <strong>Paris</strong>, <strong>Lyon</strong>, <strong>Marseille</strong> et partout en France, notre <strong>catering tournage</strong> s’intègre nativement avec nos autres pôles : <a href=\\\"/services/loges-confort/\\\">loges & confort</a> (espaces repas et VIP), <a href=\\\"/services/plateau-gardiennage/\\\">sécurité/gardiennage</a> (flux, périmètre), <a href=\\\"/services/ventousage/\\\">ventousage</a> (implantation). Du <strong>catering plateau Paris</strong> aux tournages isolés en région, nous dimensionnons une <strong>cantine mobile tournage</strong> cohérente avec votre plan de travail, vos budgets et vos régimes.</p>"
       },
       {
-        "title": "Problèmes fréquents",
-        "html": "<ul><li>Retards ou absence de livraison</li><li>Manque de diversité dans les menus</li><li>Options végétariennes/véganes absentes</li><li>Non-respect des règles d’hygiène</li><li>Allergies non prises en compte</li><li>Difficulté d’installation sur site</li><li>Gestion des déchets mal anticipée</li><li>Manque de flexibilité horaires</li></ul>"
+        "title": "Les Défis de la Restauration Plateau que Nous Résolvons",
+        "html": "<h3>Adaptation Horaires et Contraintes</h3><ul><li>Service dès <strong>5h du matin</strong> pour équipes techniques ; <strong>catering tournage</strong> calibré pour les call-times précoces.</li><li>Flexibilité en cas de retards, retakes ou changements : <strong>service catering 24h</strong> et pauses adaptées au rythme réel.</li><li>Pauses rapides, fenêtres courtes : stations café, encas, fruits, et hot-line discrète.</li><li>Service tardif (jusqu’à 22h et au‑delà) pour les tournages nocturnes.</li><li>Communication fluide avec la régie pour cadrer volumes, horaires et réassorts.</li></ul><h3>Lieux et Conditions Difficiles</h3><ul><li><strong>Catering plateau Paris</strong> centre‑ville, sites isolés, décors extérieurs : implantation sur tous terrains.</li><li>Adaptation météo : tentes, abris, zones chauffées/ventilées pour la <strong>cantine plateau</strong>.</li><li>Logistique d’acheminement et d’installation : cuisine mobile, groupes froids, hygiène irréprochable.</li><li>Discrétion plateau : service silencieux et respect des temps de prise.</li></ul><h3>Qualité et Diversité Alimentaire</h3><ul><li>Menus variés et équilibrés ; <strong>restauration tournage</strong> pour 20 à 200 personnes et plus.</li><li>Régimes spéciaux (végétarien, vegan, sans gluten, halal, casher) pris en charge sans compromis.</li><li>Produits frais, saisonniers et tracés ; <strong>traiteur audiovisuel</strong> expérimenté.</li><li>HACCP et sécurité alimentaire ; contrôles de température, remontées d’écarts, traçabilité.</li></ul>"
       },
       {
-        "title": "Notre méthode",
-        "html": "<ol><li>Sélection de traiteurs selon la localisation et les besoins</li><li>Menus validés avec la production (options végan/végé...)</li><li>Livraison sur site à Marseille, Paris, Lyon ou autre</li><li>Installation du buffet/cantine</li><li>Suivi hygiène et gestion déchets</li><li>Adaptation horaires et régimes spéciaux</li></ol>"
+        "title": "Gamme Complète Restauration et Catering Tournage",
+        "html": "<h3>Petits‑Déjeuners et Pauses</h3><ul><li>Service dès 5h : viennoiseries fraîches, café, thés, jus, yaourts, granola.</li><li>Options salées (œufs, fromages, charcuteries selon demandes), alternatives vegan et sans gluten.</li><li>Pauses café et collations toute la journée : fruits, barres, encas énergétiques.</li><li>Boissons chaudes/froides selon saison ; hydratation continue.</li></ul><h3>Déjeuners et Repas Complets</h3><ul><li>Menus renouvelés quotidiennement ; <strong>catering tournage</strong> pensé pour des équipes nombreuses.</li><li>Entrée/plat/dessert : cuisine sur place ou livrée, au choix (buffet self ou service à l’assiette).</li><li>Adaptation effectifs 20 à 200 personnes ; calibrage portions et file d’attente fluide.</li><li>Régimes spéciaux clairement identifiés, signalétique et service dédié.</li></ul><h3>Services Premium et VIP</h3><ul><li><strong>Traiteur plateau professionnel</strong> pour talents et invités : menus gastronomiques et dressage soigné.</li><li>Service en loges, <a href=\\\"/services/loges-confort/\\\">espaces dédiés</a> ou zones VIP.</li><li>Cocktails, réceptions, sommellerie et carte des vins sur demande.</li><li>Service personnalisé, discret, respectant le protocole du plateau.</li></ul><div class=\\\"content-card cta-card\\\" style=\\\"margin-top:1rem\\\"><div class=\\\"cta-title\\\">Devis catering sous 2h</div><div class=\\\"cta-subtitle\\\">Indiquez vos horaires, effectifs, villes (Paris, Lyon, Marseille, France) et régimes à prendre en compte.</div><div class=\\\"hero-buttons\\\"><a href=\\\"/contact/\\\" class=\\\"btn btn-primary\\\">Devis catering sous 2h</a><a href=\\\"https://wa.me/33646005642?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20un%20catering%20tournage%20(BMS%20Ventouse).\\\" class=\\\"btn btn-secondary\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Réserver catering : WhatsApp Direct</a></div></div>"
       },
       {
-        "title": "Livrables",
-        "html": "<ul><li>Repas complets (petit déj, déjeuner, dîner…)</li><li>Menus adaptés (végé, végan, allergies…)</li><li>Vaisselle et kit hygiène</li><li>Buffet/banc de cantine monté</li><li>Gestion déchets et nettoyage</li><li>Reporting satisfaction</li><li>Coordination avec la régie</li></ul>"
+        "title": "Équipe Culinaire Experte et Logistique Intégrée",
+        "html": "<ul><li>Chefs et équipes service expérimentés <strong>traiteur audiovisuel</strong> et événementiel.</li><li>Matériel de cuisine mobile, postes chauds/froids, bacs gastro et maintien en température.</li><li>Véhicules réfrigérés pour produits frais, chaines du froid/chaud maîtrisées.</li><li>Installation de cuisine temporaire sur tous sites ; flux propres/sales séparés.</li><li>Respect strict des normes HACCP ; formations hygiène et procédures écrites.</li><li>Approvisionnement, gestion des stocks et réassorts coordonnés avec la régie.</li><li>Vaisselle, couverts et <strong>nettoyage inclus</strong> ; gestion des déchets et tri sélectif.</li><li>Maintenance et nettoyage matériel quotidiens ; contrôle qualité continu.</li></ul>"
       },
       {
-        "title": "Nos différenciants",
-        "html": "<ul><li>Traiteurs partenaires sélectionnés</li><li>Menus variés et équilibrés</li><li>Options végan/végé garanties</li><li>Livraison sur tout site (France entière)</li><li>Adaptation horaires et contraintes tournage</li></ul>"
+        "title": "Flexibilité et Adaptation aux Contraintes Tournage",
+        "html": "<ul><li>Planning ajusté en temps réel selon the call-sheet ; <strong>service catering 24h</strong> en soutien.</li><li>Service modulable : renforts ponctuels, lignes supplémentaires, cuisines satellites.</li><li>Solutions météo : tentes, auvents, abris chauffés/ventilés.</li><li>Livraison sur sites difficiles d’accès ; coordination étroite avec la régie.</li><li>Service express pendant pauses courtes ; lignes café/snacks déportées.</li><li>Paniers repas pour déplacements équipes et unités techniques.</li><li>Adaptation budgets ; formats buffet, plateaux-repas, menus dédiés.</li><li>Service longue durée : renouvellement des menus, retours d’expérience, amélioration continue.</li><li>Allergies et intolérances : traçabilité, signalétique, procédure de substitution.</li></ul>"
       },
       {
-        "title": "Zones d’intervention",
-        "html": "<p>Nos services de cantine couvrent <strong>Marseille</strong>, <strong>Paris</strong>, <strong>Lyon</strong> et toute la France. Pour vos besoins spécifiques, <a href=\"/contact/\">contactez-nous</a>.</p>"
+        "title": "Catering Tournage Paris, Lyon, Marseille et France Entière",
+        "html": "<p>Nos équipes <strong>catering tournage</strong> et <strong>cantine plateau</strong> sont organisées autour de pôles majeurs : <strong>Paris</strong> (Île‑de‑France), <strong>Lyon</strong> (Rhône‑Alpes) et <strong>Marseille</strong> (PACA). Nous couvrons également <strong>Bordeaux</strong>, <strong>Lille</strong>, <strong>Strasbourg</strong> et la France entière : déploiement sous <strong>48h</strong> selon contraintes.</p><p>Nous travaillons avec des partenaires locaux pour l’approvisionnement frais, adaptons la carte aux <em>spécialités régionales</em> et respectons les réglementations locales d’occupation du domaine public. En complément, nos services <a href=\\\"/services/plateau-gardiennage/\\\">sécurité/gardiennage</a> et <a href=\\\"/services/ventousage/\\\">ventousage</a> facilitent les flux et l’implantation pour un <strong>catering plateau Paris</strong> ou régional fiable et discret.</p>"
+      },
+      {
+        "title": "Pourquoi Choisir BMS Ventouse pour votre Catering",
+        "html": "<ul><li>Expertise spécialisée des <strong>contraintes audiovisuelles</strong> ; service discret et non‑perturbateur.</li><li>Flexibilité horaires, adaptation planning et <strong>service catering 24h</strong>.</li><li>Qualité culinaire, diversité des menus et régimes spéciaux gérés avec rigueur.</li><li>Coordination native avec <a href=\\\"/services/loges-confort/\\\">loges & confort</a>, <a href=\\\"/services/plateau-gardiennage/\\\">sécurité</a>, <a href=\\\"/services/ventousage/\\\">ventousage</a>.</li><li>Équipes formées, matériel pro, HACCP et sécurité alimentaire maîtrisés.</li><li>Démarche éco‑responsable et gestion des déchets.</li><li>Tarification adaptée aux budgets de production, devis clairs et rapides.</li></ul>"
       },
       {
         "title": "Liens utiles",
-        "html": "<p>Voir nos <a href=\"/realisations/\">références restauration</a>, le service <a href=\"/services/loges-confort/\">loges &amp; confort</a> pour accueillir talents et équipes, ou <a href=\"/contact/\">nous contacter</a> pour une proposition adaptée.</p>"
+        "html": "<p>Voir nos <a href=\\\"/realisations/\\\">références restauration</a>, nos services <a href=\\\"/services/loges-confort/\\\">loges & confort</a> et <a href=\\\"/services/plateau-gardiennage/\\\">gardiennage</a>, ou <a href=\\\"/contact/\\\">nous contacter</a> pour un devis sous 2h.</p>"
       }
     ],
     "features": [
-      "Traiteurs partenaires partout en France",
-      "Menus variés et équilibrés",
-      "Options végan/végé",
-      "Flexibilité horaires",
-      "Respect hygiène et allergies"
+      "Catering tournage 24/7 (petit-déjeuner, déjeuner, dîner, pauses)",
+      "Cantine plateau modulable 20 à 200 personnes",
+      "Régimes spéciaux pris en charge (vegan, sans gluten, halal, casher)",
+      "Traiteur audiovisuel, cuisine mobile, véhicules réfrigérés",
+      "HACCP, sécurité alimentaire et gestion des déchets"
     ],
     "faq": [
       {
-        "q": "Quels types de repas proposez-vous ?",
-        "a": "Petit-déjeuner, déjeuner, dîner, collations, menus végétariens, véganes, sans gluten, etc."
+        "q": "Proposez-vous le service dès très tôt le matin ?",
+        "a": "Oui. Notre catering tournage démarre dès 5h pour les équipes techniques, avec boissons chaudes, viennoiseries et options salées/vegan/sans gluten."
       },
       {
-        "q": "Livrez-vous sur tous les sites (ex : Marseille, Paris, Lyon) ?",
-        "a": "Oui, partout en France, même sur des sites complexes ou isolés."
+        "q": "Comment gérez-vous les régimes alimentaires spéciaux ?",
+        "a": "Nous identifions en amont les besoins (végétarien, vegan, sans gluten, halal, casher) et préparons des alternatives dédiées avec une signalétique claire."
       },
       {
-        "q": "Comment gérez-vous les allergies et régimes spéciaux ?",
-        "a": "Nous recueillons les besoins en amont et proposons des menus adaptés à chaque équipe."
+        "q": "Le service est-il possible sur des sites isolés ?",
+        "a": "Oui. Notre cantine mobile tournage et nos cuisines temporaires permettent de servir en extérieur, sur des sites sans infrastructure, dans le respect HACCP."
       },
       {
-        "q": "Qui s’occupe de la logistique sur place ?",
-        "a": "Nos équipes installent, servent, nettoient et assurent la gestion des déchets."
+        "q": "Comment vous adaptez-vous aux changements de planning ?",
+        "a": "Nous ajustons horaires et volumes en coordination avec la régie. Le service catering 24h et des lignes de service modulables absorbent les imprévus."
       },
       {
-        "q": "Est-ce possible d’avoir des horaires flexibles ?",
-        "a": "Oui, nous adaptons la livraison et le service au rythme du tournage."
+        "q": "Proposez-vous du catering pour les talents et VIP ?",
+        "a": "Oui. Traiteur plateau professionnel, menus premium, dressage soigné et service discret en loges ou espaces dédiés."
+      },
+      {
+        "q": "Le matériel et la vaisselle sont-ils inclus ?",
+        "a": "Oui. Nous apportons le matériel nécessaire, la vaisselle et assurons le nettoyage et la gestion des déchets."
+      },
+      {
+        "q": "Comment garantissez-vous l’hygiène alimentaire ?",
+        "a": "Procédures HACCP, contrôle des températures, traçabilité des produits, formations hygiène et audits internes réguliers."
+      },
+      {
+        "q": "Le service est-il disponible en province ?",
+        "a": "Oui. Nous opérons à Paris, Lyon, Marseille et sur toute la France (Bordeaux, Lille, Strasbourg) avec déploiement sous 48h selon contraintes."
       }
     ]
   },
