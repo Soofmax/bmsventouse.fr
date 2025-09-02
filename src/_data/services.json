@@ -536,72 +536,83 @@
 
   {
     "slug": "regie-materiel",
-    "metaTitle": "Régie & Matériel | BMS Ventouse",
-    "metaDescription": "Personnel et matériel de régie, mise en relation & location via partenaires.",
-    "h1": "Régie & Matériel",
+    "metaTitle": "Régie Technique & Location Matériel Audiovisuel | BMS Ventouse - Experts Plateau",
+    "metaDescription": "Location matériel audiovisuel et régie technique. Éclairage, son, électricité. Régisseurs experts. Paris, Lyon, Marseille. Devis sous 2h.",
+    "h1": "Régie Technique & Location Matériel Audiovisuel | BMS Ventouse - Experts Plateau",
     "hero": {
       "desktop": "/images/service-regie-custom.jpg",
       "mobile": "/images/service-regie-custom.jpg",
-      "alt": "Régie de nuit"
+      "alt": "Régisseur technique coordonnant du matériel plateau sur un tournage"
     },
-    "summary": "Régie terrain, matériel et continuité de service pour vos tournages à Marseille, Paris, Lyon et partout en France.",
+    "summary": "Location matériel audiovisuel, régie technique tournage et matériel plateau avec régie terrain audiovisuel. Éclairage, son, électricité, structures et communication. Paris, Lyon, Marseille et France entière. Devis sous 2h.",
     "sections": [
       {
-        "title": "Introduction",
-        "html": "<p>Notre cellule régie intervient sur tous types de tournages, à <strong>Marseille</strong>, <strong>Paris</strong>, <strong>Lyon</strong> et partout en France. Nous assurons la continuité logistique et la mise à disposition de matériel et de partenaires fiables.</p>"
+        "title": "Parc Matériel Audiovisuel Professionnel et Moderne",
+        "html": "<h3>Éclairage et Électricité Professionnels</h3><ul><li>Projecteurs LED dernière génération (ARRI, Kino Flo), HMI et tungstène selon besoins créatifs : <strong>location éclairage tournage</strong> calibrée et <strong>matériel audiovisuel moderne</strong>.</li><li>Gélatines, diffuseurs, réflecteurs professionnels et systèmes d’accroche (pieds, bras, pinces, grilles) pour sculpter la lumière.</li><li>Groupes électrogènes silencieux 20–100 kVA, tableaux de distribution, câblage certifié, connectique complète : <strong>équipement technique plateau</strong> conforme aux normes en vigueur.</li><li>Éclairage de secours et solutions autonomes pour sites isolés ; gestion de la <strong>régie technique tournage</strong> en environnement contraint.</li></ul><h3>Matériel Son et Communication</h3><ul><li>Micros HF, perches, cravates (Sennheiser, Shure), enregistreurs numériques, casques de monitoring : <strong>matériel son plateau</strong> fiable.</li><li>Intercom, talkies‑walkies longue portée, systèmes de communication régie‑plateau ; coordination fluide des équipes.</li><li>Câblage audio professionnel, interfaces et solutions playback/diffusion.</li></ul><h3>Structures et Équipements Plateau</h3><ul><li>Praticables modulables, planchers techniques, échafaudages et structures d’accroche.</li><li>Rails travelling et supports caméra, barrières sécurité et signalisation.</li><li>Tentes et abris météo, chauffages d’appoint et ventilateurs.</li><li>Mobilier plateau (tables, chaises, parasols), manutention et transport.</li></ul><p>Notre <strong>location matériel audiovisuel</strong> est dimensionnée pour les longs métrages, séries, publicités et documentaires, avec un <strong>équipement technique plateau</strong> entretenu quotidiennement et des remplacements rapides en cas d’imprévu.</p>"
       },
       {
-        "title": "Problèmes fréquents",
-        "html": "<ul><li>Manque d’effectif sur le terrain</li><li>Absence de checklists ou de briefing</li><li>Problèmes de location matériel (retard, casse…)</li><li>Mauvaise gestion des consommables</li><li>Goulots d’étranglement flux matériel/équipes</li><li>Absence de régisseur dédié</li><li>Pas de solution de secours en cas d’imprévu</li></ul>"
+        "title": "Régisseurs Techniques Spécialisés Audiovisuel",
+        "html": "<h3>Expertise et Formation Continue</h3><ul><li>Régisseurs sélectionnés pour leur expérience en <strong>régie technique tournage</strong> ; connaissance fine des contraintes terrain.</li><li>Formation continue aux évolutions techniques et normes (habilitations électriques, sécurité plateau).</li><li>Maîtrise des familles d’équipements : lumière, électricité, son, structures, <strong>matériel plateau</strong>.</li><li>Capacité à opérer en <strong>régie terrain audiovisuel</strong> complexe et à orchestrer plusieurs équipes techniques.</li></ul><h3>Rôles et Responsabilités Terrain</h3><ul><li>Supervision installation/désinstallation selon plan technique, en lien avec chef op et ingénieur du son.</li><li>Optimisation consommation électrique et allocation des ressources matériel.</li><li>Maintenance préventive, dépannage urgent, gestion des stocks et inventaires.</li><li>Interface technique production/équipes, reporting quotidien et respect strict des normes plateau.</li></ul>"
       },
       {
-        "title": "Notre méthode",
-        "html": "<ol><li>Définition des besoins avec la production</li><li>Mise à disposition d’un régisseur terrain</li><li>Gestion du matériel (location, consommables, maintenance…)</li><li>Coordination avec les autres pôles (ventousage, sécurité…)</li><li>Checklists et reporting quotidiens</li><li>Plan de secours si besoin</li></ol>"
+        "title": "Régie Technique Coordonnée avec Services BMS",
+        "html": "<ul><li>Coordination native avec <a href=\\\"/services/ventousage/\\\">ventousage</a> (implantation, accès) et <a href=\\\"/services/plateau-gardiennage/\\\">sécurité</a> (périmètre, contrôle d’accès).</li><li>Livraisons synchronisées avec <a href=\\\"/services/convoyage/\\\">convoyage</a> et installation en lien avec <a href=\\\"/services/loges-confort/\\\">loges & confort</a>.</li><li>Planning unifié, communication fluide et responsabilité unique : <strong>régie technique professionnelle</strong> avec engagement de résultats.</li><li>Optimisation des coûts par synergie des services, réduction des temps morts et sécurisation des jalons.</li></ul><div class=\\\"content-card cta-card\\\" style=\\\"margin-top:1rem\\\"><div class=\\\"cta-title\\\">Devis régie & matériel sous 2h</div><div class=\\\"cta-subtitle\\\">Détaillez vos besoins (lumière, son, électricité, <strong>matériel plateau</strong>) et vos villes (Paris, Lyon, Marseille, France).</div><div class=\\\"hero-buttons\\\"><a href=\\\"/contact/\\\" class=\\\"btn btn-primary\\\">Obtenir un devis</a><a href=\\\"https://wa.me/33646005642?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20de%20la%20r%C3%A9gie%20technique%20et%20du%20mat%C3%A9riel%20audiovisuel.\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\" class=\\\"btn btn-secondary\\\">WhatsApp Direct</a></div></div>"
       },
       {
-        "title": "Livrables",
-        "html": "<ul><li>Régisseur dédié sur site</li><li>Matériel prêt à l’emploi</li><li>Mise en relation partenaires location/consommables</li><li>Checklists logistiques</li><li>Reporting quotidien</li><li>Assistance technique</li><li>Maillage interne : <a href=\"/realisations/\">voir références</a></li></ul>"
+        "title": "Maintenance Préventive et Support Technique 24/7",
+        "html": "<ul><li>Vérification systématique du matériel avant livraison, <strong>matériel audiovisuel moderne</strong> entretenu quotidiennement.</li><li>Maintenance préventive selon recommandations constructeurs et stock de secours disponible.</li><li>Techniciens d’astreinte 24/7, hotline technique avec régisseurs et intervention rapide en cas de panne critique.</li><li>Reporting technique détaillé en fin de prestation et suivi post‑tournage (retours d’expérience, améliorations).</li></ul>"
       },
       {
-        "title": "Nos différenciants",
-        "html": "<ul><li>Expérience terrain tous formats (cinéma, pub, doc…)</li><li>Réseau partenaires fiable (France entière)</li><li>Réactivité situations d’urgence</li><li>Reporting transparent</li><li>Gestion continue du matériel</li></ul>"
+        "title": "Solutions Techniques Sur Mesure et Innovation",
+        "html": "<ul><li>Configurations sur mesure selon contraintes artistiques et techniques ; <strong>location matériel Paris</strong>, Lyon, Marseille et France entière.</li><li>Veille technologique, accès aux nouveautés via partenaires et constructeurs.</li><li>Conseil technique et optimisation des ressources, solutions éco‑responsables et durables.</li><li>Formation des équipes client si nécessaire, documentation et procédures simples.</li></ul>"
       },
       {
-        "title": "Zones d’intervention",
-        "html": "<p>Régie et matériel disponibles à <strong>Marseille</strong>, <strong>Paris</strong>, <strong>Lyon</strong> et France entière. Pour tout besoin, <a href=\"/contact/\">contactez-nous</a>.</p>"
-      },
-      {
-        "title": "Liens utiles",
-        "html": "<p>Voir nos <a href=\"/realisations/\">références logistiques</a>, le service <a href=\"/services/loges-confort/\">loges &amp; confort</a> pour accueillir talents et équipes, ou <a href=\"/contact/\">nous contacter</a>.</p>"
+        "title": "Liens utiles et services complémentaires",
+        "html": "<p>Accélérez votre mise en place : <a href=\\\"/services/ventousage/\\\">ventousage</a>, <a href=\\\"/services/plateau-gardiennage/\\\">gardiennage</a>, <a href=\\\"/services/convoyage/\\\">convoyage</a>, <a href=\\\"/services/loges-confort/\\\">loges & confort</a>. Consultez aussi nos <a href=\\\"/realisations/\\\">références</a> et <a href=\\\"/contact/\\\">contactez‑nous</a> pour un devis sous 2 h.</p>"
       }
     ],
     "features": [
-      "Régie terrain expérimentée",
-      "Gestion location/consommables",
-      "Checklists et reporting",
-      "Plan de secours logistique",
-      "Réseau partenaires France"
+      "Parc matériel moderne et entretenu quotidiennement",
+      "Régisseurs techniques habilités et expérimentés",
+      "Régie terrain audiovisuel et coordination multi‑équipes",
+      "Location matériel audiovisuel (lumière, son, électricité, structures)",
+      "Régie technique professionnelle et matériel plateau complet",
+      "Maintenance préventive et support 24/7",
+      "Coordination native avec ventousage/sécurité/convoyage",
+      "Solutions sur mesure, innovation et veille technologique"
     ],
     "faq": [
       {
-        "q": "Avez-vous des régisseurs disponibles partout en France ?",
-        "a": "Oui, notre réseau couvre Marseille, Paris, Lyon et toutes les régions."
+        "q": "Quel matériel technique proposez-vous en location ?",
+        "a": "Nous couvrons la location matériel audiovisuel : éclairage (LED, HMI, tungstène), électricité (groupes, tableaux, câbles), son (micros HF, perches, enregistreurs), structures (praticables, rails), communication (talkies, intercom) et mobilier/équipements plateau."
       },
       {
-        "q": "Proposez-vous la location de matériel ?",
-        "a": "Oui, via nos partenaires, nous proposons tout le matériel régie et consommables nécessaires."
+        "q": "Vos régisseurs sont-ils habilités électriques ?",
+        "a": "Oui. Nos régisseurs techniques sont formés et habilités électricité, sécurité plateau et respect des normes en vigueur."
       },
       {
-        "q": "Comment garantissez-vous la continuité de service ?",
-        "a": "Grâce à nos checklists, reporting, et à l’anticipation des imprévus par notre équipe terrain."
+        "q": "Le matériel de secours est-il inclus en cas de panne ?",
+        "a": "Nous maintenons un stock de secours et des solutions de remplacement rapide afin d’assurer la continuité de service sans interrompre le tournage."
       },
       {
-        "q": "Faites-vous le lien avec d’autres prestataires (sécu, ventousage…) ?",
-        "a": "Oui, nous assurons la coordination avec tous les pôles logistiques nécessaires."
+        "q": "Proposez-vous l'installation et la maintenance ?",
+        "a": "Oui. Nous assurons l’installation/désinstallation, la maintenance préventive et le dépannage urgent 24/7 avec reporting technique."
       },
       {
-        "q": "Le reporting est-il transmis à la production ?",
-        "a": "Oui, quotidiennement et sur demande après le tournage."
+        "q": "Comment coordonnez-vous avec les autres équipes ?",
+        "a": "Nous travaillons en lien direct avec la régie extérieure, le ventousage, la sécurité et le convoyage pour un planning unifié et des flux maîtrisés."
+      },
+      {
+        "q": "Le matériel est-il aux dernières normes techniques ?",
+        "a": "Oui. Notre matériel audiovisuel moderne est entretenu quotidiennement, mis à jour et vérifié avant chaque livraison."
+      },
+      {
+        "q": "Intervenez-vous en dépannage urgent 24h/24 ?",
+        "a": "Oui. Une astreinte technique est disponible 24/7 pour intervenir immédiatement en cas d’incident critique."
+      },
+      {
+        "q": "Proposez-vous des solutions sur mesure ?",
+        "a": "Oui. Nous configurons des solutions techniques sur mesure selon vos contraintes artistiques, techniques et budgétaires, à Paris, Lyon, Marseille et partout en France."
       }
     ]
   },
