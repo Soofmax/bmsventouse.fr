@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO & PARTAGE (OPEN GRAPH) - Optimisé pour la page Réalisations -->
-    <title>Nos Références & Productions | BMS Ventouse</title>
-    <meta name="description" content="Références en logistique audiovisuelle : tournages & événements. Expertise du fondateur, approche moderne. 24/7, couverture nationale. Découvrez nos projets.">
+    <title>BMS Ventouse — Partenaire Logistique Total | Références & Productions Sans Stress</title>
+    <meta name="description" content="Découvrez nos références: séries, films, événements. Partenaire logistique total: ventousage, sécurité plateau, convoyage. 24/7, réponse sous 2 h.">
     <meta name="author" content="BMS Ventouse">
     <meta name="robots" content="index, follow, max-snippet:160">
     <link rel="canonical" href="https://www.bmsventouse.fr/realisations/">
@@ -15,8 +15,8 @@
     <link rel="alternate" hreflang="x-default" href="https://www.bmsventouse.fr/realisations/">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Nos Références & Productions | BMS Ventouse">
-    <meta property="og:description" content="Références en logistique audiovisuelle : tournages & événements. Expertise du fondateur, approche moderne. 24/7, national.">
+    <meta property="og:title" content="BMS Ventouse — Partenaire Logistique Total | Références & Productions Sans Stress">
+    <meta property="og:description" content="Découvrez nos références: séries, films, événements. Partenaire logistique total: ventousage, sécurité plateau, convoyage. 24/7, réponse sous 2 h.">
     <meta property="og:url" content="https://www.bmsventouse.fr/realisations/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.bmsventouse.fr/images/realisations-hero-background-desktop.webp">
@@ -31,12 +31,7 @@
     <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
     <link rel="preload" href="/js/script.js" as="script">
-    <link rel="preload" as="image" href="/images/realisations-hero-background-desktop.webp" imagesrcset="/images/realisations-hero-background-mobile.webp 767w, /images/realisations-hero-background-desktop.webp 1920w" imagesizes="(max-width: 767px ) 100vw, 100vw">
-    <link rel="preload" href="/android-chrome-192x192.webp" as="image">
-    <link rel="preload" href="/images/realisation-en-place.webp" as="image">
-    <link rel="preload" href="/images/logo-netflix.svg" as="image">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="preload" as="image" href="/images/realisations-hero-background-mobile.webp" imagesrcset="/images/realisations-hero-background-mobile.webp 767w, /images/realisations-hero-background-desktop.webp 1920w" imagesizes="100vw" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -144,9 +139,9 @@
                 </span>
             </a>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar bar--top"></span>
+                <span class="bar bar--mid"></span>
+                <span class="bar bar--bot"></span>
             </button>
             <nav id="navigation" role="navigation" aria-label="Main navigation">
                 <ul id="navLinks" class="nav-links">
@@ -175,8 +170,9 @@
     <!-- Section Héros -->
     <section class="hero">
         <picture class="hero-bg">
-            <source media="(max-width: 767px )" srcset="/images/realisations-hero-background-mobile.webp" type="image/webp">
-            <img src="/images/realisations-hero-background-desktop.webp" alt="Équipe de tournage en action dans une rue sécurisée par BMS Ventouse" loading="eager" width="1920" height="1080">
+            <source type="image/avif" srcset="/images/realisations-hero-background-mobile.webp 767w, /images/realisations-hero-background-desktop.webp 1920w" sizes="100vw">
+            <source type="image/webp" srcset="/images/realisations-hero-background-mobile.webp 767w, /images/realisations-hero-background-desktop.webp 1920w" sizes="100vw">
+            <img src="/images/realisations-hero-background-desktop.webp" alt="Équipe de tournage en action dans une rue sécurisée par BMS Ventouse" loading="eager" width="1920" height="1080" fetchpriority="high">
         </picture>
         <div class="hero-overlay">
             <div class="container animated-item">
