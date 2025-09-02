@@ -152,13 +152,11 @@ a {
 }
 
 /* Content link contrast for accessibility (not nav/buttons) */
-.section-subtitle a, .content-container a, .content-card a:not(.btn), p a {
+.section-subtitle a, .content-container a, .content-card a:not(.btn), p a, main .section a:not(.btn):not(.nav-link) {
   color: var(--color-link);
   font-weight: var(--font-weight-bold);
   text-decoration: underline;
-  text-underline-offset: .15em;
-}
-.section-subtitle a:hover, .content-container a:hover, .content-card a:not(.btn):hover, p a:hover {
+ subtitle a:hover, .content-container a:hover, .content-card a:not(.btn):hover, p a:hover {
   color: var(--color-primary-dark);
 }
 
@@ -1399,12 +1397,17 @@ body.dark-theme .header {
   box-shadow: var(--box-shadow-base);
   padding: 2rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .toc ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
+  text-align: left;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .toc li + li {
@@ -1582,6 +1585,7 @@ body.dark-theme .header {
   box-shadow: var(--box-shadow-base);
   padding: 2rem;
   margin-top: 2rem;
+  text-align: center;
 }
 
 .legal-section h2 {
@@ -1653,6 +1657,8 @@ body.dark-theme .header {
   display: flex;
   flex-direction: column;
   flex: 1;
+  text-align: center;
+  align-items: center;
 }
 
 .service-card-visual-content h3 {
@@ -1672,7 +1678,10 @@ body.dark-theme .header {
   padding-left: 0;
   margin: 0;
   margin-top: auto;
-}
+  text-align: left;
+  display: inline-block;
+  margin-left: auto;
+  margin
 
 .service-card-visual-content ul li {
   position: relative;
@@ -1740,6 +1749,8 @@ body.dark-theme .header {
   flex: 1;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
 .reference-card-content h3 {
@@ -1759,6 +1770,10 @@ body.dark-theme .header {
   padding-left: 0;
   margin: 0;
   margin-top: auto;
+  text-align: left;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .reference-card-content ul.challenge-list li {
@@ -1810,7 +1825,7 @@ body.dark-theme .header {
   border-radius: var(--border-radius-large);
   box-shadow: var(--box-shadow-base);
   padding: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .included-benefits h2,
@@ -1824,6 +1839,10 @@ body.dark-theme .header {
   list-style: none;
   margin: 0;
   padding-left: 0;
+  text-align: left;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .benefits-list li {
