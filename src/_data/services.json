@@ -37,7 +37,7 @@
       },
       {
         "title": "Liens utiles",
-        "html": "<p>Découvrez nos <a href=\"/realisations/\">références clients</a> ou <a href=\"/contact/\">contactez-nous</a> pour un conseil personnalisé.</p>"
+        "html": "<p>Découvrez nos <a href=\"/realisations/\">références clients</a>, notre service <a href=\"/services/loges-confort/\">loges &amp; confort</a> pour accueillir équipes et talents, ou <a href=\"/contact/\">contactez-nous</a> pour un conseil personnalisé.</p>"
       }
     ],
     "features": [
@@ -492,7 +492,7 @@
       },
       {
         "title": "Liens utiles",
-        "html": "<p>Voir nos <a href=\"/realisations/\">références logistiques</a> ou <a href=\"/contact/\">nous contacter</a>.</p>"
+        "html": "<p>Voir nos <a href=\"/realisations/\">références logistiques</a>, le service <a href=\"/services/loges-confort/\">loges &amp; confort</a> pour accueillir talents et équipes, ou <a href=\"/contact/\">nous contacter</a>.</p>"
       }
     ],
     "features": [
