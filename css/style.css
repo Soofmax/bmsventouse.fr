@@ -817,7 +817,7 @@ body.dark-theme .header {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--grid-gap);
+  gap: calc(var(--grid-gap) + 0.25rem);
 }
 
 /* Témoignages clients */
@@ -1517,7 +1517,7 @@ body.dark-theme .header {
 .zones-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: var(--grid-gap);
+  gap: calc(var(--grid-gap) + 0.25rem);
 }
 
 .zone-card {
@@ -1614,7 +1614,7 @@ body.dark-theme .header {
 .services-grid-visual {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--grid-gap);
+  gap: calc(var(--grid-gap) + 0.25rem);
 }
 
 .service-card-visual {
@@ -1706,7 +1706,7 @@ body.dark-theme .header {
 .references-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--grid-gap);
+  gap: calc(var(--grid-gap) + 0.25rem);
 }
 
 .reference-card {
@@ -2261,7 +2261,7 @@ body:has(.nav-links.active) {
 :root { --brand-orange: #FF8C42; }
 
 /* Generic content cards grid */
-.content-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+.content-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
 .content-card { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 12px; padding: 1.25rem 1.25rem; box-shadow: 0 6px 18px rgba(0,0,0,.06); text-align: center; display: flex; flex-direction: column; align-items: center; }
 .content-card h3.content-card-title { font-size: 1.1rem; margin: 0 0 .5rem; font-weight: 800; text-align: center; }
 .content-card p { margin: .5rem 0; text-align: center; }
@@ -2271,7 +2271,7 @@ body:has(.nav-links.active) {
 .content-card strong, .faq-item strong { color: var(--brand-orange); font-weight: 800; }
 
 /* FAQ as cards (match home style, but cardified) */
-.faq-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.faq-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
 .faq-item { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 12px; padding: 1rem 1.1rem; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
 .faq-item .faq-question { margin: 0 0 .5rem; font-weight: 800; font-size: 1.05rem; }
 
