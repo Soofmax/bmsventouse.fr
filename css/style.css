@@ -2473,6 +2473,17 @@ body:has(.nav-links.active) {
 .band{background:#f9fafb;padding:2.25rem 0}
 .band--alt{background:#f6f7f9}
 
+/* Subtle vertical rhythm between adjacent sections (light breathing space) */
+.section + .section,
+.section + .band,
+.band + .section,
+.band + .band,
+.band + .band--alt,
+.band--alt + .band,
+.band--alt + .section {
+  margin-top: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
 /* Steps styling within ordered lists */
 .content-card ol{counter-reset:step}
 .content-card ol>li{counter-increment:step;position:relative;padding-left:2.2rem;margin:.5rem 0}
