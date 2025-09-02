@@ -193,72 +193,100 @@
 
   {
     "slug": "convoyage",
-    "metaTitle": "Convoyage de Véhicules & Décors | BMS Ventouse",
-    "metaDescription": "Transport sécurisé France entière par chauffeurs expérimentés (jusqu'à 22 m³ et poids lourds).",
-    "h1": "Convoyage de Véhicules & Décors",
+    "metaTitle": "Convoyage Véhicules & Transport Matériel Audiovisuel | BMS Ventouse - Experts France",
+    "metaDescription": "Convoyage véhicules et transport matériel audiovisuel. Chauffeurs experts, assurance 2M€, suivi GPS. Paris, Lyon, Marseille. Devis sous 1h.",
+    "h1": "Convoyage Véhicules & Transport Matériel Audiovisuel | BMS Ventouse - Experts France",
     "hero": {
       "desktop": "/images/service-convoyage-custom.jpg",
       "mobile": "/images/service-convoyage-custom.jpg",
       "alt": "Camion de convoyage matériel"
     },
-    "summary": "Transport spécialisé de véhicules et décors de Marseille à Paris, Lyon et partout en France, avec sécurité et ponctualité.",
+    "summary": "Service de convoyage véhicules et transport matériel audiovisuel avec chauffeurs expérimentés audiovisuel. Transport sécurisé tournage, suivi GPS temps réel, assurance transport audiovisuel (jusqu’à 2M€). Paris, Lyon, Marseille et France entière. Devis transport sous 1h.",
     "sections": [
       {
-        "title": "Introduction",
-        "html": "<p>Le convoyage de véhicules et de décors est essentiel à la fluidité d’un tournage, en particulier dans les grandes villes comme <strong>Marseille</strong>, <strong>Paris</strong> et <strong>Lyon</strong>. Notre service s’appuie sur des chauffeurs expérimentés, des procédures strictes de sécurité et une gestion précise du planning, partout en France.</p>"
+        "title": "Chauffeurs Experts Formés Spécifiquement Audiovisuel",
+        "html": "<h3>Sélection et Formation Rigoureuse</h3><ul><li>Recrutement de <strong>chauffeurs expérimentés audiovisuel</strong> issus du transport délicat, habitués au <strong>convoyage matériel fragile</strong> et haute valeur.</li><li>Formation spécifique aux contraintes <strong>transport matériel audiovisuel</strong> : caméras (RED, ARRI, Sony), optiques (Zeiss, Cooke, Angénieux), éclairages LED pro, matériel son.</li><li>Maîtrise de plannings serrés, <strong>livraison plateau tournage</strong> express, gestion d’urgences et d’imprévus (retakes, décalages horaires).</li><li>Discrétion absolue, <em>NDAs</em> et confidentialité des projets.</li><li>Permis adaptés (B, C, CE) et formations FIMO/FCO selon les véhicules déployés.</li><li>Expérience livraisons sites complexes : rues fermées, plateaux temporaires, zones restreintes centre‑ville.</li></ul><h3>Expertise Technique et Relationnelle</h3><ul><li>Coordination fluide avec régie et équipes plateau ; communication temps réel avec la production pendant le <strong>transport sécurisé tournage</strong>.</li><li>Manutention délicate et respect des procédures d’arrimage pour matériel fragile et haute valeur.</li><li>Adaptation aux horaires décalés (5 h – 23 h) et interventions nuit/week‑end (urgence <strong>convoyage véhicules</strong>).</li><li>Relations privilégiées avec loueurs spécialisés et connaissance fine des contraintes circulation urbaine (Paris, Lyon, Marseille).</li></ul>"
       },
       {
-        "title": "Problèmes fréquents",
-        "html": "<ul><li>Retards de livraison des véhicules ou décors</li><li>Manque d’assurance ou de vérification du matériel</li><li>Volumes ou poids mal anticipés</li><li>Absence de solutions pour déplacer des poids lourds</li><li>Itinéraires non adaptés au calendrier du tournage</li><li>Communication insuffisante avec la production</li><li>Manque de reporting sur la livraison</li></ul>"
+        "title": "Flotte Complète et Équipements Transport Professionnel",
+        "html": "<h3>Véhicules Adaptés Tous Besoins</h3><ul><li>Utilitaires légers 3–9 m³ pour <strong>convoyage matériel tournage</strong> standard.</li><li>Fourgons 12–22 m³ pour gros volumes et <strong>transport décors tournage</strong>.</li><li>Partenaires <strong>poids lourds</strong> certifiés pour matériel exceptionnel et <strong>transport véhicules techniques</strong>.</li><li>Véhicules climatisés pour électronique sensible ; hayon élévateur et rampes selon besoins.</li><li>Véhicules adaptés centre‑ville et zones restreintes pour <strong>livraison plateau tournage</strong>.</li></ul><h3>Équipements Protection et Sécurité</h3><ul><li>Sangles professionnelles certifiées, barres de charge et arrimage normé.</li><li>Mousses et protections sur mesure pour <strong>convoyage matériel fragile</strong>.</li><li>Transpalettes, diables, housses et bâches météo.</li><li>Dispositifs antivol et sécurisation véhicules.</li></ul><h3>Technologies Suivi et Communication</h3><ul><li><strong>Suivi GPS temps réel</strong> et géolocalisation précise des tournées.</li><li>Application mobile chauffeur‑client : notifications, <em>ETA</em>, incidents, validation étapes.</li><li>Photos géolocalisées au chargement/déchargement et traçabilité du matériel.</li><li>Communication directe avec équipes plateau et coordination régie.</li></ul><div class=\\\"content-card cta-card\\\" style=\\\"margin-top:1rem\\\"><div class=\\\"cta-title\\\">Urgence convoyage : Intervention immédiate</div><div class=\\\"cta-subtitle\\\">Devis transport sous 1h. Chauffeur expert au téléphone maintenant. WhatsApp Direct : réponse en 15 min.</div><div class=\\\"hero-buttons\\\"><a href=\\\"/contact/\\\" class=\\\"btn btn-primary\\\">Devis transport sous 1h</a><a href=\\\"tel:+33646005642\\\" class=\\\"btn btn-secondary\\\">Parler à un chauffeur expert</a><a href=\\\"https://wa.me/33646005642?text=Bonjour,%20urgent%20convoyage%20(Paris/Lyon/Marseille).\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\" class=\\\"btn btn-secondary\\\">WhatsApp Direct</a></div></div>"
       },
       {
-        "title": "Notre méthode",
-        "html": "<ol><li>Analyse du besoin (type/volume de véhicules, planning, villes...)</li><li>Planification itinéraire et horaires (Marseille, Paris, Lyon, ou national)</li><li>Sélection de chauffeurs expérimentés avec assurances adaptées</li><li>Chargement sécurisé du matériel/décors</li><li>Transport avec suivi temps réel si besoin</li><li>Remise sur site et reporting photo</li></ol>"
+        "title": "Assurances Tous Risques et Sécurité Transport Maximale",
+        "html": "<h3>Couverture Assurance Exceptionnelle</h3><ul><li><strong>Assurance transport audiovisuel</strong> tous risques jusqu’à 2 M€ (caméras 50k–200k€, optiques 20k–100k€, éclairages 5k–50k€ kits).</li><li>RC pro transport renforcée, couverture casse, vol et détérioration pendant <strong>transport matériel audiovisuel</strong>.</li><li>Coordination directe avec vos assureurs si nécessaire ; expertise et indemnisation accélérées.</li></ul><h3>Procédures Sécurité Strictes</h3><ul><li>Vérification état matériel avant chargement (photos horodatées) et contrôle inventaire à la livraison.</li><li>Procédures sécurisées de chargement/déchargement et arrimage.</li><li>Reporting photo et émargements systématiques.</li><li>Procédures d’urgence et gestion de crise formalisées.</li></ul>"
       },
       {
-        "title": "Livrables",
-        "html": "<ul><li>Véhicules ou décors livrés sur site</li><li>Preuves de livraison (photos, émargements...)</li><li>Assurances transport adaptées</li><li>Planning précis validé</li><li>Assistance au chargement/déchargement</li><li>Coordination avec la régie et la sécurité</li><li>Liens internes : <a href=\"/contact/\">nous contacter</a> pour un devis spécifique</li></ul>"
+        "title": "Coordination Native avec Services BMS Ventouse",
+        "html": "<ul><li>Synchronisation parfaite avec <a href=\\\"/services/ventousage/\\\">ventousage</a> et <a href=\\\"/services/plateau-gardiennage/\\\">sécurité</a> pour <strong>transport sécurisé tournage</strong>.</li><li>Planning unifié, optimisation trajets et créneaux de <strong>livraison plateau tournage</strong>.</li><li>Sécurisation du matériel dès livraison par nos équipes BMS (gardiennage/contrôle d’accès).</li><li>Responsabilité et coordination uniques ; reporting consolidé.</li><li>Optimisation des coûts par synergie de services.</li></ul>"
       },
       {
-        "title": "Nos différenciants",
-        "html": "<ul><li>Réseau de chauffeurs professionnels partout en France</li><li>Gestion de tous types de véhicules (jusqu'à 22 m³, poids lourds via partenaires)</li><li>Assurances adaptées à l’audiovisuel</li><li>Ponctualité et reporting transparent</li><li>Adaptation aux contraintes du plan de tournage</li></ul>"
+        "title": "Zones d’intervention et Capacités",
+        "html": "<p>Convoyage assuré à <strong>Paris</strong>, <strong>Lyon</strong>, <strong>Marseille</strong> et sur toute la France (Bordeaux, Lille, Strasbourg…). Déploiement express selon contraintes. Gestion des <strong>convoyage véhicules</strong> et du <strong>transport matériel audiovisuel</strong> pour longs métrages, séries, publicité, documentaire et événements.</p>"
       },
       {
-        "title": "Zones d’intervention",
-        "html": "<p>Convoyage assuré à <strong>Marseille</strong>, <strong>Paris</strong>, <strong>Lyon</strong> et sur tout le territoire national. Pour organiser un transport spécifique, <a href=\"/contact/\">contactez-nous</a>.</p>"
-      },
-      {
-        "title": "Liens utiles",
-        "html": "<p>Consultez également nos <a href=\"/realisations/\">références</a> ou <a href=\"/contact/\">demandez un devis transport</a>.</p>"
+        "title": "Liens utiles et services complémentaires",
+        "html": "<p>Renforcez votre logistique : <a href=\\\"/services/ventousage/\\\">ventousage</a>, <a href=\\\"/services/plateau-gardiennage/\\\">sécurité/gardiennage</a>, <a href=\\\"/services/regie-materiel/\\\">régie & matériel</a>, <a href=\\\"/services/loges-confort/\\\">loges & confort</a>. Voir aussi nos <a href=\\\"/realisations/\\\">références</a> et <a href=\\\"/contact/\\\">demander un devis</a>.</p>"
       }
     ],
     "features": [
-      "Chauffeurs expérimentés",
-      "Assurances adaptées audiovisuel",
-      "Gestion volume/poids lourds",
-      "Ponctualité France entière",
-      "Reporting et suivi"
+      "Chauffeurs sélectionnés et formés spécifiquement audiovisuel",
+      "Convoyage véhicules : 3 à 22 m³ et partenaires poids lourds",
+      "Transport matériel audiovisuel fragile et haute valeur",
+      "Assurance transport audiovisuel tous risques jusqu’à 2 M€",
+      "Suivi GPS temps réel et reporting photo systématique",
+      "Transport sécurisé tournage et livraisons sites atypiques",
+      "Coordination native ventousage/sécurité BMS",
+      "Intervention urgence 24/7 France entière",
+      "Communication temps réel avec production/régie"
     ],
     "faq": [
       {
-        "q": "Quels types de véhicules pouvez-vous convoyer ?",
-        "a": "Tous types : utilitaires, camions, poids lourds (via partenaires), véhicules techniques, voitures régie ou comédiens."
+        "q": "Vos chauffeurs sont-ils spécialement formés au matériel audiovisuel ?",
+        "a": "Oui. Nos chauffeurs expérimentés audiovisuel sont formés aux contraintes du transport matériel audiovisuel, aux plannings serrés et à la manutention délicate."
       },
       {
-        "q": "Votre équipe s’occupe-t-elle du chargement/déchargement ?",
-        "a": "Oui, nous assistons la régie pour optimiser le temps de chargement et sécuriser le matériel."
+        "q": "Comment garantissez-vous la sécurité du matériel haute valeur ?",
+        "a": "Arrimage normé, protections sur mesure, assurance transport audiovisuel jusqu’à 2 M€, suivi GPS temps réel et reporting photo au chargement/déchargement."
       },
       {
-        "q": "Comment garantir la ponctualité sur des sites sensibles ?",
-        "a": "Nous prévoyons des marges et suivons la circulation en temps réel ; la sécurité est coordonnée avec la régie."
+        "q": "Proposez-vous le transport de véhicules techniques lourds ?",
+        "a": "Oui. Via des partenaires poids lourds certifiés, nous assurons transport véhicules techniques, générateurs, grues et volumes exceptionnels."
       },
       {
-        "q": "Les transports sont-ils assurés ?",
-        "a": "Oui, chaque prestation inclut une assurance adaptée aux risques du secteur audiovisuel."
+        "q": "Le suivi GPS temps réel est-il disponible pendant le transport ?",
+        "a": "Oui. Suivi GPS temps réel avec notifications d’étapes et communication directe avec le chauffeur et la régie."
       },
       {
-        "q": "Le service est-il disponible sur toute la France ?",
-        "a": "Oui, de Marseille à Paris, Lyon et partout en France."
+        "q": "Comment gérez-vous les livraisons sur sites difficiles d’accès ?",
+        "a": "Repérage préalable, coordination avec ventousage/sécurité, choix de véhicules adaptés centre-ville et créneaux optimisés pour la livraison plateau tournage."
+      },
+      {
+        "q": "Vos assurances couvrent-elles le matériel jusqu’à quelle valeur ?",
+        "a": "Jusqu’à 2 M€ pour le matériel audiovisuel selon configuration. Nous coordonnons si besoin avec vos assureurs pour des couvertures spécifiques."
+      },
+      {
+        "q": "Intervenez-vous en urgence la nuit et les weekends ?",
+        "a": "Oui. Urgence convoyage 24/7, y compris nuits et weekends, avec cellule d’astreinte et dispatch immédiat."
+      },
+      {
+        "q": "Comment coordonnez-vous avec le ventousage et la sécurité ?",
+        "a": "Planning unifié et communication continue. Neutralisation de stationnement par nos équipes ventousage et sécurisation par nos agents sur site."
+      },
+      {
+        "q": "Quels types de véhicules pouvez-vous convoyer ?",
+        "a": "Utilitaires légers, fourgons 12–22 m³, et via partenaires poids lourds pour matériels exceptionnels, ainsi que des véhicules techniques dédiés."
+      },
+      {
+        "q": "Assurez-vous la manutention et la protection du matériel ?",
+        "a": "Oui, nous apportons sangles, mousses, barres de charge, housses météo et le matériel de manutention nécessaire."
+      },
+      {
+        "q": "Comment gérez-vous la ponctualité sur des sites sensibles ?",
+        "a": "Itinéraires optimisés, marges intégrées, suivi trafic et coordination avec la régie et la sécurité pour tenir les créneaux imposés."
+      },
+      {
+        "q": "Le service est-il disponible partout en France ?",
+        "a": "Oui. Paris, Lyon, Marseille et France entière, avec dispatch rapide et flotte adaptée au besoin."
       }
     ]
   },
