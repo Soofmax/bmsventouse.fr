@@ -5,7 +5,7 @@ module.exports = {
       url: [
         "http://localhost:8080/",
         "http://localhost:8080/services/ventousage/",
-        "http://localhost:8080/services/securite-gardiennage/",
+        "http://localhost:8080/services/plateau-gardiennage/",
         "http://localhost:8080/services/convoyage/",
         "http://localhost:8080/realisations/",
         "http://localhost:8080/contact/",
