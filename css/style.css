@@ -4,6 +4,7 @@
    ========================================= */
 
 /* Modular components */
+@import url('./components/utilities.css');
 @import url('./components/buttons.css');
 @import url('./components/cards.css');
 @import url('./components/grids.css');
@@ -591,25 +592,7 @@ input, button, textarea, select {
 
 /* 6. RESPONSIVE DESIGN */
 
-/* Utility classes for grid/flex responsive layouts */
-.grid {
-  display: grid !important;
-  gap: var(--grid-gap, 1.5rem);
-}
 
-.flex {
-  display: flex !important;
-  gap: var(--grid-gap, 1.5rem);
-}
-
-.flex-center {
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-.flex-col {
-  flex-direction: column !important;
-}
 
 @media (min-width: 600px) {
   .hero-buttons {
