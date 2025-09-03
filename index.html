@@ -513,6 +513,24 @@
    SCRIPTS
    ========================================================================== -->
 <script src="/js/script.js" defer></script>
+<script>
+  // Make entire homepage service cards clickable (stretched card)
+  (function () {
+    var cards = document.querySelectorAll('.services-grid .service-card');
+    cards.forEach(function (card) {
+      // Priority: h3 > any /services/ link > first link
+      var primary = card.querySelector('h3 a') ||
+                    card.querySelector('a[href^="/services/"]') ||
+                    card.querySelector('a');
+      if (!primary) return;
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('a')) return; // preserve inner links
+        window.location.href = primary.getAttribute('href');
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>

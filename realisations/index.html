@@ -352,6 +352,22 @@
 
 <!-- SCRIPTS -->
 <script src="/js/script.js" defer></script>
+<script>
+  // Make entire reference cards clickable by redirecting to a relevant inner link
+  (function () {
+    var cards = document.querySelectorAll('.references-grid .reference-card');
+    cards.forEach(function (card) {
+      // Prefer a link to a service page if present, else fallback to the first link in the card
+      var primary = card.querySelector('a[href^="/services/"]') || card.querySelector('a');
+      if (!primary) return; // leave non-linked cards as-is
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('a')) return; // keep inner links behavior
+        window.location.href = primary.getAttribute('href');
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
