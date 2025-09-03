@@ -6,6 +6,7 @@
 /* Modular components */
 @import url('./tokens.css');
 @import url('./base.css');
+@import url('./components/accessibility.css');
 @import url('./layout.css');
 @import url('./components/utilities.css');
 @import url('./components/buttons.css');
@@ -247,13 +248,7 @@
 }
 
 
-@media (prefers-reduced-motion: reduce) {
-  .whatsapp-float::after { animation: none !important; }
-  .references-carousel .carousel-slide,
-  .service-card,
-  .reference-card,
-  .service-card-visual { transition: none !important; }
-}
+
 
 @keyframes pulse {
   0% {
@@ -801,24 +796,7 @@ mark, .highlight {
 
 /* ================== FONCTIONNALITÉS NOUVELLES ================== */
 
-/* === ACCESSIBILITÉ SKIP-LINK & FOCUS-VISIBLE === */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 8px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  z-index: 100;
-  transition: top .3s;
-}
-.skip-link:focus {
-  top: 8px;
-}
 
-:focus:not(:focus-visible) {
-  outline: none;
-}
 .hero-description-mobile {
   display: none;
 }
