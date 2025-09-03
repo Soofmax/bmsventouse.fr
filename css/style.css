@@ -6,6 +6,7 @@
 /* Modular components */
 @import url('./components/buttons.css');
 @import url('./components/cards.css');
+@import url('./components/grids.css');
 @import url('./components/hero.css');
 @import url('./components/nav.css');
 @import url('./components/footer.css');
@@ -310,12 +311,7 @@ input, button, textarea, select {
   width: 100%;
 }
 
-/* Grille responsive pour services/réalisations */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: calc(var(--grid-gap) + 0.25rem);
-}
+
 
 /* Témoignages clients */
 .testimonial-card {
@@ -694,12 +690,7 @@ input, button, textarea, select {
   }
 }
 
-/* Statistiques sous forme de cartes */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: var(--grid-gap);
-}
+
 
 .stat-item {
   background-color: var(--color-light);
@@ -925,12 +916,7 @@ input, button, textarea, select {
   right: 0;
 }
 
-/* Zone d'intervention cartes */
-.zones-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: calc(var(--grid-gap) + 0.25rem);
-}
+
 
 
 
@@ -986,21 +972,11 @@ input, button, textarea, select {
   color: var(--color-primary);
 }
 
-/* Cartes de services améliorées */
-.services-grid-visual {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: calc(var(--grid-gap) + 0.25rem);
-}
 
 
 
-/* Cartes de références améliorées */
-.references-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: calc(var(--grid-gap) + 0.25rem);
-}
+
+
 
 
 
