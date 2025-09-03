@@ -156,7 +156,13 @@ a {
   color: var(--color-link);
   font-weight: var(--font-weight-bold);
   text-decoration: underline;
- subtitle a:hover, .content-container a:hover, .content-card a:not(.btn):hover, p a:hover {
+}
+
+.section-subtitle a:hover,
+.content-container a:hover,
+.content-card a:not(.btn):hover,
+p a:hover,
+main .section a:not(.btn):not(.nav-link):hover {
   color: var(--color-primary-dark);
 }
 
@@ -1681,7 +1687,8 @@ body.dark-theme .header {
   text-align: left;
   display: inline-block;
   margin-left: auto;
-  margin
+  margin-right: auto;
+}
 
 .service-card-visual-content ul li {
   position: relative;
