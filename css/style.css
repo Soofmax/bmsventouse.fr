@@ -19,6 +19,7 @@
 @import url('./components/references-logos.css');
 @import url('./components/back-to-top.css');
 @import url('./components/whatsapp.css');
+@import url('./components/scroll-progress.css');
 @import url('./components/pagination.css');
 @import url('./components/grids.css');
 @import url('./components/hero.css');
@@ -558,17 +559,7 @@
 
 /* ================== FONCTIONNALITÉS NOUVELLES ================== */
 
-/* 1. Animation de progression de scroll */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  background: var(--color-primary);
-  width: 0;
-  z-index: var(--z-header);
-  transition: width 0.1s;
-}
+
 
 /* 2. Mode sombre toggle */
 .theme-toggle {
