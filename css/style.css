@@ -6,6 +6,7 @@
 /* Modular components */
 @import url('./tokens.css');
 @import url('./base.css');
+@import url('./layout.css');
 @import url('./components/utilities.css');
 @import url('./components/buttons.css');
 @import url('./components/cards.css');
@@ -44,35 +45,9 @@
 
 
 /* 3. STRUCTURE PRINCIPALE (Header, Nav, Footer) */
-.container {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 clamp(15px, 3vw, 20px);
-}
 
-.section { 
-  padding: var(--spacing-section) 0; 
-  position: relative;
-}
 
-.section-title {
-  font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-black);
-  text-align: center;
-  margin-bottom: 1rem;
-  color: var(--color-dark);
-}
 
-.section-subtitle {
-  font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 4rem;
-  color: var(--color-text-muted);
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 
 
