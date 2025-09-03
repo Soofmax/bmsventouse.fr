@@ -19,6 +19,7 @@
 @import url('./components/references-logos.css');
 @import url('./components/back-to-top.css');
 @import url('./components/whatsapp.css');
+@import url('./components/pagination.css');
 @import url('./components/grids.css');
 @import url('./components/hero.css');
 @import url('./components/nav.css');
@@ -667,23 +668,7 @@ mark, .highlight {
   font-weight: var(--font-weight-medium);
 }
 
-/* 7. Pagination améliorée */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 2rem 0;
-}
 
-.page-item {
-  list-style: none;
-}
-
-.page-link {
-  display: flex;
-  align-items: center;
-}
 
 /* ================== SECTION FAQ SEO ================== */
 
