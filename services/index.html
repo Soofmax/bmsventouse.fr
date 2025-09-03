@@ -463,6 +463,21 @@
    SCRIPTS
    ========================================================================== -->
 <script src="/js/script.js" defer></script>
+<script>
+  // Make entire service cards clickable by redirecting to their primary service link
+  (function () {
+    var cards = document.querySelectorAll('.services-grid-visual .service-card-visual');
+    cards.forEach(function (card) {
+      var link = card.querySelector('.service-card-visual-content h3 a') || card.querySelector('.service-card-visual-image a');
+      if (!link) return;
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('a')) return; // keep inner links working
+        window.location.href = link.getAttribute('href');
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
