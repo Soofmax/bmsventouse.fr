@@ -4,9 +4,13 @@
    ========================================= */
 
 /* Modular components */
+@import url('./components/utilities.css');
 @import url('./components/buttons.css');
 @import url('./components/cards.css');
+@import url('./components/grids.css');
 @import url('./components/hero.css');
+@import url('./components/nav.css');
+@import url('./components/footer.css');
 
 /* 1. VARIABLES GLOBALES & FONDATIONS */
 :root {
