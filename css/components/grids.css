@@ -37,10 +37,3 @@
   gap: var(--grid-gap);
 }
 
-/* Utilities: generic container centering */
-.container {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 clamp(15px, 3vw, 20px);
-}
