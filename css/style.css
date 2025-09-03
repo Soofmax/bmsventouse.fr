@@ -2522,6 +2522,40 @@ body:has(.nav-links.active) {
   color: var(--color-text-muted);
   text-shadow: none;
   margin: 0;
+  text-align: center;
+}
+
+/* Uniform text width/alignment inside cards for perfect harmony */
+.content-card > * {
+  max-width: min(72ch, 100%);
+}
+
+.content-card p,
+.content-card ul,
+.content-card ol,
+.content-card blockquote {
+  max-width: min(72ch, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Keep lists visually centered as a block while text stays left-aligned */
+.content-card ul,
+.content-card ol {
+  display: inline-block;
+}
+
+/* Consistent vertical rhythm inside cards */
+.content-card p + p { margin-top: 0.6rem; }
+.content-card p + ul,
+.content-card p + ol,
+.content-card ul + p,
+.content-card ol + p { margin-top: 0.7rem; }
+
+/* Preserve centered hero summary */
+.content-card--hero p {
+  text-align: center;
 }
 
 /* Hero gradient overlay for better text contrast */
