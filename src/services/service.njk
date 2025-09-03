@@ -24,8 +24,9 @@ eleventyComputed:
   "width": 1920,
   "height": 1080
 } %}
-  <h1>{{ service.h1 }}</h1>
-  <p>{{ service.summary }}</p>
+  <div class="content-cards">
+    {% contentCard '', '<h1>' ~ service.h1 ~ '</h1><p>' ~ service.summary ~ '</p>', 'content-card--hero' %}
+  </div>
 {% endhero %}
 
 <section class="band">
@@ -56,9 +57,9 @@ eleventyComputed:
 <section class="band">
   <div class="container">
     {% sectionHeader 'FAQ', 'Questions fréquentes', '' %}
-    <div class="faq-container">
+    <div class="content-cards">
       {% for q in service.faq %}
-        {{ macros.faqItem(q.q, q.a) }}
+        {% contentCard q.q, q.a, 'faq-card' %}
       {% endfor %}
     </div>
   </div>
