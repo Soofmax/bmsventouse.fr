@@ -2497,6 +2497,33 @@ body:has(.nav-links.active) {
 .content-card.cta-card .cta-subtitle{margin:0 0 .8rem}
 .content-card.cta-card .hero-buttons{display:inline-flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
 
+/* Hero variant card: no shadow, larger padding, subtle translucent background for readability */
+.content-card--hero{
+  background: rgba(255,255,255,0.94);
+  border: 1px solid var(--card-border);
+  border-top-color: rgba(255,140,66,.25);
+  border-radius: var(--radius-12);
+  box-shadow: none;
+  padding: clamp(1.5rem, 3vw, 2.25rem) clamp(1.25rem, 3vw, 2rem);
+  max-width: min(920px, 92vw);
+  margin: 0 auto;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.hero .content-card--hero h1{
+  color: var(--color-dark);
+  text-shadow: none;
+  font-size: var(--font-size-h1);
+  line-height: 1.15;
+  margin: 0 0 .5rem;
+}
+.hero .content-card--hero p{
+  color: var(--color-text-muted);
+  text-shadow: none;
+  margin: 0;
+}
+
 /* Hero gradient overlay for better text contrast */
 .hero{position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.15) 40%,rgba(0,0,0,0) 100%);pointer-events:none}
