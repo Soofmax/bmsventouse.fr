@@ -17,53 +17,13 @@
 @import url('./components/faq.css');
 @import url('./components/references.css');
 @import url('./components/back-to-top.css');
+@import url('./components/whatsapp.css');
 @import url('./components/grids.css');
 @import url('./components/hero.css');
 @import url('./components/nav.css');
 @import url('./components/footer.css');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Accessibilité améliorée */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Badges */
 .badge {
@@ -83,7 +43,6 @@
 /* 5. SECTIONS SPÉCIFIQUES (Hero, FAQ, Réalisations, etc.) */
 
 
-
 /* Centrage du bouton CTA "Découvrir tous nos services" */
 .cta-container {
   display: flex;
@@ -92,8 +51,6 @@
   margin-top: 2rem;
   width: 100%;
 }
-
-
 
 /* Témoignages clients */
 .testimonial-card {
@@ -305,49 +262,7 @@
   padding-bottom: 2rem;
 }
 
-/* 5bis. BOUTON WHATSAPP FLOTTANT */
-.whatsapp-float {
-  position: fixed;
-  bottom: var(--whatsapp-margin);
-  right: var(--whatsapp-margin);
-  width: var(--whatsapp-size);
-  height: var(--whatsapp-size);
-  background: #25d366;
-  color: white;
-  border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.20);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: var(--z-whatsapp);
-  font-size: 2.3rem;
-  transition: transform 0.2s, box-shadow 0.2s, bottom 0.2s;
-  cursor: pointer;
-  text-decoration: none;
-}
 
-.whatsapp-float:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.23);
-  background: #20ba5a;
-}
-
-.whatsapp-float i {
-  pointer-events: none;
-}
-
-/* Animation de pulse pour attirer l'attention */
-.whatsapp-float::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #25d366;
-  opacity: 0.7;
-  z-index: -1;
-  animation: pulse 2s infinite;
-}
 @media (prefers-reduced-motion: reduce) {
   .whatsapp-float::after { animation: none !important; }
   .references-carousel .carousel-slide,
@@ -424,14 +339,6 @@
     display: block;
     padding: 0.8rem 0;
   }
-
-  
-
-  
-
-  
-
-  
 
   .hero-buttons {
     gap: 0.8rem !important;
@@ -596,12 +503,6 @@
   transform: translateX(3px);
 }
 
-
-
-
-
-
-
 /* Légal sections sous forme de cartes */
 .legal-section {
   background-color: var(--color-light);
@@ -618,8 +519,6 @@
   color: var(--color-primary);
   font-weight: var(--font-weight-bold);
 }
-
-
 
 /* Présentation des clauses légales sous forme de cartes (Mentions Légales) */
 .content-container > h2[id$='title'] {
@@ -1115,6 +1014,3 @@ mark, .highlight {
 
 /* Slightly larger grid on wide screens */
 @media (min-width: 992px){.content-cards{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}}
-
-
-
