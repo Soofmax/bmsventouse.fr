@@ -16,7 +16,6 @@
 @import url('./components/nav.css');
 @import url('./components/footer.css');
 
-/* 1. VARIABLES GLOBALES & FONDATIONS */
 
 
 
@@ -24,7 +23,8 @@
 
 
 
-/* 2. RESET & ACCESSIBILITÉ */
+
+
 
 
 
@@ -44,7 +44,6 @@
 
 
 
-/* 3. STRUCTURE PRINCIPALE (Header, Nav, Footer) */
 
 
 
@@ -54,7 +53,8 @@
 
 
 
-/* 4. COMPOSANTS PRINCIPAUX (Boutons, Cartes, etc.) */
+
+
 
 
 
