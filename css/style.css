@@ -3,6 +3,11 @@
    Variables, Reset, Layout, Components
    ========================================= */
 
+/* Modular components */
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/hero.css');
+
 /* 1. VARIABLES GLOBALES & FONDATIONS */
 :root {
   /* Couleurs principales */
@@ -534,10 +539,6 @@ body.dark-theme .header {
 
 
 /* 4. COMPOSANTS PRINCIPAUX (Boutons, Cartes, etc.) */
-/* Modular components */
-@import url('./components/buttons.css');
-@import url('./components/cards.css');
-@import url('./components/hero.css');
 
 
 
