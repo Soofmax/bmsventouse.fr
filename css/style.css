@@ -13,6 +13,7 @@
 @import url('./components/cta.css');
 @import url('./components/case-study.css');
 @import url('./components/legal.css');
+@import url('./components/contact.css');
 @import url('./components/faq.css');
 @import url('./components/references.css');
 @import url('./components/back-to-top.css');
@@ -601,25 +602,6 @@
 
 
 
-/* Note d'intervention nationale sur la page contact */
-.coverage-note-card {
-  background-color: var(--color-light);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-large);
-  box-shadow: var(--box-shadow-base);
-  padding: 1.5rem 2rem;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.95rem;
-  color: var(--color-text);
-  transition: var(--transition-base);
-}
-
-.coverage-note-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--box-shadow-hover);
-}
-
 /* Légal sections sous forme de cartes */
 .legal-section {
   background-color: var(--color-light);
@@ -636,28 +618,6 @@
   color: var(--color-primary);
   font-weight: var(--font-weight-bold);
 }
-
-/* Contact cards améliorées */
-.contact-card {
-  background-color: var(--color-light);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-large);
-  box-shadow: var(--box-shadow-base);
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.contact-card .contact-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-  color: var(--color-primary);
-}
-
-
-
-
-
-
 
 
 
@@ -684,13 +644,6 @@
 }
 
 /* Avantages inclus */
-
-
-
-
-
-
-
 
 @media (max-width: 600px) {
   :root {
