@@ -432,6 +432,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // --------------------------------------------------------------------------
+  // MODULE: GOOGLE ANALYTICS 4 (CTA tracking non bloquant, Consent Mode compatible)
+  // --------------------------------------------------------------------------
+  const setupGAEvents = () => {
+    const isGAReady = () => typeof window.gtag === 'function';
+
+    const getLocation = (el) => {
+      // Try to infer a meaningful location from context
+      let node = el;
+      while (node && node !== document.body) {
+        if (node.classList) {
+          if (node.classList.contains('hero')) return 'hero';
+          if (node.classList.contains('cta-section')) return 'cta-section';
+          if (node.classList.contains('footer')) return 'footer';
+          if (node.classList.contains('header')) return 'header';
+          if (node.classList.contains('service-card')) return 'services-card';
+          if (node.classList.contains('reference-card')) return 'references-card';
+        }
+        if (node.id) return node.id;
+        node = node.parentElement;
+      }
+      return 'generic';
+    };
+
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a, button');
+      if (!a) return;
+
+      // Detect CTA-like elements
+      const isButton = a.classList && a.classList.contains('btn');
+      const inHeroButtons = a.closest && a.closest('.hero-buttons');
+      const inCTASection = a.closest && a.closest('.cta-section');
+
+      const href = a.getAttribute && a.getAttribute('href') || '';
+      const isWA = /wa\.me|api\.whatsapp\.com/i.test(href || '');
+      const isTel = (href || '').startsWith('tel:');
+      const isMail = (href || '').startsWith('mailto:');
+
+      if (!isButton && !inHeroButtons && !inCTASection && !isWA && !isTel && !isMail) {
+        return; // not a CTA
+      }
+
+      if (!isGAReady()) return;
+
+      const cta_label = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 120);
+      const cta_location = getLocation(a);
+      const cta_url = href || (a.tagName === 'BUTTON' ? '' : '');
+
+      try {
+        window.gtag('event', 'cta_click', {
+          cta_label,
+          cta_location,
+          cta_url
+        });
+      } catch (_) {
+        // swallow to avoid breaking UX
+      }
+    }, { capture: true });
+  };
+
   // ==========================================================================
   // INITIALISATION DE TOUS LES MODULES
   // ==========================================================================
