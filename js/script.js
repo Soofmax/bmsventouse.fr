@@ -503,6 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupBackToTop();
     setupThemeToggle();
     setupAnalytics();
+    setupGAEvents();
     console.log('🚀 BMS Ventouse - Tous les modules initialisés avec succès');
   } catch (error) {
     console.error("Erreur lors de l'initialisation des scripts du site :", error);
