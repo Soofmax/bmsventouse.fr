@@ -125,9 +125,3 @@ input, button, textarea, select {
   }
 }
 
-/* Selection */
-::selection {
-  background-color: var(--color-primary);
-  color: white;
-  text-shadow: none;
-}

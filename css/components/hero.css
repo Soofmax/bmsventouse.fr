@@ -163,11 +163,3 @@
 .hero .hero-overlay .container { position:relative }
 .hero h1, .hero p { color:#fff; text-shadow:0 2px 8px rgba(0 0 0 / 30%) }
 
-/* Optional hero description toggles */
-.hero-description-mobile { display: none; }
-.hero-description-desktop { display: block; }
-
-@media (max-width: 768px) {
-  .hero-description-mobile { display: block; }
-  .hero-description-desktop { display: none; }
-}
