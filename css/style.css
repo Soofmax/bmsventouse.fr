@@ -25,8 +25,8 @@
 @import url('./components/theme.css');
 @import url('./components/tooltips.css');
 @import url('./components/selection.css');
+@import url('./components/badges.css');
 @import url('./components/animations.css');
-@import url('./components/stats.css');
 @import url('./components/grids.css');
 @import url('./components/hero.css');
 @import url('./components/nav.css');
@@ -34,20 +34,7 @@
 
 /* Accessibilité améliorée */
 
-/* Badges */
-.badge {
-  background: rgba(255, 140, 66, 0.1);
-  color: var(--color-primary);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: var(--font-weight-medium);
-  border: 1px solid rgba(255, 140, 66, 0.2);
-  display: inline-block;
-}
 
-.badge-netflix { background: rgba(229, 9, 20, 0.1); color: #e50914; border-color: rgba(229, 9, 20, 0.2); }
-.badge-jo { background: rgba(255, 215, 0, 0.1); color: #b7950b; border-color: rgba(255, 215, 0, 0.2); }
 
 /* 5. SECTIONS SPÉCIFIQUES (Hero, FAQ, Réalisations, etc.) */
 
