@@ -43,13 +43,7 @@
 
 /* 6. RESPONSIVE DESIGN */
 
-@media (min-width: 600px) {
-  .hero-buttons {
-    flex-direction: row;
-    gap: 1.5rem;
-    width: auto;
-  }
-}
+
 
 @media (max-width: 768px) {
   :root {
@@ -91,17 +85,7 @@
     padding: 0.8rem 0;
   }
 
-  .hero-buttons {
-    gap: 0.8rem !important;
-    margin-top: 1rem !important;
-  }
-
-  .hero-buttons .btn {
-    padding: 12px 20px !important;
-    font-size: 0.95rem !important;
-    width: 100% !important;
-    max-width: 280px !important;
-  }
+  
 
   
 }
