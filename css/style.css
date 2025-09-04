@@ -247,10 +247,7 @@
 
 
 
-.legal-section {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-}
+
 
 
 /* 6. RESPONSIVE DESIGN */
@@ -332,16 +329,6 @@
 
 
 
-/* Mise en forme de la table des matières (TOC) pour les mentions légales */
-.toc,
-.toc-card {
-  background-color: var(--color-light);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-large);
-  box-shadow: var(--box-shadow-base);
-  padding: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
+
 
 .toc ul {
