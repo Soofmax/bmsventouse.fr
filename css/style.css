@@ -36,12 +36,7 @@
 
 /* Accessibilité améliorée */
 
-
-
 /* 5. SECTIONS SPÉCIFIQUES (Hero, FAQ, Réalisations, etc.) */
-
-
-
 
 /* Témoignages clients */
 .testimonial-card {
@@ -96,15 +91,6 @@
   color: var(--color-primary); 
 }
 
-
-
-
-
-
-
-
-
-
 /* 6. RESPONSIVE DESIGN */
 
 @media (min-width: 600px) {
@@ -132,8 +118,6 @@
   .header .hamburger {
     display: flex;
   }
-
-  
 
   .case-study, .case-study.reverse {
     grid-template-columns: 1fr;
@@ -177,13 +161,3 @@
     right: 12px;
   }
 }
-
-
-
-
-
-
-
-
-
-
