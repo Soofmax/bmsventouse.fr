@@ -27,6 +27,7 @@
 @import url('./components/selection.css');
 @import url('./components/badges.css');
 @import url('./components/animations.css');
+@import url('./components/stats.css');
 @import url('./components/grids.css');
 @import url('./components/hero.css');
 @import url('./components/hero-descriptions.css');
@@ -40,14 +41,7 @@
 /* 5. SECTIONS SPÉCIFIQUES (Hero, FAQ, Réalisations, etc.) */
 
 
-/* Centrage du bouton CTA "Découvrir tous nos services" */
-.cta-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  width: 100%;
-}
+
 
 /* Témoignages clients */
 .testimonial-card {
