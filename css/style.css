@@ -45,47 +45,4 @@
 
 
 
-@media (max-width: 768px) {
-  :root {
-    --header-height: 70px;
-    --spacing-section: 60px;
-  }
 
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .header .nav-links {
-    display: none;
-  }
-
-  .header .hamburger {
-    display: flex;
-  }
-
-  .case-study, .case-study.reverse {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .case-study.reverse .case-study-image,
-  .case-study.reverse .case-study-content {
-    grid-column: 1;
-  }
-
-  .case-study-image {
-    order: -1;
-  }
-
-  .nav-link.btn {
-    width: 100%;
-    margin: 0.3rem 0;
-    text-align: center;
-    display: block;
-    padding: 0.8rem 0;
-  }
-
-  
-
-  
-}
