@@ -74,7 +74,11 @@
   z-index: var(--z-above);
   position: relative;
   padding: 0 clamp(15px, 5vw, 40px);
-  animation: fadeInUp 1s ease-out;
+}
+
+/* Optional: enable entrance animation only when explicitly requested */
+.hero--animate .hero-overlay .container {
+  animation: fadeInUp 0.6s ease-out;
 }
 
 @keyframes fadeInUp {
