@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // Production logging flag
+  const DEBUG = false;
+
   // --------------------------------------------------------------------------
   // MODULE: MENU HAMBURGER & ACCESSIBILITÉ
   // --------------------------------------------------------------------------
@@ -504,7 +507,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setupGAEvents();
     
   } catch (error) {
-    console.error("Erreur lors de l'initialisation des scripts du site :", error);
+    if (DEBUG) {
+      console.error("Erreur lors de l'initialisation des scripts du site :", error);
+    }
   }
 });
 
