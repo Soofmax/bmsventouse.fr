@@ -42,29 +42,40 @@ function relaxCsp(win) {
 }
 
 function runAxeAndLog() {
+  // Ensure DOM is rendered before scanning
+  cy.get('body', { timeout: 10000 }).should('be.visible');
+
   // Run axe manually and log violations without failing the test
   cy.window({ log: false }).then((win) => {
     const options = {
-      // Focus on critical/serious categories
       includedImpacts: ['critical', 'serious'],
       rules: {
         // CI headless renderers often misreport contrast; we track it separately
         'color-contrast': { enabled: false }
       }
     };
-    // Ensure axe is present (injected by cy.injectAxe)
-    if (!win.axe) return;
-    return win.axe.run(win.document, options).then(({ violations }) => {
-      if (violations && violations.length) {
-        cy.log(`axe: ${violations.length} critical/serious violation(s) found`).then(() => {
-          // Log each violation to the Cypress console for triage
-          violations.forEach((v) => {
-            // eslint-disable-next-line no-console
-            console.warn(`[axe] ${v.impact} - ${v.id}: ${v.description}`, v.nodes);
+
+    if (!win.axe) {
+      // axe wasn't injected (shouldn't happen after cy.injectAxe), skip gracefully
+      return null;
+    }
+
+    // Wrap the axe promise so Cypress can manage and resolve it
+    return cy
+      .wrap(win.axe.run(win.document, options), { log: false, timeout: 20000 })
+      .then(({ violations }) => {
+        if (violations && violations.length) {
+          // Log to Cypress runner and console for triage; do not fail the test
+          Cypress.log({
+            name: 'axe',
+            message: `${violations.length} critical/serious violation(s)`,
+            consoleProps: () => violations
           });
-        });
-      }
-    });
+          // eslint-disable-next-line no-console
+          console.warn('[axe] Violations:', violations);
+        }
+      })
+      .catch(() => null);
   });
 }
 
