@@ -74,8 +74,7 @@ function runAxeAndLog() {
           // eslint-disable-next-line no-console
           console.warn('[axe] Violations:', violations);
         }
-      })
-      .catch(() => null);
+      });
   });
 }
 
