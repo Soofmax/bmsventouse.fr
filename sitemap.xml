@@ -90,4 +90,9 @@
     <priority>0.60</priority>
     <changefreq>monthly</changefreq>
   </url>
+<url>
+    <loc>https://www.bmsventouse.fr/services/logistique-evenementielle/</loc>
+    <priority>0.60</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
