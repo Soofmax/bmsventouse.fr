@@ -41,6 +41,33 @@ function relaxCsp(win) {
   }
 }
 
+function runAxeAndLog() {
+  // Run axe manually and log violations without failing the test
+  cy.window({ log: false }).then((win) => {
+    const options = {
+      // Focus on critical/serious categories
+      includedImpacts: ['critical', 'serious'],
+      rules: {
+        // CI headless renderers often misreport contrast; we track it separately
+        'color-contrast': { enabled: false }
+      }
+    };
+    // Ensure axe is present (injected by cy.injectAxe)
+    if (!win.axe) return;
+    return win.axe.run(win.document, options).then(({ violations }) => {
+      if (violations && violations.length) {
+        cy.log(`axe: ${violations.length} critical/serious violation(s) found`).then(() => {
+          // Log each violation to the Cypress console for triage
+          violations.forEach((v) => {
+            // eslint-disable-next-line no-console
+            console.warn(`[axe] ${v.impact} - ${v.id}: ${v.description}`, v.nodes);
+          });
+        });
+      }
+    });
+  });
+}
+
 describe('A11y - Core pages', () => {
   // Exclude Mentions from axe run due to strict CSP (kept strict in prod)
   const pages = ['/', '/services/', '/realisations/', '/contact/'];
@@ -53,18 +80,7 @@ describe('A11y - Core pages', () => {
       });
 
       cy.injectAxe();
-      // Run axe against critical/serious rules; relax color-contrast to reduce flakiness under CI renderers.
-      cy.checkA11y(
-        null,
-        {
-          includedImpacts: ['critical', 'serious'],
-          rules: {
-            'color-contrast': { enabled: false }
-          }
-        },
-        null,
-        true // skipFailures (keep pipeline green; violations are logged by Cypress)
-      );
+      runAxeAndLog(); // do not fail the test; violations are logged for follow-up
     });
   });
 
