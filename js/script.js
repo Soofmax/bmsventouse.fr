@@ -25,11 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Production logging flag
+  /* EXPLICATION (2025): le flag DEBUG permet d'activer localement l'affichage d'erreurs
+     (console.error) en phase de QA sans polluer la console en production. */
   const DEBUG = false;
 
   // --------------------------------------------------------------------------
   // MODULE: MENU HAMBURGER & ACCESSIBILITÉ
   // --------------------------------------------------------------------------
+  /* EXPLICATION (2025): le menu mobile applique un focus trap (Tab/Shift+Tab) lorsque
+     le menu est ouvert, désactive le scroll de la page (overflow: hidden) et expose
+     aria-expanded sur le bouton. Le focus initial est déplacé vers le premier lien du menu
+     pour respecter l'accessibilité clavier. */
   const setupHamburgerMenu = () => {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
@@ -140,6 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   // MODULE: ANIMATIONS AU DÉFILEMENT (Intersection Observer)
   // --------------------------------------------------------------------------
+  /* EXPLICATION (2025): les éléments .animated-item sont observés via IntersectionObserver.
+     Seuil léger (threshold 0.1) et rootMargin neutre pour déclencher une seule fois puis
+     unobserve afin d'éviter des coûts inutiles. Respecte prefers-reduced-motion via CSS. */
   const setupScrollAnimations = () => {
     const animatedItems = document.querySelectorAll('.animated-item');
     if (animatedItems.length === 0) return;
@@ -162,6 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   // MODULE: FAQ INTERACTIVE
   // --------------------------------------------------------------------------
+  /* EXPLICATION (2025): création d'IDs aléatoires pour lier question/réponse,
+     ajout des rôles/attributs ARIA, et mode accordéon exclusif (fermeture des autres
+     items lors de l'ouverture d'un seul). Activation clavier (Enter/Espace). */
   const setupFaqAccordion = () => {
     const faqItems = document.querySelectorAll('.faq-item');
     
@@ -225,6 +237,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   // MODULE: CARROUSEL DES RÉFÉRENCES
   // --------------------------------------------------------------------------
+  /* EXPLICATION (2025): carrousel minimal sans dépendance externe.
+     - Largeur calculée = width + margin-right (getComputedStyle) pour un scroll précis.
+     - Préserve l’accessibilité: aria-current sur slide courant, aria-live via #carouselStatus.
+     - Respecte prefers-reduced-motion (scrollTo sans smooth).
+     - Gestes swipe basiques (touchstart/touchend) et clavier (flèches). */
   const setupReferencesCarousel = () => {
     const track = document.querySelector('.references-carousel .carousel-track');
     const slides = track ? Array.from(track.children) : [];
@@ -324,6 +341,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   // MODULE: BOUTON "RETOUR EN HAUT"
   // --------------------------------------------------------------------------
+  /* EXPLICATION (2025): affiche/cache le bouton selon scrollY>300.
+     Scroll fluide sauf si prefers-reduced-motion=reduce. */
   const setupBackToTop = () => {
     const backToTopButton = document.querySelector('.back-to-top');
     if (!backToTopButton) return;
@@ -353,6 +372,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   // MODULE: ANALYTICS (Plausible conversions tracking: CTA, WhatsApp, phone, email)
   // --------------------------------------------------------------------------
+  /* EXPLICATION (2025): envoie un événement Plausible uniquement pour les liens CTA
+     identifiés (data-cta, whatsapp, tel:, mailto:). Pour navigation standard, on empêche
+     temporairement la navigation, on envoie l’event avec callback puis on redirige.
+     Pour nouvel onglet/modificateurs, on n’empêche pas. Si plausible absent, on n’intercepte pas. */
   const setupAnalytics = () => {
     // Utility to get context: find nearest section id or class (e.g. hero)
     const getContext = (el) => {
@@ -436,6 +459,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   // MODULE: GOOGLE ANALYTICS 4 (CTA tracking non bloquant, Consent Mode compatible)
   // --------------------------------------------------------------------------
+  /* EXPLICATION (2025): instrumentation GA4 non bloquante des CTA.
+     - Détection heuristique des CTA: .btn, liens dans .hero-buttons/.cta-section, tel/mail/whatsapp.
+     - Construit cta_label/cta_location/cta_url pour gtag('event','cta_click',…).
+     - Respect natif du Consent Mode v2 (gtag est no-op sans consentement).
+     - capture:true afin d’attraper les clics avant d’éventuels handlers descendants,
+       tout en ne bloquant jamais la navigation. */
   const setupGAEvents = () => {
     const isGAReady = () => typeof window.gtag === 'function';
 
@@ -496,6 +525,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // INITIALISATION DE TOUS LES MODULES
   // ==========================================================================
+  /* EXPLICATION (2025): ordre conservateur: UI > accessibilité > analytics.
+     Chaque module est isolé et no-op si sélecteurs absents, limitant les risques en prod. */
   try {
     setupHamburgerMenu();
     setupScrollAnimations();
