@@ -43,10 +43,7 @@
 <meta name="twitter:description" content="{{ description | escape }}">
 <meta name="twitter:image" content="{{ ogImage or (site.url + '/images/hero-background-custom.jpg') }}">
 
-{# Preload hero image if provided #}
-{% if heroImage %}
-<link rel="preload" as="image" href="{{ heroImage }}" fetchpriority="high">
-{% endif %}
+{# Do not preload a single hero image to avoid preloading the wrong variant on mobile (prevents wasted bytes and improves LCP). The hero <img> uses fetchpriority/high. #}
 
 {# Preload favicon (perf) #}
 <link rel="preload" as="image" href="/favicon-32x32.png">
@@ -62,7 +59,7 @@
 <link rel="stylesheet" href="{{ '/css/style.bundle.css' | fingerprint }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=optional" rel="stylesheet">
 
 {# JSON-LD Schema.org (WebSite, Organization, BreadcrumbList) #}
 <script type="application/ld+json">
