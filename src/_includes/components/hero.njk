@@ -4,7 +4,7 @@
     {% if imageMobile %}
       <source media="(max-width: 767px)" srcset="{{ imageMobile }}" type="image/webp">
     {% endif %}
-    <img src="{{ imageDesktop }}" alt="{{ alt }}" loading="{{ loading }}" {% if fetchpriority %}fetchpriority="{{ fetchpriority }}"{% endif %} width="{{ width }}" height="{{ height }}">
+    <img src="{{ imageDesktop }}" alt="{{ alt }}" loading="{{ loading }}" {% if fetchpriority %}fetchpriority="{{ fetchpriority }}"{% else %}{% if loading == 'eager' %}fetchpriority="high"{% endif %}{% endif %} width="{{ width }}" height="{{ height }}">
   </picture>
   <div class="hero-overlay">
     <div class="container">
