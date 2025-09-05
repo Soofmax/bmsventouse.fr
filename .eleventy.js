@@ -26,13 +26,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('netlify.toml');
   eleventyConfig.addPassthroughCopy('sw.js');
 
-  // Copy static HTML site pages that live outside of src/ so they are published under _site/
-  eleventyConfig.addPassthroughCopy('index.html');
-  eleventyConfig.addPassthroughCopy('offline.html');
-  eleventyConfig.addPassthroughCopy('services');
-  eleventyConfig.addPassthroughCopy('contact');
-  eleventyConfig.addPassthroughCopy('mentions');
-  eleventyConfig.addPassthroughCopy('realisations');
+  // Copy only static pages that do not exist in Eleventy sources
+  eleventyConfig.addPassthroughCopy('offline.html'); // keep PWA fallback
   eleventyConfig.addPassthroughCopy('ventousage-paris');
   eleventyConfig.addPassthroughCopy('ventousage-lyon');
   eleventyConfig.addPassthroughCopy('ventousage-marseille');
