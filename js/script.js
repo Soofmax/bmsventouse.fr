@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navOverlay = document.getElementById('navOverlay');
 
     if (!hamburger || !navLinks || !navOverlay) {
-      console.warn("Éléments du menu mobile non trouvés. Le module ne sera pas initialisé.");
+      
       return;
     }
 
@@ -163,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
     
     if (faqItems.length === 0) {
-      console.warn("Aucun élément FAQ trouvé.");
       return;
     }
 
@@ -217,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    console.log(`✅ FAQ interactive initialisée pour ${faqItems.length} éléments`);
+    
   };
 
   // --------------------------------------------------------------------------
@@ -232,7 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (!track || slides.length === 0 || !prevBtn || !nextBtn) {
-      console.warn("Éléments du carrousel non trouvés.");
       return;
     }
 
@@ -317,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize state
     scrollToIndex(0);
-    console.log(`✅ Carrousel initialisé avec ${slides.length} éléments`);
+    
   };
 
   // --------------------------------------------------------------------------
@@ -504,7 +502,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupThemeToggle();
     setupAnalytics();
     setupGAEvents();
-    console.log('🚀 BMS Ventouse - Tous les modules initialisés avec succès');
+    
   } catch (error) {
     console.error("Erreur lors de l'initialisation des scripts du site :", error);
   }
