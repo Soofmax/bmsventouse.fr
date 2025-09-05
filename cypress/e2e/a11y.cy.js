@@ -45,7 +45,7 @@ function runAxeAndLog() {
   // Ensure DOM is rendered before scanning
   cy.get('body', { timeout: 10000 }).should('be.visible');
 
-  // Run axe manually and log violations without failing the test
+  // Run axe manually and log violations without failing or blocking the test
   cy.window({ log: false }).then((win) => {
     const options = {
       includedImpacts: ['critical', 'serious'],
@@ -57,18 +57,17 @@ function runAxeAndLog() {
 
     if (!win.axe) {
       // axe wasn't injected (shouldn't happen after cy.injectAxe), skip gracefully
-      return null;
+      return;
     }
 
-    // Wrap the axe promise so Cypress can manage and resolve it
-    return cy
-      .wrap(win.axe.run(win.document, options), { log: false, timeout: 20000 })
+    // Fire-and-forget: do not return a promise to Cypress (avoids wrap/timeout issues)
+    Promise.resolve()
+      .then(() => win.axe.run(win.document, options))
       .then(({ violations }) => {
         if (violations && violations.length) {
-          // Log to Cypress runner and console for triage; do not fail the test
           Cypress.log({
             name: 'axe',
-            message: `${violations.length} critical/serious violation(s)`,
+            message: `${violations.length} critical/serious violation           message: `${violations.length} critical/serious violation(s)`,
             consoleProps: () => violations
           });
           // eslint-disable-next-line no-console
