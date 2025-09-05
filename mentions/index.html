@@ -31,15 +31,19 @@
     <meta property="og:image" content="https://www.bmsventouse.fr/images/og-image.webp">
     
     <!-- PERFORMANCE & RESSOURCES -->
+    <!-- Préconnexion pour réduire la latence des polices externes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <!-- Correction : charger le CSS "classique" (pas preload + onload) -->
+    <!-- CSS principal: chargement classique, stable -->
     <link rel="stylesheet" href="/css/style.css">
-    <!-- FontAwesome & Google Fonts en mode feuille de style simple : -->
+    <!-- Google Fonts (Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- JS principal préchargé si besoin -->
-    <link rel="preload" href="/js/script.js" as="script">
+    <!-- Remplacement Font Awesome CDN: les icônes critiques sont en SVG inline plus bas -->
+    <!-- (on retire la feuille Font Awesome pour éviter le blocage du rendu) -->
+    <!-- JS principal: pas besoin de preload si déjà defer en bas -->
     <!-- Favicon & manifeste -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -152,7 +156,7 @@
         <picture class="hero-bg">
             <source media="(min-width: 768px )" srcset="/images/contact-hero-background-desktop.webp" type="image/webp">
             <source media="(max-width: 767px)" srcset="/images/contact-hero-background-mobile.webp" type="image/webp">
-            <img src="/images/contact-hero-background-desktop.webp" alt="Bureau moderne avec documents légaux et contrats" loading="eager">
+            <img src="/images/contact-hero-background-desktop.webp" alt="Bureau moderne avec documents légaux et contrats" loading="eager" fetchpriority="high" width="1920" height="1080" decoding="async">
         </picture>
         <div class="hero-overlay">
             <div class="container animated-item">
@@ -243,7 +247,12 @@
             <h2 class="cta-title">Besoin d'un renseignement ?</h2>
             <p class="cta-subtitle">Notre équipe est à votre disposition pour toute question sur nos services ou nos conditions.</p>
             <div class="hero-buttons">
-                <a href="/contact/" class="btn btn-primary"><i class="fas fa-envelope" aria-hidden="true"></i> Nous Contacter</a>
+                <a href="/contact/" class="btn btn-primary" aria-label="Nous Contacter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512" aria-hidden="true" focusable="false" role="img">
+                        <path fill="currentColor" d="M502.3 190.8L327.4 338.2c-21.9 18.5-54.9 18.5-76.8 0L9.7 190.8C3.9 186 0 178.8 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.8-3.9 15-9.7 19.8zM480 128H32v43.8l197.4 166.5c15.6 13.2 37.6 13.2 53.2 0L480 171.8V128zm-16 288H48c-26.5 0-48-21.5-48-48V213.8l185.4 156.4c33 27.8 81.1 27.8 114.1 0L512 213.8V368c0 26.5-21.5 48-48 48z"/>
+                    </svg>
+                    Nous Contacter
+                </a>
             </div>
         </div>
     </section>
@@ -252,7 +261,9 @@
 
 <!-- Bouton Retour en haut -->
 <a href="#" class="back-to-top" aria-label="Retour en haut de la page">
-    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" aria-hidden="true" focusable="false" role="img">
+        <path fill="currentColor" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.3V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.3L330.3 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
+    </svg>
 </a>
 
 <!-- PIED DE PAGE -->
