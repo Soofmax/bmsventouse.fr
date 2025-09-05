@@ -24,13 +24,14 @@ eleventyComputed:
   "width": 1920,
   "height": 1080
 } %}
-  <h1>{{ service.h1 }}</h1>
-  <p>{{ service.summary }}</p>
+  <div class="content-cards">
+    {% contentCard '', '<h1>' ~ service.h1 ~ '</h1><p>' ~ service.summary ~ '</p>', 'content-card--hero' %}
+  </div>
 {% endhero %}
 
 <section class="band">
   <div class="container">
-    {% sectionHeader 'Présentation', service.h1, 'A Marseille, Paris, Lyon et partout en France' %}
+    {% sectionHeader 'Présentation', service.h1, 'À Paris, Lyon, Marseille, Bordeaux, Toulouse, Nice et partout en France' %}
     <div class="content-cards">
       {% for section in service.sections %}
         {% contentCard section.title, section.html %}
@@ -56,21 +57,36 @@ eleventyComputed:
 <section class="band">
   <div class="container">
     {% sectionHeader 'FAQ', 'Questions fréquentes', '' %}
-    <div class="faq-container">
+    <div class="content-cards">
       {% for q in service.faq %}
-        {{ macros.faqItem(q.q, q.a) }}
+        {% contentCard q.q, q.a, 'faq-card' %}
       {% endfor %}
     </div>
   </div>
 </section>
 {% endif %}
 
+<!-- Services connexes (maillage interne standardisé) -->
+<section class="band">
+  <div class="container">
+    {% sectionHeader 'Services connexes', 'Vous pourriez aussi avoir besoin de…', '' %}
+    <div class="content-cards">
+      {% set candidateSlugs = ['loges-confort','plateau-gardiennage','ventousage','cantine-catering','convoyage'] %}
+      {% for s in services %}
+        {% if s.slug != service.slug and s.slug in candidateSlugs %}
+          {% contentCard s.h1, '<p>' ~ s.summary ~ ' <a href="/services/' ~ s.slug ~ '/">Découvrir</a></p>' %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="band band--alt">
   <div class="container">
     <div class="content-cards">
       {% contentCard
         '',
-        '<div class="cta-card-inner"><h2 class="cta-title">Prêt à démarrer ?</h2><p class="cta-subtitle">Nos équipes interviennent à Marseille, Paris, Lyon et partout en France.</p>' ~ (macros.ctaButtons('/contact/', 'Parler à un expert', 'https://wa.me/33646005642', 'WhatsApp Direct')) ~ '</div>',
+        '<div class="cta-card-inner"><h2 class="cta-title">Prêt à démarrer ?</h2><p class="cta-subtitle">Nos équipes interviennent à Paris, Lyon, Marseille, Bordeaux, Toulouse, Nice et partout en France.</p>' ~ (macros.ctaButtons('/contact/', 'Parler à un expert', 'https://wa.me/33646005642', 'WhatsApp Direct')) ~ '</div>',
         'cta-card'
       %}
     </div>
@@ -90,7 +106,13 @@ eleventyComputed:
       "url": "{{ site.url }}"
     },
     "areaServed": [
-      { "@type": "Country", "name": "France" }
+      { "@type": "Country", "name": "France" },
+      { "@type": "City", "name": "Paris" },
+      { "@type": "City", "name": "Lyon" },
+      { "@type": "City", "name": "Marseille" },
+      { "@type": "City", "name": "Bordeaux" },
+      { "@type": "City", "name": "Toulouse" },
+      { "@type": "City", "name": "Nice" }
     ]
   }
   </script>
@@ -120,7 +142,15 @@ eleventyComputed:
       "latitude": "{{ site.geo.latitude }}",
       "longitude": "{{ site.geo.longitude }}"
     },
-    "areaServed": { "@type": "Country", "name": "France" }
+    "areaServed": [
+      { "@type": "Country", "name": "France" },
+      { "@type": "City", "name": "Paris" },
+      { "@type": "City", "name": "Lyon" },
+      { "@type": "City", "name": "Marseille" },
+      { "@type": "City", "name": "Bordeaux" },
+      { "@type": "City", "name": "Toulouse" },
+      { "@type": "City", "name": "Nice" }
+    ]
   }
   </script>
   <script type="application/ld+json">
