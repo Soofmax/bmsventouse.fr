@@ -43,7 +43,14 @@
 <meta name="twitter:description" content="{{ description | escape }}">
 <meta name="twitter:image" content="{{ ogImage or (site.url + '/images/hero-background-custom.jpg') }}">
 
-{# Do not preload a single hero image to avoid preloading the wrong variant on mobile (prevents wasted bytes and improves LCP). The hero <img> uses fetchpriority/high. #}
+{# Responsive preload for hero when both variants are provided #}
+{% if heroImage %}
+  {% if heroImageMobile %}
+<link rel="preload" as="image" imagesrcset="{{ heroImageMobile }} 768w, {{ heroImage }} 1920w" imagesizes="100vw" fetchpriority="high">
+  {% else %}
+<link rel="preload" as="image" href="{{ heroImage }}" fetchpriority="high">
+  {% endif %}
+{% endif %}
 
 {# Preload favicon (perf) #}
 <link rel="preload" as="image" href="/favicon-32x32.png">
