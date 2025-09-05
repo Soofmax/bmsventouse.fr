@@ -32,6 +32,23 @@
   display: block;
 }
 
+/* Background-mode variant: image as CSS background so text becomes LCP */
+.hero--bg {
+  background-image: var(--hero-bg-desktop);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hide the picture element when background mode is active (safety) */
+.hero--bg .hero-bg { display: none !important; }
+
+@media (max-width: 767px) {
+  .hero--bg {
+    background-image: var(--hero-bg-mobile, var(--hero-bg-desktop));
+  }
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;

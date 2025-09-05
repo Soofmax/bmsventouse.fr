@@ -1,4 +1,14 @@
-{% macro hero(imageDesktop, imageMobile, alt, loading='eager', fetchpriority, width=1920, height=1080) %}
+{% macro hero(imageDesktop, imageMobile, alt, loading='eager', fetchpriority, width=1920, height=1080, mode='') %}
+{# Background mode: use CSS background to avoid making the image the LCP element #}
+{% if mode == 'background' %}
+<section class="hero hero--bg" style="{% if imageMobile %}--hero-bg-mobile: url('{{ imageMobile }}');{% endif %}{% if imageDesktop %} --hero-bg-desktop: url('{{ imageDesktop }}');{% endif %}">
+  <div class="hero-overlay">
+    <div class="container">
+      {{ caller() }}
+    </div>
+  </div>
+</section>
+{% else %}
 <section class="hero">
   <picture class="hero-bg">
     {% if imageMobile %}
@@ -19,4 +29,5 @@
     </div>
   </div>
 </section>
+{% endif %}
 {% endmacro %}
