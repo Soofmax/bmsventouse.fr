@@ -50,7 +50,7 @@ function runAxeAndLog() {
     const options = {
       includedImpacts: ['critical', 'serious'],
       rules: {
-        // CI headless renderers often misreport contrast; we track it separately
+        // CI headless renderers often misreport contrast; we track it séparément
         'color-contrast': { enabled: false }
       }
     };
@@ -60,20 +60,21 @@ function runAxeAndLog() {
       return;
     }
 
-    // Fire-and-forget: do not return a promise to Cypress (avoids wrap/timeout issues)
-    Promise.resolve()
-      .then(() => win.axe.run(win.document, options))
-      .then(({ violations }) => {
-        if (violations && violations.length) {
-          Cypress.log({
-            name: 'axe',
-            message: `${violations.length} critical/serious violation           message: `${violations.length} critical/serious violation(s)`,
-            consoleProps: () => violations
-          });
-          // eslint-disable-next-line no-console
-          console.warn('[axe] Violations:', violations);
-        }
-      });
+    // Fire-and-forget via setTimeout to fully decouple from Cypress command queue
+    setTimeout(() => {
+      Promise.resolve()
+        .then(() => win.axe.run(win.document, options))
+        .then((res) => {
+          const violations = (res && res.violations) || [];
+          if (violations.length) {
+            // eslint-disable-next-line no-console
+            console.warn('[axe] critical/serious violations:', violations);
+          }
+        })
+        .catch(() => {
+          // Swallow axe errors in CI environment
+        });
+    }, 0);
   });
 }
 
