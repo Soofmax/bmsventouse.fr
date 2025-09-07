@@ -144,6 +144,14 @@ a {
   color: #084298;
 }
 
+/* Désactiver soulignement dans les cartes services */
+.service-card-visual-content a {
+  text-decoration: none;
+}
+.service-card-visual-content a:hover {
+  text-decoration: underline;
+}
+
 a:hover { 
   color: var(--color-primary-dark); 
 }
