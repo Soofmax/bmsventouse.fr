@@ -24,7 +24,20 @@
 <link rel="canonical" href="{{ canonicalHref }}">
 <link rel="alternate" hreflang="fr-FR" href="{{ frHref }}">
 <link rel="alternate" hreflang="x-default" href="{{ canonicalHref }}">
-<script src="{{ '/js/early-theme.js' | fingerprint }}"></script>
+<script>
+  (function(){
+    try{
+      var k='bms-theme-preference';
+      var s=localStorage.getItem(k);
+      var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var dark=s?s==='dark':m;
+      if(dark){
+        document.documentElement.classList.add('dark-theme');
+        document.body&&document.body.classList&&document.body.classList.add('dark-theme');
+      }
+    }catch(e){ void e; }
+  })();
+</script>
 
 {# Open Graph / Facebook #}
 <meta property="og:title" content="{{ title | escape }}">
@@ -64,27 +77,7 @@
 <link rel="shortcut icon" href="/favicon.ico">
 
 {# CSS, fonts, preconnect #}
-{% if bodyClass == 'page-realisations' or bodyClass == 'page-accueil' %}
-  <style id="critical-above-fold">
-    /* Minimal critical CSS for header + promo + hero overlay to avoid CLS and paint H1 early */
-    html { text-size-adjust:100%; -webkit-text-size-adjust:100%; -moz-text-size-adjust:100%; }
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height:1.6; color:#333; background:#fff; overflow-x:hidden; }
-    .container { width:100%; max-width: min(1200px,95vw); margin:0 auto; padding:0 clamp(15px, 3vw, 20px); }
-    .promo-banner{ position:fixed; top:0; left:0; right:0; height:50px; background:#c24a00; color:#fff; display:flex; align-items:center; justify-content:center; z-index:2000; font-weight:700; font-size:1.125rem; padding:.5rem; text-align:center }
-    .promo-banner a{ color:#fff; text-decoration:underline }
-    .header{ position:relative; margin-top:50px; border-bottom:1px solid #e0e0e0; background:#fff }
-    .hero{ position:relative; min-height:420px; color:#fff; overflow:hidden }
-    .hero--bg{ background-size:cover; background-position:center; background-repeat:no-repeat }
-    .hero-overlay{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding:40px 5vw; background:linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.65) 100%) }
-    .hero-overlay .container{ padding:0 clamp(15px, 5vw, 40px) }
-    .hero h1{ font-size: clamp(2.2rem, 6vw, 3.5rem); font-weight:800; line-height:1.18; margin:0 0 1rem 0; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,.44) }
-    .hero p{ font-size: clamp(1rem, 2vw, 1.2rem); margin:0 0 2rem 0; opacity:.97; color:#fff }
-  </style>
-  <link rel="preload" href="{{ '/css/style.bundle.css' | fingerprint }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ '/css/style.bundle.css' | fingerprint }}"></noscript>
-{% else %}
-  <link rel="stylesheet" href="{{ '/css/style.bundle.css' | fingerprint }}">
-{% endif %}
+<link rel="stylesheet" href="{{ '/css/style.bundle.css' | fingerprint }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=optional" rel="stylesheet">
