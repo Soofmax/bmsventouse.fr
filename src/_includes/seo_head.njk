@@ -43,8 +43,9 @@
 <meta name="twitter:description" content="{{ description | escape }}">
 <meta name="twitter:image" content="{{ ogImage or (site.url + '/images/hero-background-custom.jpg') }}">
 
-{# Responsive preload for hero when provided (works for both <img> and CSS background heroes) #}
-{% if heroImage %}
+{# Responsive preload for hero when provided (works for both <img> and CSS background heroes).
+   Allow opt-out via heroDefer flag for pages where we intentionally delay the hero image. #}
+{% if heroImage and not heroDefer %}
   {% if heroImageMobile %}
 <link rel="preload" as="image" imagesrcset="{{ heroImageMobile }} 768w, {{ heroImage }} 1920w" imagesizes="100vw" fetchpriority="high">
   {% else %}

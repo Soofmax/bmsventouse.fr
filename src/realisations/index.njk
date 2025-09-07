@@ -8,6 +8,7 @@ description: "Découvrez nos références prestigieuses en logistique audiovisue
 ogImage: "{{ site.url }}/images/realisations-hero-background-desktop.webp"
 heroImage: "/images/realisations-hero-background-desktop.webp"
 heroMode: background
+heroDefer: true
 ---
 {% import "components/macros.njk" as macros %}
 
@@ -23,6 +24,22 @@ heroMode: background
   <h1>La Preuve par l'Action</h1>
   <p>Nous résolvons des problèmes complexes pour garantir le succès de votre production.</p>
 {% endhero %}
+
+<script>
+  (function() {
+    var markLoaded = function() {
+      var el = document.querySelector('.hero.hero--bg');
+      if (el) el.classList.add('hero--loaded');
+    };
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(markLoaded, { timeout: 1500 });
+    } else if (document.readyState === 'complete') {
+      setTimeout(markLoaded, 0);
+    } else {
+      window.addEventListener('load', function() { setTimeout(markLoaded, 0); });
+    }
+  })();
+</script>
 
 <section class="section stats-section section-alt" role="region" aria-labelledby="stats-title">
   <div class="container">
