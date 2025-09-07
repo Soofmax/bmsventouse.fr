@@ -385,17 +385,19 @@ body.dark-theme .header {
 .nav-link {
   color: var(--color-dark);
   font-weight: var(--font-weight-medium);
-  padding: 0.5rem 1.1rem;
-  border-radius: var(--border-radius-base);
+  padding: 0.5rem 0.25rem;
+  border-radius: 0;
   transition: var(--transition-base);
   position: relative;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-link:hover, .nav-link.active {
-  background-color: var(--color-primary);
-  color: var(--color-light);
-  transform: translateY(-2px);
+  background-color: transparent;
+  color: var(--color-primary);
+  transform: none;
+  border-bottom-color: var(--color-primary);
 }
 
 .nav-link.btn {
