@@ -10,7 +10,8 @@
   top: 0;
   left: 0;
   right: 0;
-  
+  /* Reserve space below the fixed promo banner to avoid layout shifts */
+  margin-top: var(--promo-banner-height);
   background: rgba(255,255,255,1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);

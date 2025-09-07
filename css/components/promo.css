@@ -2,11 +2,12 @@
    Promo Banner
    ========================================= */
 
+/* Make the promo banner fixed so it doesn't shift layout (reduces CLS) */
 .promo-banner {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: var(--z-promo);
   height: var(--promo-banner-height);
   background-color: var(--color-primary-dark);

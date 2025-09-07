@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "eleventy",
+    "build:css": "node scripts/build-css.js",
+    "build": "npm run build:css && eleventy",
     "postbuild": "npm run generate:sitemap",
     "generate:sitemap": "node scripts/ci/generate-sitemap.js",
     "dev": "eleventy --serve --port=8080",

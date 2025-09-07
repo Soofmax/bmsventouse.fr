@@ -30,7 +30,7 @@
     <meta name="twitter:image" content="https://www.bmsventouse.fr/images/realisations-hero-background-desktop.webp">
     <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
-    <link rel="preload" href="/js/script.js" as="script">
+    
     <link rel="preload" as="image" href="/images/realisations-hero-background-mobile.webp" imagesrcset="/images/realisations-hero-background-mobile.webp 767w, /images/realisations-hero-background-desktop.webp 1920w" imagesizes="100vw" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -193,17 +193,23 @@
             <h2 id="stats-title" class="sr-only">Nos statistiques clés</h2>
             <div class="stats-grid">
                 <div class="stat-item animated-item">
-                    <i class="fas fa-film stat-icon" aria-hidden="true"></i>
+                    <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 512 512" aria-hidden="true" focusable="false" role="img">
+                      <path fill="currentColor" d="M32 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32v320c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32V96zm80 0H64v64h48V96zm80 0h-48v64h48V96zm80 0h-48v64h48V96zm80 0h-48v64h48V96zm80 0h-48v64h48V96zM112 256h288v128H112V256z"/>
+                    </svg>
                     <div class="stat-number">+50</div>
                     <div class="stat-label">Productions Accompagnées depuis 2023</div>
                 </div>
                 <div class="stat-item animated-item">
-                    <i class="fas fa-clock stat-icon" aria-hidden="true"></i>
+                    <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 512 512" aria-hidden="true" focusable="false" role="img">
+                      <path fill="currentColor" d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208s208-93.1 208-208S370.9 48 256 48zm0 64a16 16 0 0 1 16 16v112h80a16 16 0 0 1 0 32H256a16 16 0 0 1-16-16V128a16 16 0 0 1 16-16z"/>
+                    </svg>
                     <div class="stat-number">24/7</div>
                     <div class="stat-label">Disponibilité Totale</div>
                 </div>
                 <div class="stat-item animated-item">
-                    <i class="fas fa-globe-europe stat-icon" aria-hidden="true"></i>
+                    <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 512 512" aria-hidden="true" focusable="false" role="img">
+                      <path fill="currentColor" d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208s208-93.1 208-208S370.9 48 256 48zm-24 64c22.1 0 40 17.9 40 40v16h24c22.1 0 40 17.9 40 40v24c0 13.3-10.7 24-24 24h-48v32h32c13.3 0 24 10.7 24 24v24c0 22.1-17.9 40-40 40h-32c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40z"/>
+                    </svg>
                     <div class="stat-number">100%</div>
                     <div class="stat-label">Territoire Français Couvert</div>
                 </div>
@@ -294,8 +300,18 @@
             <p class="cta-subtitle">Discutons de vos défis logistiques et voyons comment notre expertise peut servir votre production.</p>
             <div class="hero-buttons">
                 <!-- CTA remanié : options de contact par message ou WhatsApp -->
-                <a href="/contact/" class="btn btn-primary"><i class="fas fa-envelope" aria-hidden="true"></i> Envoyer un message</a>
-                <a href="https://wa.me/33646005642?text=Bonjour,%20j'aimerais%20obtenir%20un%20devis%20gratuit." class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Direct</a>
+                <a href="/contact/" class="btn btn-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512" aria-hidden="true" focusable="false" role="img">
+                    <path fill="currentColor" d="M502.3 190.8L327.4 338.6c-15.6 13.3-39.2 13.3-54.8 0L9.7 190.8C3.9 186.2 0 178.8 0 171V104c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v67c0 7.8-3.9 15.2-9.7 19.8zM480 416H32c-17.7 0-32-14.3-32-32V213.8l197.4 166.8c22.6 19.1 55.8 19.1 78.4 0L512 213.8V384c0 17.7-14.3 32-32 32z"/>
+                  </svg>
+                  Envoyer un message
+                </a>
+                <a href="https://wa.me/33646005642?text=Bonjour,%20j'aimerais%20obtenir%20un%20devis%20gratuit." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 448 512" aria-hidden="true" focusable="false" role="img">
+                    <path fill="currentColor" d="M380.9 97.1C339-14.7 197.5-33.1 97.1 60.7c-84 78.2-88.3 212.3-10.1 296.3l-45.5 110.9c-3 7.2 4 14.2 11.2 11.2l110.9-45.5c84 35.3 181.4-7.4 216.7-91.4 33.2-78.8-8.8-166.2-87.6-199.4zM224 392c-92.6 0-168-75.4-168-168S131.4 56 224 56s168 75.4 168 168s-75.4 168-168 168z"/>
+                  </svg>
+                  WhatsApp Direct
+                </a>
             </div>
         </div>
     </section>
@@ -329,10 +345,22 @@
                         <h4>Contact Direct</h4>
                         <ul>
                             <!-- Numéro unique de Béna mis en avant -->
-                            <li><a href="tel:+33646005642"><i class="fas fa-phone-alt" aria-hidden="true"></i> +33&nbsp;6&nbsp;46&nbsp;00&nbsp;56&nbsp;42 (Béna)</a></li>
+                            <li><a href="tel:+33646005642">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512" aria-hidden="true" focusable="false" role="img">
+                                <path fill="currentColor" d="M497.4 361.8l-112-48a24 24 0 0 0-28 5.4l-49.6 60.7A370.6 370.6 0 0 1 132.1 204.2l60.7-49.6a24 24 0 0 0 5.4-28l-48-112A24 24 0 0 0 128 0H24A24 24 0 0 0 0 24C0 284.3 227.7 512 488 512a24 24 0 0 0 24-24v-104a24 24 0 0 0-14.6-22.2z"/>
+                              </svg>
+                              +33&nbsp;6&nbsp;46&nbsp;00&nbsp;56&nbsp;42 (Béna)</a></li>
                             <!-- Contact WhatsApp direct -->
-                            <li><a href="https://wa.me/33646005642" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Direct</a></li>
-                            <li><a href="mailto:bms.ventouse@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> bms.ventouse@gmail.com</a></li>
+                            <li><a href="https://wa.me/33646005642" target="_blank" rel="noopener noreferrer">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 448 512" aria-hidden="true" focusable="false" role="img">
+                                <path fill="currentColor" d="M380.9 97.1C339-14.7 197.5-33.1 97.1 60.7c-84 78.2-88.3 212.3-10.1 296.3l-45.5 110.9c-3 7.2 4 14.2 11.2 11.2l110.9-45.5c84 35.3 181.4-7.4 216.7-91.4 33.2-78.8-8.8-166.2-87.6-199.4zM224 392c-92.6 0-168-75.4-168-168S131.4 56 224 56s168 75.4 168 168s-75.4 168-168 168z"/>
+                              </svg>
+                              WhatsApp Direct</a></li>
+                            <li><a href="mailto:bms.ventouse@gmail.com">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512" aria-hidden="true" focusable="false" role="img">
+                                <path fill="currentColor" d="M502.3 190.8L327.4 338.6c-15.6 13.3-39.2 13.3-54.8 0L9.7 190.8C3.9 186.2 0 178.8 0 171V104c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v67c0 7.8-3.9 15.2-9.7 19.8zM480 416H32c-17.7 0-32-14.3-32-32V213.8l197.4 166.8c22.6 19.1 55.8 19.1 78.4 0L512 213.8V384c0 17.7-14.3 32-32 32z"/>
+                              </svg>
+                              bms.ventouse@gmail.com</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">

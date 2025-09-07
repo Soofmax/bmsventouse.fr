@@ -32,6 +32,28 @@
   display: block;
 }
 
+/* Background-mode variant: image as CSS background so text becomes LCP.
+   Do not apply background-image until the 'hero--loaded' class is present (to avoid impacting LCP). */
+.hero--bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Apply the background image only after we mark it as loaded */
+.hero--bg.hero--loaded {
+  background-image: var(--hero-bg-desktop);
+}
+
+/* Hide the picture element when background mode is active (safety) */
+.hero--bg .hero-bg { display: none !important; }
+
+@media (max-width: 767px) {
+  .hero--bg.hero--loaded {
+    background-image: var(--hero-bg-mobile, var(--hero-bg-desktop));
+  }
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -57,7 +79,11 @@
   z-index: var(--z-above);
   position: relative;
   padding: 0 clamp(15px, 5vw, 40px);
-  animation: fadeInUp 1s ease-out;
+}
+
+/* Optional: enable entrance animation only when explicitly requested */
+.hero--animate .hero-overlay .container {
+  animation: fadeInUp 0.6s ease-out;
 }
 
 @keyframes fadeInUp {

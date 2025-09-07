@@ -24,7 +24,20 @@
 <link rel="canonical" href="{{ canonicalHref }}">
 <link rel="alternate" hreflang="fr-FR" href="{{ frHref }}">
 <link rel="alternate" hreflang="x-default" href="{{ canonicalHref }}">
-<script src="{{ '/js/early-theme.js' | fingerprint }}"></script>
+<script>
+  (function(){
+    try{
+      var k='bms-theme-preference';
+      var s=localStorage.getItem(k);
+      var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var dark=s?s==='dark':m;
+      if(dark){
+        document.documentElement.classList.add('dark-theme');
+        document.body&&document.body.classList&&document.body.classList.add('dark-theme');
+      }
+    }catch(e){ void e; }
+  })();
+</script>
 
 {# Open Graph / Facebook #}
 <meta property="og:title" content="{{ title | escape }}">
@@ -43,9 +56,14 @@
 <meta name="twitter:description" content="{{ description | escape }}">
 <meta name="twitter:image" content="{{ ogImage or (site.url + '/images/hero-background-custom.jpg') }}">
 
-{# Preload hero image if provided #}
-{% if heroImage %}
+{# Responsive preload for hero when provided (works for both <img> and CSS background heroes).
+   Allow opt-out via heroDefer flag for pages where we intentionally delay the hero image. #}
+{% if heroImage and not heroDefer %}
+  {% if heroImageMobile %}
+<link rel="preload" as="image" imagesrcset="{{ heroImageMobile }} 768w, {{ heroImage }} 1920w" imagesizes="100vw" fetchpriority="high">
+  {% else %}
 <link rel="preload" as="image" href="{{ heroImage }}" fetchpriority="high">
+  {% endif %}
 {% endif %}
 
 {# Preload favicon (perf) #}
@@ -59,10 +77,10 @@
 <link rel="shortcut icon" href="/favicon.ico">
 
 {# CSS, fonts, preconnect #}
-<link rel="stylesheet" href="{{ '/css/style.css' | fingerprint }}">
+<link rel="stylesheet" href="{{ '/css/style.bundle.css' | fingerprint }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=optional" rel="stylesheet">
 
 {# JSON-LD Schema.org (WebSite, Organization, BreadcrumbList) #}
 <script type="application/ld+json">
