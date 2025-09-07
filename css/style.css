@@ -5,16 +5,24 @@
 
 /* 1. VARIABLES GLOBALES & FONDATIONS */
 :root {
-  /* Couleurs principales */
-  --color-primary: #FF8C42;
-  --color-primary-dark: #c24a00;
+  /* Couleurs principales (palette accessible - mode clair) */
+  --orange-primary: #E97316;   /* Orange principal (accessible) */
+  --orange-hover: #EA580C;     /* Orange hover plus foncé */
+  --text-primary: #111827;     /* Noir texte (AAA) */
+  --text-secondary: #374151;   /* Gris texte (AA) */
+  --bg-primary: #FFFFFF;       /* Blanc */
+  --bg-section: #F9FAFB;       /* Gris très clair */
+
+  /* Bridge vers variables historiques (compatibilité) */
+  --color-primary: var(--orange-primary);
+  --color-primary-dark: var(--orange-hover);
   --color-primary-light: #ffaa70;
   --color-dark: #2c3e50;
   --color-dark-lighten: #34495e;
-  --color-light: #ffffff;
-  --color-light-alt: #f8f9fa;
-  --color-text: #333;
-  --color-text-muted: #666;
+  --color-light: var(--bg-primary);
+  --color-light-alt: var(--bg-section);
+  --color-text: var(--text-primary);
+  --color-text-muted: var(--text-secondary);
   --color-border: #e0e0e0;
   --color-success: #28a745;
   --color-error: #dc3545;
@@ -74,27 +82,52 @@
 /* Thème sombre - avec détection automatique */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-light: #1a202c;
-    --color-light-alt: #2d3748;
-    --color-text: #e2e8f0;
-    --color-text-muted: #b0c0d0;
-    --color-border: #4a5568;
+    /* Palette sombre accessible */
+    --orange-primary: #FB923C;
+    --orange-hover: #FDBA74;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --bg-primary: #0F172A;
+    --bg-section: #1E293B;
+
+    /* Bridge sombre */
+    --color-primary: var(--orange-primary);
+    --color-primary-dark: var(--orange-hover);
+    --color-text: var(--text-primary);
+    --color-text-muted: var(--text-secondary);
+    --color-light: var(--bg-primary);
+    --color-light-alt: var(--bg-section);
+
+    --color-border: #334155;
     --color-dark: #ffffff;
-    --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.2);
-    --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.25);
+    --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.3);
+    --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
   }
 }
 
 /* Support for html.dark-theme (for anti-flash script) */
-html.dark-theme, body.dark-theme {
-  --color-light: #1a202c;
-  --color-light-alt: #2d3748;
-  --color-text: #e2e8f0;
-  --color-text-muted: #b0c0d0;
-  --color-border: #4a5568;
+html.dark-theme, body.dark-theme,
+html[data-theme="dark"], body[data-theme="dark"] {
+  /* Palette sombre accessible */
+  --orange-primary: #FB923C;
+  --orange-hover: #FDBA74;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --bg-primary: #0F172A;
+  --bg-section: #1E293B;
+
+  /* Bridge sombre */
+  --color-primary: var(--orange-primary);
+  --color-primary-dark: var(--orange-hover);
+  --color-text: var(--text-primary);
+  --color-text-muted: var(--text-secondary);
+  --color-light: var(--bg-primary);
+  --color-light-alt: var(--bg-section);
+
+  --color-border: #334155;
   --color-dark: #ffffff;
-  --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.2);
-  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.3);
+  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
   color-scheme: dark;
 }
 
@@ -575,13 +608,13 @@ body.dark-theme .header {
 }
 
 .btn-primary {
-  background-color: #D45A00;
+  background-color: var(--color-primary);
   color: var(--color-light);
-  border-color: #D45A00;
+  border-color: var(--color-primary);
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #B34A00;
+  background-color: var(--color-primary-dark);
   color: #fff;
 }
 
