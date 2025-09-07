@@ -294,8 +294,8 @@ input, button, textarea, select {
   right: 0;
   height: var(--promo-banner-height);
   z-index: var(--z-promo);
-  background-color: var(--color-primary-dark);
-  color: var(--color-light);
+  background-color: var(--color-primary);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -462,8 +462,8 @@ body.dark-theme .header {
 }
 
 .footer {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--color-light-alt);
+  color: var(--color-text);
   padding-top: 4rem;
 }
 
@@ -519,7 +519,7 @@ body.dark-theme .header {
 }
 
 .footer-column a { 
-  color: #a0aec0; 
+  color: var(--color-text-muted); 
   transition: color 0.2s, transform 0.2s;
   display: inline-flex;
   align-items: center;
@@ -892,10 +892,10 @@ body.dark-theme .header {
   color: var(--color-primary); 
 }
 
-/* CTA section */
+/* CTA section - harmonisée avec palette accessible */
 .cta-section {
-  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-lighten) 100%);
-  color: var(--color-light);
+  background: linear-gradient(135deg, var(--color-light-alt) 0%, var(--color-light) 100%);
+  color: var(--color-text);
   text-align: center;
 }
 
