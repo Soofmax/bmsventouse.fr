@@ -21,7 +21,6 @@
   --color-warning: #ffc107;
   --color-info: #17a2b8;
   --color-link: #0A58CA;
-}
 
   /* Typographie */
   --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -65,25 +64,25 @@
   --z-normal: 1;
   --z-above: 10;
   --z-fixed: 100;
-  --z-header: 1000;
+  --z-header: 1502;
   --z-overlay: 1500;
   --z-promo: 2000;
   --z-toast: 3000;
   --z-whatsapp: 2000;
 }
 
-/* Thème sombre - avec détection automatique et toggle */
-body.dark-theme, 
-:root:has(body.dark-theme),
+/* Thème sombre - avec détection automatique */
 @media (prefers-color-scheme: dark) {
-  --color-light: #1a202c;
-  --color-light-alt: #2d3748;
-  --color-text: #e2e8f0;
-  --color-text-muted: #b0c0d0;
-  --color-border: #4a5568;
-  --color-dark: #ffffff;
-  --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.2);
-  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.25);
+  :root {
+    --color-light: #1a202c;
+    --color-light-alt: #2d3748;
+    --color-text: #e2e8f0;
+    --color-text-muted: #b0c0d0;
+    --color-border: #4a5568;
+    --color-dark: #ffffff;
+    --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.2);
+    --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.25);
+  }
 }
 
 /* Support for html.dark-theme (for anti-flash script) */
@@ -108,7 +107,8 @@ html.dark-theme, body.dark-theme {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + var(--promo-banner-height) + 10px);
+  /* Assure un scroll correct sous header+bannière fixes */
+  scroll-padding-top: calc(var(--header-height) + var(--promo-banner-height));
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -243,34 +243,34 @@ input, button, textarea, select {
   margin-right: auto;
 }
 
-/* === BLOC CORRIGÉ POUR LA BANNIÈRE ET LE HEADER === */
+/* === HEADER FIXÉ + BANNIÈRE FIXÉE (corrige le trou et le chevauchement) === */
 
-/* Bannière promo repositionnée en relative */
+/* Bannière promo fixée en haut */
 .promo-banner {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 1000;
+  right: 0;
   height: var(--promo-banner-height);
+  z-index: var(--z-promo);
   background-color: var(--color-primary-dark);
   color: var(--color-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0 .75rem;
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
-/* Header repositionné en relative */
+/* Header fixé juste sous la bannière */
 .header {
-  position: relative;
-  top: 0;
+  position: fixed;
+  top: var(--promo-banner-height);
   left: 0; 
   right: 0;
-  z-index: 1001;
+  z-index: var(--z-header);
   background: rgba(255,255,255,1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1210,19 +1210,21 @@ body.dark-theme .header {
   display: block;
 }
 
-/* nav-links mobile active state - CORRIGÉ */
+/* nav-links mobile active state - ALIGNE SOUS BANNIÈRE + HEADER FIXES */
 .nav-links.active {
   display: flex !important;
   flex-direction: column;
   position: fixed;
-  top: var(--header-height);
-  right: 0;
+  top: calc(var(--promo-banner-height) + var(--header-height));
   left: 0;
+  right: 0;
   background-color: var(--color-light);
-  z-index: 999;
-  padding: 1.5rem 0;
+  z-index: calc(var(--z-header) - 1);
+  padding: 1rem 0;
   box-shadow: var(--box-shadow-base);
   animation: slideInDown 0.3s forwards;
+  height: calc(100vh - var(--promo-banner-height) - var(--header-height));
+  overflow-y: auto;
 }
 
 @keyframes slideInDown {
@@ -2091,28 +2093,9 @@ mark, .highlight {
   /* 2. On cache les liens de navigation textuels */
   .nav-links {
     display: none; /* Caché par défaut */
-    
-    /* 3. On définit le style du menu déroulant quand il sera ouvert */
-    position: fixed; /* Positionné par rapport à la fenêtre */
-    /* Il doit commencer sous le header et la bannière qui sont maintenant fixés en haut */
-    top: calc(var(--header-height) + var(--promo-banner-height)); 
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background-color: var(--color-light);
-    padding: 1rem 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border-top: 1px solid var(--color-border);
-    gap: 0;
-    z-index: 1000;
   }
 
-  /* 4. Règle qui sera activée par votre JavaScript pour AFFICHER le menu */
-  .nav-links.active {
-    display: flex;
-  }
-
-  /* 5. Styles pour les liens à l'intérieur du menu ouvert */
+  /* 3. Styles pour les liens à l'intérieur du menu ouvert */
   .nav-link {
     width: 100%;
     text-align: center;
