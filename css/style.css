@@ -2129,6 +2129,26 @@ body:has(.nav-links.active) {
   gap: 1rem;
 }
 
+/* === PATCH: Cards + Cardified FAQ for service pages === */
+:root { --brand-orange: #FF8C42; }
+
+/* Generic content cards grid */
+.content-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+.content-card { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 12px; padding: 1.25rem 1.25rem; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.content-card h3.content-card-title { font-size: 1.1rem; margin: 0 0 .5rem; font-weight: 800; }
+.content-card p, .content-card ul, .content-card ol { margin: .5rem 0; }
+
+/* Emphasis in cards and FAQ */
+.content-card strong, .faq-item strong { color: var(--brand-orange); font-weight: 800; }
+
+/* FAQ as cards (match home style, but cardified) */
+.faq-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.faq-item { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 12px; padding: 1rem 1.1rem; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.faq-item .faq-question { margin: 0 0 .5rem; font-weight: 800; font-size: 1.05rem; }
+
+/* Minor polish */
+.section .section-title { scroll-margin-top: 90px; }
+
 .faq-item {
   background: var(--color-light);
   border: 1px solid var(--color-border);
@@ -2236,5 +2256,122 @@ body:has(.nav-links.active) {
   .faq-item.is-open .faq-answer {
     padding: 1rem;
   }
+}
+
+/* ================== FONCTIONNALITÉS NOUVELLES ================== */
+
+/* === ACCESSIBILITÉ SKIP-LINK & FOCUS-VISIBLE === */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  transition: top .3s;
+}
+.skip-link:focus {
+  top: 8px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+.hero-description-mobile {
+  display: none;
+}
+
+.hero-description-desktop {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-description-mobile {
+    display: block;
+  }
+  
+  .hero-description-desktop {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .faq-question {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  
+  .faq-question::after {
+    right: 1rem;
+  }
+  
+  .faq-answer {
+    padding: 0 1rem;
+  }
+  
+  .faq-item.is-open .faq-answer {
+    padding: 1rem;
+  }
+}
+
+/* === PRO CARD UX PATCH === */
+:root{
+  --brand-orange:#FF8C42;--bg:#0a0a0a;--card-bg:#fff;--card-border:rgba(0,0,0,.08);
+  --radius-12:12px;--radius-16:16px;--elev-1:0 4px 12px rgba(0,0,0,.06);--elev-2:0 10px 24px rgba(0,0,0,.10)
+}
+
+/* Card elevation + hover */
+.content-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-12);box-shadow:var(--elev-1);transition:transform .2s ease,box-shadow .2s ease;border-top:3px solid rgba(255,140,66,.25)}
+.content-card:hover{transform:translateY(-2px);box-shadow:var(--elev-2)}
+
+/* Card headings accent */
+.content-card-title{position:relative;padding-left:.75rem}
+.content-card-title::before{content:"";position:absolute;left:0;top:.2rem;width:4px;height:1.2rem;background:var(--brand-orange);border-radius:3px}
+
+/* Orange emphasis */
+.content-card strong,.faq-item strong{color:var(--brand-orange);font-weight:800}
+
+/* Bands (section backgrounds) */
+.band{background:#f9fafb;padding:2.25rem 0}
+.band--alt{background:#f6f7f9}
+
+/* Steps styling within ordered lists */
+.content-card ol{counter-reset:step}
+.content-card ol>li{counter-increment:step;position:relative;padding-left:2.2rem;margin:.5rem 0}
+.content-card ol>li::before{content:counter(step);position:absolute;left:0;top:.1rem;width:1.6rem;height:1.6rem;border-radius:999px;background:rgba(255,140,66,.12);color:var(--brand-orange);display:grid;place-items:center;font-weight:800}
+
+/* Feature cards and CTA card */
+.content-card--feature{display:flex;align-items:flex-start;gap:.6rem}
+.content-card--feature::before{content:'\2713';color:var(--brand-orange);font-weight:800;margin-top:.15rem}
+.content-card.cta-card{text-align:center;padding:1.6rem 1.6rem;background:linear-gradient(180deg,#fff,rgba(255,140,66,.03))}
+.content-card.cta-card .cta-title{margin:0 0 .4rem;font-size:1.25rem;font-weight:800}
+.content-card.cta-card .cta-subtitle{margin:0 0 .8rem}
+.content-card.cta-card .hero-buttons{display:inline-flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+
+/* Hero gradient overlay for better text contrast */
+.hero{position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.15) 40%,rgba(0,0,0,0) 100%);pointer-events:none}
+.hero .hero-overlay .container{position:relative}
+.hero h1,.hero p{color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+
+/* Motion-safe microinteractions */
+@media (prefers-reduced-motion:reduce){.content-card{transition:none}.content-card:hover{transform:none}}
+
+/* Slightly larger grid on wide screens */
+@media (min-width: 992px){.content-cards{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}}
+
+/* Feature cards */
+.content-card--feature { display: flex; align-items: flex-start; gap: .6rem; }
+.content-card--feature::before { content: '✓'; display: inline-block; color: var(--brand-orange); font-weight: 800; margin-top: .15rem; }
+
+/* CTA card */
+.content-card.cta-card { text-align: center; padding: 1.5rem 1.5rem; }
+.content-card.cta-card .cta-title { margin: 0 0 .4rem; font-size: 1.25rem; font-weight: 800; }
+.content-card.cta-card .cta-subtitle { margin: 0 0 .8rem; }
+.content-card.cta-card .hero-buttons { display: inline-flex; gap: .6rem; flex-wrap: wrap; justify-content: center; }
+
+/* Slightly larger grid on wide screens */
+@media (min-width: 992px) {
+  .content-cards { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 }
 
