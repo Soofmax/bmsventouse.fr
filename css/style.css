@@ -359,20 +359,26 @@ body.dark-theme .header {
 }
 
 .logo { margin-right: 1rem; }
-
-
-.logo {
-  background: none;
-  border: none;
-  box-shadow: none;
+.header-actions {
+  margin-left: auto;
+  display: none;
+  gap: .6rem;
 }
-.logo .bms {
-  background: var(--color-primary);
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 8px;
-  line-height: 1;
-  letter-spacing: .3px;
+@media (min-width: 992px) {
+  .header-actions { display: inline-flex; }
+}
+
+/* Affichage clair du bloc texte du logo */
+.logo-text {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+.logo .ventouse {
+  color: var(--color-dark);
+  font-weight: var(--font-weight-black);
+  letter-spacing: .2px;
 }
 
 .logo {
@@ -395,8 +401,13 @@ body.dark-theme .header {
   transform: scale(1.05);
 }
 
-.logo .bms { 
-  color: var(--color-primary); 
+.logo .bms {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 8px;
+  line-height: 1;
+  letter-spacing: .3px;
 }
 
 .nav-links {
