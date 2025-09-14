@@ -1,0 +1,9 @@
+{%- if (process.env.CONTEXT == "production") -%}
+User-agent: *
+Allow: /
+Sitemap: {{ site.url }}/sitemap.xml
+Host: {{ site.url }}
+{%- else -%}
+User-agent: *
+Disallow: /
+{%- endif -%}

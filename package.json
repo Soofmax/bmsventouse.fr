@@ -33,7 +33,6 @@
     "axe-core": "^4.7.0",
     "cypress": "^13.0.0",
     "cypress-axe": "^1.5.0",
-    "eleventy-plugin-robotstxt": "*",
     "eslint": "^8.57.0",
     "html-minifier": "^4.0.0",
     "htmlhint": "^1.1.4",

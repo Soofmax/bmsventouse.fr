@@ -4,7 +4,7 @@
 
 [build]
   publish = "_site"
-  command = "npm run build"
+  command = "npm ci && npm run build"
 
   # Ensure Netlify uses the correct Node version and clean install flags
   [build.environment]

@@ -1,12 +1,11 @@
 const pluginSitemap = require('@nichoth/eleventy-plugin-sitemap');
-const pluginRobotsTxt = require('eleventy-plugin-robotstxt');
 
 /**
- * Register Eleventy plugins (sitemap, robots.txt).
+ * Register Eleventy plugins (sitemap).
+ * Robots.txt is generated via template (src/robots.liquid) to avoid extra dependency.
  * @param {import('@11ty/eleventy/src/UserConfig')} eleventyConfig
  */
 module.exports = function registerPlugins(eleventyConfig) {
-  const isProd = process.env.CONTEXT === 'production' || process.env.NODE_ENV === 'production';
   const siteUrl = process.env.SITE_URL || 'https://www.bmsventouse.fr';
 
   // Sitemap
@@ -15,18 +14,4 @@ module.exports = function registerPlugins(eleventyConfig) {
       hostname: siteUrl,
     },
   });
-
-  // Robots.txt
-  eleventyConfig.addPlugin(
-    pluginRobotsTxt,
-    isProd
-      ? {
-          policy: [{ userAgent: '*', allow: '/' }],
-          sitemap: `${siteUrl}/sitemap.xml`,
-          host: siteUrl,
-        }
-      : {
-          policy: [{ userAgent: '*', disallow: '/' }],
-        }
-  );
 };
