@@ -47,8 +47,8 @@
   /* Layout */
   --container-width: min(1200px, 95vw);
   --spacing-section: clamp(60px, 8vh, 80px);
-  --header-height: 70px;
-  --promo-banner-height: 50px;
+  --header-height: 64px;
+  --promo-banner-height: 40px;
   --footer-gap: 2rem;
   --grid-gap: clamp(1.5rem, 3vw, 2rem);
   --content-padding: clamp(1rem, 5vw, 2rem);
