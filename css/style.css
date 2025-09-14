@@ -47,7 +47,7 @@
   /* Layout */
   --container-width: min(1200px, 95vw);
   --spacing-section: clamp(60px, 8vh, 80px);
-  --header-height: 64px;
+  --header-height: 68px;
   --promo-banner-height: 40px;
   --footer-gap: 2rem;
   --grid-gap: clamp(1.5rem, 3vw, 2rem);
@@ -326,11 +326,12 @@ input, button, textarea, select {
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   }
   .header .nav {
-    transition: height 0.25s ease;
-  }
-  .header.shrink .nav {
-    height: 54px; /* plus compact pour un rendu premium */
-  }
+  height: var(--header-height);
+  transition: height 0.25s ease;
+}
+.header.shrink .nav {
+  height: 60px; /* compact mais lisible */
+}
 
   /* Micro-animation du logo au shrink */
   .header .logo img,
