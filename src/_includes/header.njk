@@ -28,12 +28,9 @@
           <li class="nav-item has-submenu">
             <a href="/services/" class="nav-link{% if activeNav == 'services' %} active{% endif %}" aria-haspopup="true" aria-expanded="false">Services</a>
             <ul class="submenu" aria-label="Sous-menu Services">
-              <li><a href="/services/#ventousage" class="submenu-link">Ventousage &amp; Stationnement</a></li>
-              <li><a href="/services/#securite-plateau" class="submenu-link">Sécurité Plateau &amp; Gardiennage</a></li>
-              <li><a href="/services/#convoyage" class="submenu-link">Convoyage de Véhicules &amp; Décors</a></li>
-              <li><a href="/services/#regie-technique" class="submenu-link">Régie &amp; Matériel</a></li>
-              <li><a href="/services/#loges-mobiles" class="submenu-link">Loges &amp; Confort</a></li>
-              <li><a href="/services/#catering" class="submenu-link">Cantine &amp; Catering</a></li>
+              {% for s in services %}
+                <li><a href="/services/{{ s.slug }}/" class="submenu-link">{{ s.h1 }}</a></li>
+              {% endfor %}
             </ul>
           </li>
           <li><a href="/realisations/" class="nav-link{% if activeNav == 'realisations' %} active{% endif %}">Références</a></li>
