@@ -158,6 +158,8 @@ body {
   overflow-x: hidden;
   transition: background-color 0.4s, color 0.4s;
   text-rendering: optimizeSpeed;
+  /* Évite que le contenu passe sous la bannière promo + header fixes */
+  padding-top: calc(var(--promo-banner-height) + var(--header-height));
 }
 
 a {
