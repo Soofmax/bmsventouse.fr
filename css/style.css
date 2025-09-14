@@ -461,12 +461,14 @@ body.dark-theme .header {
   color: currentColor;
 }
 
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  min-width: 280px;
+/* Force submenu to be an absolutely-positioned dropdown below the Services item */
+.nav-links > .has-submenu { position: relative; }
+.nav-links > .has-submenu > .submenu {
+  position: absolute !important;
+  top: 100% !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(8px) !important;
+  min-width: 320px;
   background: var(--color-light);
   border: 1px solid var(--color-border);
   border-radius: 10px;
@@ -492,9 +494,10 @@ body.dark-theme .header {
   margin: .25rem 0;
 }
 
-.has-submenu:hover > .submenu,
-.has-submenu:focus-within > .submenu,
-.has-submenu.open > .submenu {
+/* Show dropdown only while hovering/focusing the Services item */
+.nav-links > .has-submenu:hover > .submenu,
+.nav-links > .has-submenu:focus-within > .submenu,
+.nav-links > .has-submenu.open > .submenu {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(4px);
