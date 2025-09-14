@@ -450,6 +450,33 @@ document.addEventListener('DOMContentLoaded', () => {
     io.observe(sentinel);
   };
 
+  // Hover-out delay for Services submenu (prevents accidental close)
+  const setupServicesHoverDelay = () => {
+    const item = document.querySelector('.nav-item.has-submenu');
+    if (!item) return;
+    let timer = null;
+
+    const open = () => {
+      clearTimeout(timer);
+      item.classList.add('open');
+      const link = item.querySelector('.nav-link');
+      if (link) link.setAttribute('aria-expanded', 'true');
+    };
+    const close = () => {
+      timer = setTimeout(() => {
+        item.classList.remove('open');
+        const link = item.querySelector('.nav-link');
+        if (link) link.setAttribute('aria-expanded', 'false');
+      }, 150);
+    };
+
+    item.addEventListener('mouseenter', open);
+    item.addEventListener('mouseleave', close);
+    // Ensure keyboard users keep it open on focus within
+    item.addEventListener('focusin', open);
+    item.addEventListener('focusout', close);
+  };
+
   // ==========================================================================
   // INITIALISATION DE TOUS LES MODULES
   // ==========================================================================
@@ -462,6 +489,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupThemeToggle();
     setupAnalytics();
     setupHeaderShrink();
+    setupServicesHoverDelay();
     console.log('🚀 BMS Ventouse - Tous les modules initialisés avec succès');
   } catch (error) {
     console.error("Erreur lors de l'initialisation des scripts du site :", error);
