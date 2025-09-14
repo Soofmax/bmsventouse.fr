@@ -392,6 +392,12 @@ body.dark-theme .header {
   align-items: center;
 }
 
+/* Hide mobile-only items on desktop to avoid duplicate CTAs */
+.only-mobile { display: none; }
+@media (max-width: 991px) {
+  .only-mobile { display: block; }
+}
+
 .nav-link {
   color: var(--color-dark);
   font-weight: var(--font-weight-medium);
