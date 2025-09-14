@@ -434,21 +434,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Header shrink on scroll (desktop)
   const setupHeaderShrink = () => {
     const header = document.querySelector('.header');
-    if (!header) return;
-    let lastY = window.scrollY;
+    const sentinel = document.getElementById('headerSentinel');
+    if (!header || !sentinel) return;
 
-    const onScroll = () => {
-      const y = window.scrollY;
-      if (y > 10) {
-        header.classList.add('shrink');
-      } else {
-        header.classList.remove('shrink');
-      }
-      lastY = y;
-    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.boundingClientRect.y < 0 || !entry.isIntersecting) {
+          header.classList.add('shrink');
+        } else {
+          header.classList.remove('shrink');
+        }
+      });
+    }, { rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--promo-banner-height') || '40')}px 0px 0px 0px`, threshold: 0 });
 
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
+    io.observe(sentinel);
   };
 
   // ==========================================================================
