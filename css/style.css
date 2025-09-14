@@ -320,6 +320,19 @@ input, button, textarea, select {
   transition: transform 0.3s ease, background 0.4s, box-shadow 0.3s;
 }
 
+/* Effet shrink (desktop) */
+@media (min-width: 992px) {
+  .header.shrink {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+  .header .nav {
+    transition: height 0.25s ease;
+  }
+  .header.shrink .nav {
+    height: 56px; /* visuellement plus compact que var(--header-height) */
+  }
+}
+
 /* Header comportement scroll (ceci peut être réactivé avec du JS si besoin) */
 .header.header-hidden {
   transform: translateY(-100%);
