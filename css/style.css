@@ -355,10 +355,18 @@ body.dark-theme .header {
   .header-actions { display: inline-flex; }
 }
 
-.logo, .logo .bms {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
+.logo {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.logo .bms {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 8px;
+  line-height: 1;
+  letter-spacing: .3px;
 }
 
 .logo {
