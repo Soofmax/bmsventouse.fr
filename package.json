@@ -2,6 +2,7 @@
   "name": "bms-ventouse-site",
   "private": true,
   "version": "1.0.0",
+  "engines": { "node": ">=20 <21" },
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve --port=8080",
@@ -32,7 +33,7 @@
     "axe-core": "^4.7.0",
     "cypress": "^13.0.0",
     "cypress-axe": "^1.5.0",
-    "eleventy-plugin-robotstxt": "*",
+    "eleventy-plugin-robotstxt": "^2.0.1",
     "eslint": "^8.57.0",
     "html-minifier": "^4.0.0",
     "htmlhint": "^1.1.4",
