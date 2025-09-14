@@ -329,7 +329,26 @@ input, button, textarea, select {
     transition: height 0.25s ease;
   }
   .header.shrink .nav {
-    height: 56px; /* visuellement plus compact que var(--header-height) */
+    height: 54px; /* plus compact pour un rendu premium */
+  }
+
+  /* Micro-animation du logo au shrink */
+  .header .logo img,
+  .header .logo-text {
+    transition: transform 0.25s ease;
+  }
+  .header.shrink .logo img {
+    transform: scale(0.92);
+  }
+  .header.shrink .logo-text {
+    transform: scale(0.98);
+  }
+}
+
+/* Ajustement mobile: pastille BMS plus compacte */
+@media (max-width: 768px) {
+  .logo .bms {
+    padding: 3px 6px;
   }
 }
 
