@@ -346,14 +346,7 @@ body.dark-theme .header {
 }
 
 .logo { margin-right: 1rem; }
-.header-actions {
-  margin-left: auto;
-  display: none;
-  gap: .6rem;
-}
-@media (min-width: 992px) {
-  .header-actions { display: inline-flex; }
-}
+
 
 .logo {
   background: none;
