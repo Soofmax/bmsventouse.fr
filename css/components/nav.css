@@ -6,12 +6,11 @@
 
 /* Header */
 .header {
-  position: relative;
-  top: 0;
+  position: sticky;
+  top: var(--promo-banner-height);
   left: 0;
   right: 0;
-  /* Reserve space below the fixed promo banner to avoid layout shifts */
-  margin-top: var(--promo-banner-height);
+  margin-top: 0;
   background: rgba(255,255,255,1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
