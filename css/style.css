@@ -473,6 +473,20 @@ body.dark-theme .header {
   z-index: calc(var(--z-header) + 1);
 }
 
+.submenu-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--color-text-muted);
+  padding: .35rem .65rem .15rem;
+}
+
+.submenu-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: .25rem 0;
+}
+
 .has-submenu:hover > .submenu,
 .has-submenu:focus-within > .submenu {
   opacity: 1;
