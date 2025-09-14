@@ -388,7 +388,7 @@ body.dark-theme .header {
 
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   list-style: none;
   align-items: center;
 }
@@ -402,12 +402,14 @@ body.dark-theme .header {
 .nav-link {
   color: var(--color-dark);
   font-weight: var(--font-weight-medium);
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
   padding: 0.5rem 0.25rem;
   border-radius: 0;
   transition: var(--transition-base);
   position: relative;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1.5px solid transparent;
 }
 
 .nav-link:hover, .nav-link.active {
