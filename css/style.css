@@ -375,6 +375,17 @@ body.dark-theme .header {
   align-items: center;
   height: var(--header-height);
   gap: 1rem;
+  width: 100%;
+}
+
+/* Centrer la navigation au sein du header */
+#navigation {
+  flex: 1 1 auto;
+}
+#navigation .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo { margin-right: 1rem; }
