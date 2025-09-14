@@ -12,7 +12,7 @@
 /* Root & scrolling */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + var(--promo-banner-height) + 10px);
+  scroll-padding-top: calc(var(--promo-banner-height) + var(--header-height) + 10px);
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -30,6 +30,7 @@ body {
   overflow-x: hidden;
   transition: background-color 0.4s, color 0.4s;
   text-rendering: optimizeSpeed;
+  padding-top: var(--promo-banner-height); /* push content below fixed promo */
 }
 
 /* Links */
