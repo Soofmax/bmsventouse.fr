@@ -374,19 +374,23 @@ body.dark-theme .header {
 .nav {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* logo à gauche, nav à droite */
   height: var(--header-height);
   gap: 1rem;
   width: 100%;
 }
 
-/* Centrer la navigation au sein du header */
+/* Ré-aligner la nav à droite pour garantir la place et la lisibilité */
 #navigation {
   flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
 }
 #navigation .nav-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .logo { margin-right: 1rem; }
