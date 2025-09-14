@@ -28,9 +28,17 @@
           <li class="nav-item has-submenu">
             <a href="/services/" class="nav-link{% if activeNav == 'services' %} active{% endif %}" aria-haspopup="true" aria-expanded="false">Services</a>
             <ul class="submenu" aria-label="Sous-menu Services">
-              {% for s in services %}
-                <li><a href="/services/{{ s.slug }}/" class="submenu-link">{{ s.h1 }}</a></li>
-              {% endfor %}
+              <!-- Essentiels -->
+              <li><a href="/services/ventousage/" class="submenu-link">Ventousage</a></li>
+              <li><a href="/services/securite-gardiennage/" class="submenu-link">Sécurité plateau</a></li>
+              <!-- Techniques -->
+              <li><a href="/services/convoyage/" class="submenu-link">Convoyage</a></li>
+              <li><a href="/services/regie-materiel/" class="submenu-link">Régie &amp; matériel</a></li>
+              <!-- Complémentaires -->
+              <li><a href="/services/loges-confort/" class="submenu-link">Loges</a></li>
+              <li><a href="/services/cantine-catering/" class="submenu-link">Cantine</a></li>
+              <li><a href="/services/logistique-evenementielle/" class="submenu-link">Événementiel</a></li>
+              <li><a href="/services/solutions-packagees/" class="submenu-link">Solutions packagées</a></li>
             </ul>
           </li>
           <li><a href="/realisations/" class="nav-link{% if activeNav == 'realisations' %} active{% endif %}">Références</a></li>
