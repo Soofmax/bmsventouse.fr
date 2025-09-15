@@ -21,16 +21,29 @@ a.service-card,
   overflow: visible !important;
 }
 
-/* SUPPRIMER les images existantes */
+/* SUPPRIMER COMPLÈTEMENT LES IMAGES/CARRÉS EXISTANTS */
 .service-card img,
+.service-card picture,
+.service-card svg,
 a.service-card img,
+a.service-card picture,
+a.service-card svg,
 [class*="service"] img,
+[class*="service"] picture,
+[class*="service"] svg,
 [href*="ventousage"] img,
 [href*="gardiennage"] img,
-[href*="regie"] img {
+[href*="regie"] img,
+div[style*="background-color"],
+.icon,
+[class*="icon"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
 }
 
 /* CRÉER les nouvelles icônes avec ::before */
@@ -61,18 +74,21 @@ a.service-card::before,
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
 }
 
-/* ICÔNES SPÉCIFIQUES PAR SERVICE */
-[href*="ventousage"]::before {
+/* ICÔNES SPÉCIFIQUES PAR SERVICE - SÉLECTEURS ULTRA-PRÉCIS */
+a[href*="ventousage"]::before,
+.service-card:nth-child(1)::before {
   content: "🔧" !important;
 }
 
-[href*="gardiennage"]::before,
-[href*="securite"]::before {
+a[href*="gardiennage"]::before,
+a[href*="securite"]::before,
+.service-card:nth-child(2)::before {
   content: "🛡️" !important;
 }
 
-[href*="regie"]::before,
-[href*="technique"]::before {
+a[href*="regie"]::before,
+a[href*="technique"]::before,
+.service-card:nth-child(3)::before {
   content: "📹" !important;
 }
 
@@ -322,15 +338,50 @@ header button {
 }
 
 /* ========================================
-   DEBUG - VÉRIFICATION VISUELLE
+   NAVIGATION HEADER PROFESSIONNELLE
+   Corriger le menu qui ressemble à Excel
    ======================================== */
 
-/* Bordure temporaire pour voir si le CSS s'applique */
-.service-card {
-  outline: 2px solid red !important;
-  outline-offset: 2px !important;
+/* Navigation propre et moderne */
+header nav,
+header .nav,
+[class*="nav"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-/* Supprimer après vérification */
-/* .service-card { outline: none !important; } */
+header nav a,
+header .nav a,
+[class*="nav"] a {
+  background: transparent !important;
+  border: none !important;
+  padding: 0.75rem 1.5rem !important;
+  margin: 0 0.25rem !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  color: var(--text-primary, #333) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+}
+
+header nav a:hover,
+header .nav a:hover,
+[class*="nav"] a:hover {
+  background: rgba(255, 140, 66, 0.1) !important;
+  color: #FF8C42 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Mode sombre */
+[data-theme="dark"] header nav a,
+[data-theme="dark"] header .nav a {
+  color: #fff !important;
+}
+
+[data-theme="dark"] header nav a:hover,
+[data-theme="dark"] header .nav a:hover {
+  background: rgba(255, 140, 66, 0.2) !important;
+  color: #FF8C42 !important;
+}
 
