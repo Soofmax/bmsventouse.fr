@@ -20,15 +20,15 @@
 @import url('./site-complete-professional.css');
 
 /* =========================================
-   ANIMATIONS PROFESSIONNELLES CORRIGÉES
-   Animations fluides et performantes
-   ========================================= */
-
-@import url('./animations-fix.css');
-
-/* =========================================
    RESPONSIVE DESIGN COMPLET - MOBILE FIRST
    Correction de TOUS les problèmes responsive
    ========================================= */
 
 @import url('./responsive-fix-complete.css');
+
+/* =========================================
+   ANIMATIONS ET ICÔNES CORRIGÉES
+   Animations fluides + vraies icônes émojis/SVG
+   ========================================= */
+
+@import url('./animations-icons-fix.css');
