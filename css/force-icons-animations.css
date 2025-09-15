@@ -74,45 +74,43 @@ a.service-card::before,
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
 }
 
-/* ICÔNES SPÉCIFIQUES PAR SERVICE - SÉLECTEURS ULTRA-PRÉCIS */
-a[href*="ventousage"]::before,
-.service-card:nth-child(1)::before {
+/* ICÔNES SPÉCIFIQUES PAR SERVICE - SÉLECTEURS CORRECTS */
+a[href*="ventousage"]::before {
   content: "🔧" !important;
 }
 
+a[href*="plateau-gardiennage"]::before,
 a[href*="gardiennage"]::before,
-a[href*="securite"]::before,
-.service-card:nth-child(2)::before {
+a[href*="securite"]::before {
   content: "🛡️" !important;
 }
 
-a[href*="regie"]::before,
-a[href*="technique"]::before,
-.service-card:nth-child(3)::before {
-  content: "📹" !important;
-}
-
-[href*="transport"]::before,
-[href*="convoyage"]::before {
+a[href*="convoyage"]::before,
+a[href*="transport"]::before {
   content: "🚛" !important;
 }
 
-[href*="cantine"]::before,
-[href*="catering"]::before {
+a[href*="regie"]::before,
+a[href*="technique"]::before {
+  content: "📹" !important;
+}
+
+a[href*="cantine"]::before,
+a[href*="catering"]::before {
   content: "🍽️" !important;
 }
 
-[href*="logistique"]::before {
+a[href*="logistique"]::before {
   content: "📋" !important;
 }
 
-[href*="location"]::before,
-[href*="loge"]::before {
+a[href*="location"]::before,
+a[href*="loge"]::before {
   content: "🏠" !important;
 }
 
-[href*="solutions"]::before,
-[href*="package"]::before {
+a[href*="solutions"]::before,
+a[href*="package"]::before {
   content: "📦" !important;
 }
 
