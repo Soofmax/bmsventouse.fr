@@ -29,7 +29,8 @@ function initScrollAnimations() {
       if (entry.isIntersecting) {
         // Délai progressif pour un effet échelonné
         setTimeout(() => {
-          entry.target.classList.add('in-view');
+          entry.target.classList.add('animate');
+          entry.target.classList.remove('will-animate');
         }, index * 100);
         
         // Arrêter d'observer après animation
@@ -58,6 +59,11 @@ function initScrollAnimations() {
     .stats,
     [class*="stats"]
   `);
+
+  // Préparer les éléments avec l'état initial si l'animation CSS l'attend
+  elementsToAnimate.forEach(el => {
+    el.classList.add('animate-on-scroll', 'will-animate');
+  });
 
   console.log(`🎬 ${elementsToAnimate.length} éléments trouvés pour animation`);
 
