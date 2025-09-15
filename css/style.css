@@ -5,23 +5,30 @@
 
 /* 1. VARIABLES GLOBALES & FONDATIONS */
 :root {
-  /* Couleurs principales */
-  --color-primary: #FF8C42;
-  --color-primary-dark: #c24a00;
+  /* Couleurs principales (palette accessible - mode clair) */
+  --orange-primary: #E97316;   /* Orange principal (accessible) */
+  --orange-hover: #EA580C;     /* Orange hover plus foncé */
+  --text-primary: #111827;     /* Noir texte (AAA) */
+  --text-secondary: #374151;   /* Gris texte (AA) */
+  --bg-primary: #FFFFFF;       /* Blanc */
+  --bg-section: #F9FAFB;       /* Gris très clair */
+
+  /* Bridge vers variables historiques (compatibilité) */
+  --color-primary: var(--orange-primary);
+  --color-primary-dark: var(--orange-hover);
   --color-primary-light: #ffaa70;
   --color-dark: #2c3e50;
   --color-dark-lighten: #34495e;
-  --color-light: #ffffff;
-  --color-light-alt: #f8f9fa;
-  --color-text: #333;
-  --color-text-muted: #666;
+  --color-light: var(--bg-primary);
+  --color-light-alt: var(--bg-section);
+  --color-text: var(--text-primary);
+  --color-text-muted: var(--text-secondary);
   --color-border: #e0e0e0;
   --color-success: #28a745;
   --color-error: #dc3545;
   --color-warning: #ffc107;
   --color-info: #17a2b8;
   --color-link: #0A58CA;
-}
 
   /* Typographie */
   --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -40,8 +47,8 @@
   /* Layout */
   --container-width: min(1200px, 95vw);
   --spacing-section: clamp(60px, 8vh, 80px);
-  --header-height: 70px;
-  --promo-banner-height: 50px;
+  --header-height: 64px;
+  --promo-banner-height: 40px;
   --footer-gap: 2rem;
   --grid-gap: clamp(1.5rem, 3vw, 2rem);
   --content-padding: clamp(1rem, 5vw, 2rem);
@@ -65,37 +72,62 @@
   --z-normal: 1;
   --z-above: 10;
   --z-fixed: 100;
-  --z-header: 1000;
+  --z-header: 1502;
   --z-overlay: 1500;
   --z-promo: 2000;
   --z-toast: 3000;
   --z-whatsapp: 2000;
 }
 
-/* Thème sombre - avec détection automatique et toggle */
-body.dark-theme, 
-:root:has(body.dark-theme),
+/* Thème sombre - avec détection automatique */
 @media (prefers-color-scheme: dark) {
-  --color-light: #1a202c;
-  --color-light-alt: #2d3748;
-  --color-text: #e2e8f0;
-  --color-text-muted: #b0c0d0;
-  --color-border: #4a5568;
-  --color-dark: #ffffff;
-  --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.2);
-  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.25);
+  :root {
+    /* Palette sombre accessible */
+    --orange-primary: #FB923C;
+    --orange-hover: #FDBA74;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --bg-primary: #0F172A;
+    --bg-section: #1E293B;
+
+    /* Bridge sombre */
+    --color-primary: var(--orange-primary);
+    --color-primary-dark: var(--orange-hover);
+    --color-text: var(--text-primary);
+    --color-text-muted: var(--text-secondary);
+    --color-light: var(--bg-primary);
+    --color-light-alt: var(--bg-section);
+
+    --color-border: #334155;
+    --color-dark: #ffffff;
+    --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.3);
+    --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+  }
 }
 
 /* Support for html.dark-theme (for anti-flash script) */
-html.dark-theme, body.dark-theme {
-  --color-light: #1a202c;
-  --color-light-alt: #2d3748;
-  --color-text: #e2e8f0;
-  --color-text-muted: #b0c0d0;
-  --color-border: #4a5568;
+html.dark-theme, body.dark-theme,
+html[data-theme="dark"], body[data-theme="dark"] {
+  /* Palette sombre accessible */
+  --orange-primary: #FB923C;
+  --orange-hover: #FDBA74;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --bg-primary: #0F172A;
+  --bg-section: #1E293B;
+
+  /* Bridge sombre */
+  --color-primary: var(--orange-primary);
+  --color-primary-dark: var(--orange-hover);
+  --color-text: var(--text-primary);
+  --color-text-muted: var(--text-secondary);
+  --color-light: var(--bg-primary);
+  --color-light-alt: var(--bg-section);
+
+  --color-border: #334155;
   --color-dark: #ffffff;
-  --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.2);
-  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.3);
+  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
   color-scheme: dark;
 }
 
@@ -108,7 +140,8 @@ html.dark-theme, body.dark-theme {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + var(--promo-banner-height) + 10px);
+  /* Assure un scroll correct sous header+bannière fixes */
+  scroll-padding-top: calc(var(--header-height) + var(--promo-banner-height));
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -125,6 +158,8 @@ body {
   overflow-x: hidden;
   transition: background-color 0.4s, color 0.4s;
   text-rendering: optimizeSpeed;
+  /* Évite que le contenu passe sous la bannière promo + header fixes */
+  padding-top: calc(var(--promo-banner-height) + var(--header-height));
 }
 
 a {
@@ -142,6 +177,14 @@ a {
 }
 .section-subtitle a:hover, .content-container a:hover, p a:hover {
   color: #084298;
+}
+
+/* Désactiver soulignement dans les cartes services */
+.service-card-visual-content a {
+  text-decoration: none;
+}
+.service-card-visual-content a:hover {
+  text-decoration: underline;
 }
 
 a:hover { 
@@ -243,39 +286,71 @@ input, button, textarea, select {
   margin-right: auto;
 }
 
-/* === BLOC CORRIGÉ POUR LA BANNIÈRE ET LE HEADER === */
+/* === HEADER FIXÉ + BANNIÈRE FIXÉE (corrige le trou et le chevauchement) === */
 
-/* Bannière promo repositionnée en relative */
+/* Bannière promo fixée en haut */
 .promo-banner {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 1000;
+  right: 0;
   height: var(--promo-banner-height);
-  background-color: var(--color-primary-dark);
-  color: var(--color-light);
+  z-index: var(--z-promo);
+  background-color: var(--color-primary);
+  color: #fff;
   display: flex;
-  align-items: center;
+  align-items: center; /* fix typo to ensure vertical centering */
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.5rem .75rem;
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
-/* Header repositionné en relative */
+/* Header fixé juste sous la bannière promo */
 .header {
-  position: relative;
-  top: 0;
+  position: fixed;
+  top: var(--promo-banner-height);
   left: 0; 
   right: 0;
-  z-index: 1001;
-  background: rgba(255,255,255,1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  z-index: var(--z-header);
+  background: var(--color-light);
   border-bottom: 1px solid var(--color-border);
-  transition: transform 0.3s ease, background 0.4s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, background 0.4s, box-shadow 0.3s;
+}
+
+/* Effet shrink (desktop) */
+@media (min-width: 992px) {
+  .header.shrink {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+  .header .nav {
+  height: var(--header-height);
+  transition: height 0.25s ease;
+}
+.header.shrink .nav {
+  height: 56px; /* valeur précédente stable */
+}
+
+  /* Micro-animation du logo au shrink */
+  .header .logo img,
+  .header .logo-text {
+    transition: transform 0.25s ease;
+  }
+  .header.shrink .logo img {
+    transform: scale(0.92);
+  }
+  .header.shrink .logo-text {
+    transform: scale(0.98);
+  }
+}
+
+/* Ajustement mobile: pastille BMS plus compacte */
+@media (max-width: 768px) {
+  .logo .bms {
+    padding: 3px 6px;
+  }
 }
 
 /* Header comportement scroll (ceci peut être réactivé avec du JS si besoin) */
@@ -298,16 +373,47 @@ body.dark-theme .header {
 
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between; /* logo à gauche, nav à droite */
   height: var(--header-height);
   gap: 1rem;
+  width: 100%;
 }
 
-.logo, .logo .bms {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
+/* Ré-aligner la nav à droite pour garantir la place et la lisibilité */
+#navigation {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+#navigation .nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.logo { margin-right: 1rem; }
+.header-actions {
+  margin-left: auto;
+  display: none;
+  gap: .6rem;
+}
+@media (min-width: 992px) {
+  .header-actions { display: inline-flex; }
+}
+
+/* Affichage clair du bloc texte du logo */
+.logo-text {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+.logo .ventouse {
+  color: var(--color-dark);
+  font-weight: var(--font-weight-black);
+  letter-spacing: .2px;
 }
 
 .logo {
@@ -330,31 +436,288 @@ body.dark-theme .header {
   transform: scale(1.05);
 }
 
-.logo .bms { 
-  color: var(--color-primary); 
+.logo .bms {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 8px;
+  line-height: 1;
+  letter-spacing: .3px;
 }
 
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   list-style: none;
   align-items: center;
+}
+
+/* Dropdown (new API) */
+.nav-item { position: relative; }
+
+.has-dropdown > .nav-link .icon-chevron-down {
+  display: inline-block;
+  transition: transform .2s ease;
+  font-style: normal;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 280px;
+  background: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+  padding: .5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+  z-index: calc(var(--z-header) + 1);
+}
+
+.has-dropdown:hover > .dropdown-menu,
+.has-dropdown:focus-within > .dropdown-menu,
+.has-dropdown.open > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(4px);
+}
+
+.has-dropdown:hover > .nav-link .icon-chevron-down,
+.has-dropdown.open > .nav-link .icon-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* Links inside dropdown */
+.dropdown-menu li { list-style: none; }
+.dropdown-link {
+  display: block;
+  padding: .55rem .75rem;
+  color: var(--color-dark);
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.dropdown-link:hover,
+.dropdown-link:focus {
+  background: var(--color-light-alt);
+  color: var(--color-primary);
+}
+
+/* Mobile: dropdown behaves inline (no hover) */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    border: none;
+    box-shadow: none;
+    padding: .25rem 0;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+  }
+  .has-dropdown.open > .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Show dropdown only while hovering/focusing the Services item */
+.nav-links > .has-submenu:hover > .submenu,
+.nav-links > .has-submenu:focus-within > .submenu,
+.nav-links > .has-submenu.open > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(4px);
+}
+
+/* Lien \"Tous les services\" en haut du menu */
+.menu-top {
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+.menu-all {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .9rem;
+}
+.menu-all:hover { color: var(--color-primary-dark); transform: translateX(2px); }
+.all-icon { font-size: 1rem; }
+
+/* Old simple submenu link styles kept for fallback entries */
+.submenu li { list-style: none; }
+.submenu-link {
+  display: block;
+  padding: .55rem .75rem;
+  color: var(--color-dark);
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.submenu-link:hover,
+.submenu-link:focus {
+  background: var(--color-light-alt);
+  color: var(--color-primary);
+}
+
+/* Enhanced Services mega dropdown */
+.services-menu {
+  background: var(--color-light);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  min-width: 320px;
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: menuSlideIn 0.2s ease-out;
+}
+
+@keyframes menuSlideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-section { margin-bottom: 1.25rem; }
+.menu-section:last-of-type { margin-bottom: .75rem; }
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: .5rem;
+  padding: .4rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.section-icon { font-size: .875rem; }
+
+/* Items */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .65rem .75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--color-dark);
+  transition: all .2s ease;
+  position: relative;
+  margin-bottom: .25rem;
+}
+.menu-item:hover {
+  background: #f8fafc;
+  color: var(--color-primary);
+  transform: translateX(4px);
+}
+.item-icon {
+  font-size: 1.1rem;
+  width: 2rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+.item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+.item-name {
+  font-weight: 600;
+  font-size: .9rem;
+  line-height: 1.2;
+}
+.item-desc {
+  font-size: .75rem;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+}
+
+/* Badges */
+.item-badge {
+  font-size: .625rem;
+  font-weight: 600;
+  padding: .125rem .5rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+}
+.item-badge.popular { background: #fef3c7; color: #d97706; }
+.item-badge.premium { background: #fce7f3; color: #be185d; }
+.item-badge.new { background: #dcfce7; color: #16a34a; }
+
+/* Footer */
+.menu-footer {
+  border-top: 1px solid #f3f4f6;
+  padding-top: .9rem;
+  margin-top: .4rem;
+}
+.menu-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: #fff;
+  padding: .65rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .875rem;
+  transition: all .2s ease;
+}
+.menu-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(253, 126, 20, 0.3);
+}
+.cta-icon { font-size: 1rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-menu {
+    min-width: 280px;
+    max-height: 70vh;
+  }
+  .menu-item { padding: .6rem; }
+  .item-name { font-size: .85rem; }
+  .item-desc { font-size: .7rem; }
+}
+
+/* Hide mobile-only items on desktop to avoid duplicate CTAs */
+.only-mobile { display: none; }
+@media (max-width: 991px) {
+  .only-mobile { display: block; }
 }
 
 .nav-link {
   color: var(--color-dark);
   font-weight: var(--font-weight-medium);
-  padding: 0.5rem 1.1rem;
-  border-radius: var(--border-radius-base);
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+  padding: 0.5rem 0.25rem;
+  border-radius: 0;
   transition: var(--transition-base);
   position: relative;
   text-decoration: none;
+  border-bottom: 1.5px solid transparent;
 }
 
 .nav-link:hover, .nav-link.active {
-  background-color: var(--color-primary);
-  color: var(--color-light);
-  transform: translateY(-2px);
+  background-color: transparent;
+  color: var(--color-primary);
+  transform: none;
+  border-bottom-color: var(--color-primary);
 }
 
 .nav-link.btn {
@@ -421,8 +784,8 @@ body.dark-theme .header {
 }
 
 .footer {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--color-light-alt);
+  color: var(--color-text);
   padding-top: 4rem;
 }
 
@@ -478,7 +841,7 @@ body.dark-theme .header {
 }
 
 .footer-column a { 
-  color: #a0aec0; 
+  color: var(--color-text-muted); 
   transition: color 0.2s, transform 0.2s;
   display: inline-flex;
   align-items: center;
@@ -567,13 +930,13 @@ body.dark-theme .header {
 }
 
 .btn-primary {
-  background-color: #D45A00;
+  background-color: var(--color-primary);
   color: var(--color-light);
-  border-color: #D45A00;
+  border-color: var(--color-primary);
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #B34A00;
+  background-color: var(--color-primary-dark);
   color: #fff;
 }
 
@@ -851,10 +1214,10 @@ body.dark-theme .header {
   color: var(--color-primary); 
 }
 
-/* CTA section */
+/* CTA section - harmonisée avec palette accessible */
 .cta-section {
-  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-lighten) 100%);
-  color: var(--color-light);
+  background: linear-gradient(135deg, var(--color-light-alt) 0%, var(--color-light) 100%);
+  color: var(--color-text);
   text-align: center;
 }
 
@@ -1210,19 +1573,21 @@ body.dark-theme .header {
   display: block;
 }
 
-/* nav-links mobile active state - CORRIGÉ */
+/* nav-links mobile active state - ALIGNE SOUS BANNIÈRE + HEADER FIXES */
 .nav-links.active {
   display: flex !important;
   flex-direction: column;
   position: fixed;
-  top: var(--header-height);
-  right: 0;
+  top: calc(var(--promo-banner-height) + var(--header-height));
   left: 0;
+  right: 0;
   background-color: var(--color-light);
-  z-index: 999;
-  padding: 1.5rem 0;
+  z-index: calc(var(--z-header) - 1);
+  padding: 1rem 0;
   box-shadow: var(--box-shadow-base);
   animation: slideInDown 0.3s forwards;
+  height: calc(100vh - var(--promo-banner-height) - var(--header-height));
+  overflow-y: auto;
 }
 
 @keyframes slideInDown {
@@ -2091,28 +2456,9 @@ mark, .highlight {
   /* 2. On cache les liens de navigation textuels */
   .nav-links {
     display: none; /* Caché par défaut */
-    
-    /* 3. On définit le style du menu déroulant quand il sera ouvert */
-    position: fixed; /* Positionné par rapport à la fenêtre */
-    /* Il doit commencer sous le header et la bannière qui sont maintenant fixés en haut */
-    top: calc(var(--header-height) + var(--promo-banner-height)); 
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background-color: var(--color-light);
-    padding: 1rem 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border-top: 1px solid var(--color-border);
-    gap: 0;
-    z-index: 1000;
   }
 
-  /* 4. Règle qui sera activée par votre JavaScript pour AFFICHER le menu */
-  .nav-links.active {
-    display: flex;
-  }
-
-  /* 5. Styles pour les liens à l'intérieur du menu ouvert */
+  /* 3. Styles pour les liens à l'intérieur du menu ouvert */
   .nav-link {
     width: 100%;
     text-align: center;

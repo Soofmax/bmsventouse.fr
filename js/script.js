@@ -431,6 +431,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // Header shrink on scroll (desktop)
+  const setupHeaderShrink = () => {
+    const header = document.querySelector('.header');
+    const sentinel = document.getElementById('headerSentinel');
+    if (!header || !sentinel) return;
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.boundingClientRect.y < 0 || !entry.isIntersecting) {
+          header.classList.add('shrink');
+        } else {
+          header.classList.remove('shrink');
+        }
+      });
+    }, { rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--promo-banner-height') || '40')}px 0px 0px 0px`, threshold: 0 });
+
+    io.observe(sentinel);
+  };
+
+  // Hover-out delay for Services submenu (prevents accidental close)
+  const setupServicesHoverDelay = () => {
+    const item = document.querySelector('.nav-item.has-dropdown');
+    if (!item) return;
+    let timer = null;
+
+    const open = () => {
+      clearTimeout(timer);
+      item.classList.add('open');
+      const link = item.querySelector('.nav-link');
+      if (link) link.setAttribute('aria-expanded', 'true');
+    };
+    const close = () => {
+      timer = setTimeout(() => {
+        item.classList.remove('open');
+        const link = item.querySelector('.nav-link');
+        if (link) link.setAttribute('aria-expanded', 'false');
+      }, 150);
+    };
+
+    item.addEventListener('mouseenter', open);
+    item.addEventListener('mouseleave', close);
+    // Keyboard
+    item.addEventListener('focusin', open);
+    item.addEventListener('focusout', close);
+
+    // Mobile: toggle on click
+    const link = item.querySelector('.nav-link');
+    if (link) {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const isOpen = item.classList.contains('open');
+          item.classList.toggle('open', !isOpen);
+          link.setAttribute('aria-expanded', String(!isOpen));
+        }
+      });
+    }
+  };
+
   // ==========================================================================
   // INITIALISATION DE TOUS LES MODULES
   // ==========================================================================
@@ -442,6 +501,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setupBackToTop();
     setupThemeToggle();
     setupAnalytics();
+    setupHeaderShrink();
+    setupServicesHoverDelay();
     console.log('🚀 BMS Ventouse - Tous les modules initialisés avec succès');
   } catch (error) {
     console.error("Erreur lors de l'initialisation des scripts du site :", error);

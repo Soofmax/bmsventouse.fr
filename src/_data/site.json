@@ -17,10 +17,10 @@
   "geo": { "lat": "48.9242", "lng": "2.4453" },
   "openingHours": "Mo-Su 00:00-23:59",
   "areaServed": ["France"],
-  "priceRange": "$$",
+  "priceRange": "$",
   "socials": {
     "linkedin": "https://www.linkedin.com/company/bms-ventouse",
     "facebook": "https://www.facebook.com/bmsventouse"
   },
-  "themeColor": "#FF8C42"
+  "themeColor": "#E97316"
 }
