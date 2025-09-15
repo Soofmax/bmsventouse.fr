@@ -100,12 +100,23 @@
 
 /* Classes d'animation pour Intersection Observer */
 .animate-on-scroll {
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1; /* VISIBLE PAR DÉFAUT */
+  transform: translateY(0); /* POSITION NORMALE PAR DÉFAUT */
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation d'entrée optionnelle */
+.animate-on-scroll.will-animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-on-scroll.will-animate.animate {
   opacity: 1;
   transform: translateY(0);
 }
