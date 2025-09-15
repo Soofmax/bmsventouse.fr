@@ -6,8 +6,15 @@
 @import url('./mockup-transform.css');
 
 /* =========================================
-   MICRO-ANIMATIONS PROFESSIONNELLES
-   Animations et interactions avancées
+   CORRECTIONS HEADER PROFESSIONNEL
+   Header moderne et élégant
    ========================================= */
 
-@import url('./micro-animations.css');
+@import url('./header-fix.css');
+
+/* =========================================
+   ANIMATIONS PROFESSIONNELLES CORRIGÉES
+   Animations fluides et performantes
+   ========================================= */
+
+@import url('./animations-fix.css');

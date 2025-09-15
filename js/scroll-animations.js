@@ -1,12 +1,12 @@
 /**
- * ANIMATIONS AU SCROLL - BMS VENTOUSE
- * Script pour déclencher les animations lors du scroll
+ * ANIMATIONS AU SCROLL CORRIGÉES - BMS VENTOUSE
+ * Script optimisé pour les vrais éléments HTML du site
  */
 
 // Configuration des animations
 const ANIMATION_CONFIG = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
+  threshold: 0.15,
+  rootMargin: '0px 0px -100px 0px'
 };
 
 // Initialisation des animations au scroll
@@ -25,37 +25,45 @@ function initScrollAnimations() {
 
   // Créer l'observer
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        // Optionnel : arrêter d'observer après animation
+        // Délai progressif pour un effet échelonné
+        setTimeout(() => {
+          entry.target.classList.add('in-view');
+        }, index * 100);
+        
+        // Arrêter d'observer après animation
         observer.unobserve(entry.target);
       }
     });
   }, ANIMATION_CONFIG);
 
-  // Observer tous les éléments à animer
+  // Sélecteurs spécifiques pour les éléments réels du site
   const elementsToAnimate = document.querySelectorAll(`
-    .card,
-    [class*="card"],
+    .grid > div,
+    .services-grid > div,
+    article,
     .service-card,
     [class*="service"],
-    .stats-number,
-    [class*="stats"],
-    .faq-item,
-    [class*="faq"],
-    section > h1,
-    section > h2,
-    section > h3,
+    .card,
+    [class*="card"],
+    section h1,
+    section h2,
+    section h3,
     .hero,
     .testimonial,
-    [class*="testimonial"]
+    [class*="testimonial"],
+    .faq-item,
+    [class*="faq"],
+    .stats,
+    [class*="stats"]
   `);
 
+  console.log(`🎬 ${elementsToAnimate.length} éléments trouvés pour animation`);
+
   elementsToAnimate.forEach((el, index) => {
-    // Ajouter la classe d'animation avec délai progressif
+    // Ajouter la classe d'animation
     el.classList.add('animate-on-scroll');
-    el.style.animationDelay = `${index * 0.1}s`;
     
     // Observer l'élément
     observer.observe(el);
@@ -64,10 +72,19 @@ function initScrollAnimations() {
 
 // Animation des compteurs (statistiques)
 function animateCounters() {
-  const counters = document.querySelectorAll('.stats-number, [class*="stats"] .number');
+  const counters = document.querySelectorAll(`
+    .stats-number, 
+    [class*="stats"] .number,
+    [class*="stat"],
+    [data-count]
+  `);
   
   counters.forEach(counter => {
-    const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
+    const text = counter.textContent || counter.innerText;
+    const target = parseInt(text.replace(/[^0-9]/g, ''));
+    
+    if (isNaN(target) || target === 0) return;
+    
     const duration = 2000; // 2 secondes
     const increment = target / (duration / 16); // 60fps
     let current = 0;
@@ -75,10 +92,13 @@ function animateCounters() {
     const updateCounter = () => {
       current += increment;
       if (current < target) {
-        counter.textContent = Math.floor(current) + (counter.textContent.includes('+') ? '+' : '') + (counter.textContent.includes('%') ? '%' : '');
+        const value = Math.floor(current);
+        const suffix = text.includes('+') ? '+' : (text.includes('%') ? '%' : '');
+        counter.textContent = value + suffix;
         requestAnimationFrame(updateCounter);
       } else {
-        counter.textContent = target + (counter.textContent.includes('+') ? '+' : '') + (counter.textContent.includes('%') ? '%' : '');
+        const suffix = text.includes('+') ? '+' : (text.includes('%') ? '%' : '');
+        counter.textContent = target + suffix;
       }
     };
     
@@ -90,7 +110,7 @@ function animateCounters() {
           observer.unobserve(entry.target);
         }
       });
-    });
+    }, { threshold: 0.5 });
     
     observer.observe(counter);
   });
@@ -114,10 +134,21 @@ function initThemeToggleAnimation() {
 
 // Animation des boutons avec effet ripple
 function initRippleEffect() {
-  const buttons = document.querySelectorAll('.btn, button, [class*="btn"]');
+  const buttons = document.querySelectorAll(`
+    .btn, 
+    button, 
+    [class*="btn"],
+    a[class*="button"]
+  `);
   
   buttons.forEach(button => {
     button.addEventListener('click', function(e) {
+      // Éviter les doublons
+      const existingRipple = this.querySelector('.ripple-effect');
+      if (existingRipple) {
+        existingRipple.remove();
+      }
+      
       // Créer l'effet ripple
       const ripple = document.createElement('span');
       const rect = this.getBoundingClientRect();
@@ -134,7 +165,9 @@ function initRippleEffect() {
       
       // Supprimer l'effet après animation
       setTimeout(() => {
-        ripple.remove();
+        if (ripple.parentNode) {
+          ripple.remove();
+        }
       }, 600);
     });
   });
@@ -147,39 +180,25 @@ function initFormAnimations() {
   inputs.forEach(input => {
     // Animation focus
     input.addEventListener('focus', function() {
-      this.parentElement.classList.add('focused');
+      if (this.parentElement) {
+        this.parentElement.classList.add('focused');
+      }
     });
     
     input.addEventListener('blur', function() {
-      if (!this.value) {
+      if (!this.value && this.parentElement) {
         this.parentElement.classList.remove('focused');
       }
     });
     
     // Vérifier si déjà rempli au chargement
-    if (input.value) {
+    if (input.value && input.parentElement) {
       input.parentElement.classList.add('focused');
     }
   });
 }
 
-// Animation de parallaxe légère
-function initParallaxEffect() {
-  const parallaxElements = document.querySelectorAll('.hero, [class*="hero"]');
-  
-  if (parallaxElements.length === 0) return;
-  
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * -0.5;
-    
-    parallaxElements.forEach(element => {
-      element.style.transform = `translateY(${rate}px)`;
-    });
-  });
-}
-
-// Performance: Throttle scroll events
+// Optimisation des performances avec throttle
 function throttle(func, limit) {
   let inThrottle;
   return function() {
@@ -195,7 +214,7 @@ function throttle(func, limit) {
 
 // Initialisation au chargement de la page
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('🎬 Initialisation des micro-animations BMS Ventouse');
+  console.log('🎬 Initialisation des animations corrigées BMS Ventouse');
   
   // Délai pour laisser le CSS se charger
   setTimeout(() => {
@@ -204,15 +223,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initThemeToggleAnimation();
     initRippleEffect();
     initFormAnimations();
-    initParallaxEffect();
     
-    console.log('✅ Micro-animations initialisées avec succès');
-  }, 100);
+    console.log('✅ Animations corrigées initialisées avec succès');
+  }, 200);
 });
 
 // Réinitialiser les animations si la page change (SPA)
 window.addEventListener('popstate', () => {
-  setTimeout(initScrollAnimations, 100);
+  setTimeout(() => {
+    initScrollAnimations();
+    animateCounters();
+  }, 200);
 });
 
 // Export pour utilisation externe si nécessaire
@@ -220,7 +241,8 @@ if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     initScrollAnimations,
     animateCounters,
-    initThemeToggleAnimation
+    initThemeToggleAnimation,
+    initRippleEffect
   };
 }
 
