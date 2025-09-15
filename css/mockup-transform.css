@@ -1464,10 +1464,39 @@ section[class*="cta"] a[href*="whatsapp"] {
   display: none !important;
 }
 
-/* GARDER SEULEMENT LE BOUTON HEADER */
+/* CORRECTION ALIGNEMENT BOUTON HEADER */
 .nav-utilities .btn,
 header .btn {
-  display: inline-block !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  margin: 0 !important;
+  padding: 0.75rem 1.5rem !important;
+  line-height: 1 !important;
+}
+
+/* ALIGNEMENT NAVIGATION HEADER */
+.nav-utilities,
+header .nav-utilities {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+/* ALIGNEMENT GLOBAL HEADER */
+header nav,
+.header-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.nav-links,
+header .nav-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 2rem !important;
 }
 @media (max-width: 768px) {
   .nav-dropdown .dropdown-menu {
