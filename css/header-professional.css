@@ -1,0 +1,384 @@
+/* ========================================
+   HEADER PROFESSIONNEL ULTRA-POLISH
+   Design moderne et élégant pour BMS Ventouse
+   ======================================== */
+
+/* RESET COMPLET DU HEADER */
+header, .header, nav {
+  all: unset !important;
+}
+
+/* HEADER PRINCIPAL */
+header {
+  display: block !important;
+  background: var(--bg-primary) !important;
+  border-bottom: 2px solid var(--primary-orange) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  width: 100% !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* CONTAINER NAVIGATION */
+header > div,
+header nav,
+.nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0.75rem 1.5rem !important;
+  height: 64px !important;
+  background: transparent !important;
+}
+
+/* ========================================
+   LOGO SECTION
+   ======================================== */
+.logo,
+header .logo,
+header a[href="/"] {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  color: var(--text-primary) !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  transition: all 0.3s ease !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.logo:hover {
+  transform: scale(1.02) !important;
+  color: var(--primary-orange) !important;
+}
+
+.logo img {
+  width: 36px !important;
+  height: 36px !important;
+  margin-right: 10px !important;
+  object-fit: contain !important;
+}
+
+/* ========================================
+   NAVIGATION PRINCIPALE
+   ======================================== */
+.nav-links,
+header .nav-links,
+header nav ul,
+header ul {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* LIENS NAVIGATION - STYLE MODERNE */
+.nav-links a,
+header nav a:not(.btn):not([class*="btn"]),
+header ul li a {
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  padding: 0.6rem 1rem !important;
+  border-radius: 8px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  white-space: nowrap !important;
+}
+
+/* HOVER EFFECT ÉLÉGANT */
+.nav-links a:hover,
+header nav a:not(.btn):not([class*="btn"]):hover,
+header ul li a:hover {
+  color: var(--primary-orange) !important;
+  background: rgba(255, 140, 66, 0.08) !important;
+  border-color: rgba(255, 140, 66, 0.2) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.15) !important;
+}
+
+/* ÉTAT ACTIF */
+.nav-links a.active,
+.nav-links a[aria-current="page"],
+header nav a.active {
+  color: var(--primary-orange) !important;
+  background: rgba(255, 140, 66, 0.1) !important;
+  border-color: rgba(255, 140, 66, 0.3) !important;
+  font-weight: 600 !important;
+}
+
+/* ========================================
+   SECTION UTILITIES (téléphone + toggle + CTA)
+   ======================================== */
+.nav-utilities,
+header .nav-utilities {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* TÉLÉPHONE STYLÉ */
+.nav-utilities a[href*="tel"],
+header a[href*="tel"] {
+  color: var(--text-secondary) !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+}
+
+.nav-utilities a[href*="tel"]:hover,
+header a[href*="tel"]:hover {
+  color: var(--primary-orange) !important;
+  background: rgba(255, 140, 66, 0.1) !important;
+  border-color: var(--primary-orange) !important;
+  transform: translateY(-1px) !important;
+}
+
+.nav-utilities a[href*="tel"]::before {
+  content: "📞" !important;
+  font-size: 0.8rem !important;
+}
+
+/* THEME TOGGLE ÉLÉGANT */
+[title*="thème"],
+.theme-toggle,
+button[title*="thème"] {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  color: var(--text-primary) !important;
+  font-size: 1.1rem !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+[title*="thème"]:hover,
+.theme-toggle:hover {
+  border-color: var(--primary-orange) !important;
+  background: rgba(255, 140, 66, 0.1) !important;
+  transform: translateY(-1px) scale(1.05) !important;
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.2) !important;
+}
+
+/* BOUTON CTA PRINCIPAL - ULTRA POLISH */
+.btn,
+header .btn,
+a[class*="btn"],
+[class*="btn"] {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, #e67a2e 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.7rem 1.4rem !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.25) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 1px solid transparent !important;
+}
+
+.btn:hover,
+header .btn:hover,
+a[class*="btn"]:hover,
+[class*="btn"]:hover {
+  background: linear-gradient(135deg, #e67a2e 0%, #d16a1e 100%) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 25px rgba(255, 140, 66, 0.35) !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.btn:active,
+header .btn:active {
+  transform: translateY(0) scale(0.98) !important;
+  transition-duration: 0.1s !important;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* TABLETTE */
+@media (max-width: 1024px) {
+  header > div,
+  header nav {
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .nav-links {
+    gap: 0.3rem !important;
+  }
+  
+  .nav-links a {
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  header > div,
+  header nav {
+    padding: 0.6rem 1rem !important;
+    height: 60px !important;
+  }
+  
+  .logo {
+    font-size: 1.2rem !important;
+  }
+  
+  .logo img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  
+  .nav-links {
+    gap: 0.2rem !important;
+  }
+  
+  .nav-links a {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  .nav-utilities {
+    gap: 0.5rem !important;
+  }
+  
+  [title*="thème"] {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.1rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* TRÈS PETIT MOBILE */
+@media (max-width: 480px) {
+  .nav-utilities a[href*="tel"] {
+    display: none !important;
+  }
+  
+  .nav-links a {
+    padding: 0.4rem 0.5rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .btn {
+    padding: 0.5rem 0.9rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* ========================================
+   ANIMATIONS AVANCÉES
+   ======================================== */
+
+/* ANIMATION SCROLL */
+header.scrolled {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* MICRO-INTERACTIONS */
+header * {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* FOCUS ACCESSIBILITY */
+header a:focus,
+header button:focus {
+  outline: 2px solid var(--primary-orange) !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
+/* ========================================
+   CORRECTIONS SPÉCIFIQUES
+   ======================================== */
+
+/* FORCER LA HAUTEUR */
+header {
+  min-height: 64px !important;
+  max-height: 64px !important;
+}
+
+/* SUPPRESSION ÉLÉMENTS INDÉSIRABLES */
+header .promo-banner,
+header [class*="promo"],
+header [class*="banner"],
+header .skip-link {
+  display: none !important;
+}
+
+/* ALIGNEMENT PARFAIT */
+header > div,
+header nav {
+  align-items: center !important;
+  height: 64px !important;
+}
+
+.nav-utilities {
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.nav-utilities > * {
+  margin: 0 !important;
+  vertical-align: middle !important;
+}
+
+/* TYPOGRAPHIE COHÉRENTE */
+header, header * {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* PERFORMANCE */
+header {
+  contain: layout style paint !important;
+  will-change: transform !important;
+}
+
