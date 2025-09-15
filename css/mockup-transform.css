@@ -1445,12 +1445,22 @@ input:focus, textarea:focus, select:focus {
   color: #ffffff !important;
 }
 
-/* MASQUER LES BOUTONS CTA EN DOUBLE DANS LE HERO */
+/* MASQUER LES BOUTONS CTA EN DOUBLE PARTOUT */
 .hero .btn,
 .hero .cta-buttons,
 .hero [class*="btn"],
 .hero a[href*="contact"],
-.hero a[href*="whatsapp"] {
+.hero a[href*="whatsapp"],
+.cta-section .btn,
+.cta-section .cta-buttons,
+.cta-section [class*="btn"],
+.cta-section a[href*="contact"],
+.cta-section a[href*="whatsapp"],
+section[class*="cta"] .btn,
+section[class*="cta"] .cta-buttons,
+section[class*="cta"] [class*="btn"],
+section[class*="cta"] a[href*="contact"],
+section[class*="cta"] a[href*="whatsapp"] {
   display: none !important;
 }
 
