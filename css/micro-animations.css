@@ -1,0 +1,405 @@
+/* ========================================
+   MICRO-ANIMATIONS PROFESSIONNELLES BMS VENTOUSE
+   ======================================== */
+
+/* VARIABLES D'ANIMATION */
+:root {
+  --animation-speed-fast: 0.2s;
+  --animation-speed-normal: 0.3s;
+  --animation-speed-slow: 0.5s;
+  --animation-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ANIMATIONS GLOBALES */
+* {
+  transition: all var(--animation-speed-normal) var(--animation-easing) !important;
+}
+
+/* RÉDUCTION DES ANIMATIONS POUR ACCESSIBILITÉ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   ANIMATIONS HEADER & NAVIGATION
+   ======================================== */
+
+/* LOGO HOVER ANIMATION */
+.logo, 
+header .logo,
+[class*="logo"] {
+  transition: transform var(--animation-speed-normal) var(--animation-easing) !important;
+}
+
+.logo:hover,
+header .logo:hover,
+[class*="logo"]:hover {
+  transform: scale(1.05) !important;
+}
+
+/* NAVIGATION LINKS HOVER */
+.nav-links a,
+header nav a:not(.btn) {
+  position: relative !important;
+  transition: color var(--animation-speed-normal) var(--animation-easing) !important;
+}
+
+.nav-links a::after,
+header nav a:not(.btn)::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -4px !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: var(--primary-orange) !important;
+  transition: width var(--animation-speed-normal) var(--animation-easing) !important;
+}
+
+.nav-links a:hover::after,
+header nav a:not(.btn):hover::after {
+  width: 100% !important;
+}
+
+/* BOUTON CTA ANIMATIONS */
+.btn,
+button,
+[class*="btn"] {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all var(--animation-speed-normal) var(--animation-easing) !important;
+  transform: translateZ(0) !important; /* Force GPU acceleration */
+}
+
+.btn:hover,
+button:hover,
+[class*="btn"]:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 25px rgba(255, 140, 66, 0.3) !important;
+}
+
+.btn:active,
+button:active,
+[class*="btn"]:active {
+  transform: translateY(0) scale(0.98) !important;
+}
+
+/* EFFET RIPPLE SUR LES BOUTONS */
+.btn::before,
+button::before,
+[class*="btn"]::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-radius: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  transition: width var(--animation-speed-slow) var(--animation-easing), 
+              height var(--animation-speed-slow) var(--animation-easing) !important;
+}
+
+.btn:active::before,
+button:active::before,
+[class*="btn"]:active::before {
+  width: 300px !important;
+  height: 300px !important;
+}
+
+/* THEME TOGGLE ANIMATION */
+[title*="thème"] {
+  transition: transform var(--animation-speed-normal) var(--animation-bounce) !important;
+}
+
+[title*="thème"]:hover {
+  transform: rotate(180deg) scale(1.1) !important;
+}
+
+/* ========================================
+   ANIMATIONS CARTES & SERVICES
+   ======================================== */
+
+/* CARTES SERVICES HOVER */
+.card,
+[class*="card"],
+.service-card,
+[class*="service"] {
+  transition: all var(--animation-speed-normal) var(--animation-easing) !important;
+  transform: translateZ(0) !important;
+}
+
+.card:hover,
+[class*="card"]:hover,
+.service-card:hover,
+[class*="service"]:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ANIMATION BORDURE PROGRESSIVE */
+.card::before,
+[class*="card"]::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  border: 2px solid transparent !important;
+  border-radius: inherit !important;
+  background: linear-gradient(45deg, var(--primary-orange), transparent, var(--primary-orange)) border-box !important;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0) !important;
+  mask-composite: exclude !important;
+  opacity: 0 !important;
+  transition: opacity var(--animation-speed-normal) var(--animation-easing) !important;
+}
+
+.card:hover::before,
+[class*="card"]:hover::before {
+  opacity: 1 !important;
+}
+
+/* IMAGES HOVER ZOOM */
+.card img,
+[class*="card"] img,
+img {
+  transition: transform var(--animation-speed-slow) var(--animation-easing) !important;
+}
+
+.card:hover img,
+[class*="card"]:hover img {
+  transform: scale(1.1) !important;
+}
+
+/* ========================================
+   ANIMATIONS STATISTIQUES
+   ======================================== */
+
+/* COMPTEUR ANIMÉ */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stats-number,
+[class*="stats"] .number,
+[class*="stat"] {
+  animation: countUp var(--animation-speed-slow) var(--animation-easing) !important;
+}
+
+/* ICÔNES STATISTIQUES PULSE */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.stats-icon,
+[class*="stats"] .icon {
+  animation: pulse 2s infinite !important;
+}
+
+/* ========================================
+   ANIMATIONS SCROLL & APPARITION
+   ======================================== */
+
+/* FADE IN AU SCROLL */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SLIDE IN FROM LEFT */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* SLIDE IN FROM RIGHT */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* CLASSES D'ANIMATION AU SCROLL */
+.animate-on-scroll {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  transition: all var(--animation-speed-slow) var(--animation-easing) !important;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ========================================
+   ANIMATIONS FAQ & ACCORDÉONS
+   ======================================== */
+
+/* FAQ EXPAND ANIMATION */
+.faq-item,
+[class*="faq"] {
+  transition: all var(--animation-speed-normal) var(--animation-easing) !important;
+}
+
+.faq-item:hover,
+[class*="faq"]:hover {
+  background: rgba(255, 140, 66, 0.05) !important;
+  transform: translateX(5px) !important;
+}
+
+/* ICÔNE FAQ ROTATION */
+.faq-icon,
+.faq-toggle {
+  transition: transform var(--animation-speed-normal) var(--animation-easing) !important;
+}
+
+.faq-item.active .faq-icon,
+.faq-item.active .faq-toggle {
+  transform: rotate(180deg) !important;
+}
+
+/* ========================================
+   ANIMATIONS FORMULAIRES
+   ======================================== */
+
+/* INPUT FOCUS ANIMATIONS */
+input, textarea, select {
+  transition: all var(--animation-speed-normal) var(--animation-easing) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  transform: scale(1.02) !important;
+  box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.2) !important;
+}
+
+/* LABEL FLOAT ANIMATION */
+.form-group {
+  position: relative !important;
+}
+
+.form-group label {
+  transition: all var(--animation-speed-normal) var(--animation-easing) !important;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  transform: translateY(-25px) scale(0.8) !important;
+  color: var(--primary-orange) !important;
+}
+
+/* ========================================
+   ANIMATIONS LOADING & FEEDBACK
+   ======================================== */
+
+/* SPINNER LOADING */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite !important;
+}
+
+/* SKELETON LOADING */
+@keyframes skeleton {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.skeleton {
+  animation: skeleton 1.5s ease-in-out infinite !important;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%) !important;
+  background-size: 200% 100% !important;
+}
+
+/* ========================================
+   ANIMATIONS THÈME TOGGLE
+   ======================================== */
+
+/* TRANSITION FLUIDE ENTRE THÈMES */
+html {
+  transition: background-color var(--animation-speed-slow) var(--animation-easing) !important;
+}
+
+body {
+  transition: color var(--animation-speed-slow) var(--animation-easing) !important;
+}
+
+/* ANIMATION SWITCH THÈME */
+@keyframes themeSwitch {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+.theme-switching {
+  animation: themeSwitch var(--animation-speed-normal) var(--animation-easing) !important;
+}
+
+/* ========================================
+   ANIMATIONS MOBILES OPTIMISÉES
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Réduction des animations sur mobile pour performance */
+  .card:hover,
+  [class*="card"]:hover {
+    transform: translateY(-4px) !important;
+  }
+  
+  .btn:hover,
+  button:hover {
+    transform: translateY(-1px) scale(1.01) !important;
+  }
+  
+  /* Animations tactiles */
+  .card:active,
+  [class*="card"]:active {
+    transform: scale(0.98) !important;
+  }
+}
+
+/* ========================================
+   ANIMATIONS PERFORMANCE OPTIMISÉES
+   ======================================== */
+
+/* FORCE GPU ACCELERATION */
+.card, .btn, [class*="card"], [class*="btn"] {
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+  perspective: 1000px !important;
+}
+
+/* OPTIMISATION REPAINT */
+.animate-on-scroll,
+.card:hover,
+.btn:hover {
+  contain: layout style paint !important;
+}
+
