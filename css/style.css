@@ -15,7 +15,7 @@
 @import url('./components/footer.css');
 
 /* 4. Animations et micro-interactions */
-@import url('./components/animations.css');
+/* @import url('./components/animations.css'); SUPPRIMÉ - CASSAIT L'AFFICHAGE */
 
 /* 5. Responsive design */
 @import url('./components/responsive.css');
