@@ -13,6 +13,13 @@
 @import url('./header-professional.css');
 
 /* =========================================
+   SITE COMPLET ULTRA-PROFESSIONNEL
+   Cartes services, footer, boutons - tout cohérent
+   ========================================= */
+
+@import url('./site-complete-professional.css');
+
+/* =========================================
    ANIMATIONS PROFESSIONNELLES CORRIGÉES
    Animations fluides et performantes
    ========================================= */
