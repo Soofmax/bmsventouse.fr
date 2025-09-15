@@ -3,7 +3,7 @@
    ========================================= */
 
 .testimonial-card {
-  background: var(--color-light);
+  background: var(--color-light-alt); /* Fond sombre alternatif */
   padding: 2.5rem;
   border-radius: var(--border-radius-large);
   box-shadow: var(--box-shadow-base);
@@ -15,6 +15,7 @@
 .testimonial-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--box-shadow-hover);
+  border-color: var(--color-primary); /* Bordure orange au hover */
 }
 
 .testimonial-card p {
@@ -37,7 +38,7 @@
 
 .testimonial-card footer {
   font-weight: var(--font-weight-bold);
-  color: var(--color-dark);
+  color: var(--color-text); /* Texte blanc */
   display: flex;
   align-items: center;
   gap: 1rem;

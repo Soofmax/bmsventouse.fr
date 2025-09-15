@@ -13,7 +13,7 @@
 
 /* FAQ card */
 .faq-item {
-  background: var(--color-light);
+  background: var(--color-light-alt); /* Fond sombre alternatif */
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-large);
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -23,7 +23,7 @@
 
 .faq-item:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  border-color: var(--color-primary-light);
+  border-color: var(--color-primary); /* Bordure orange au hover */
 }
 
 /* Question header */
@@ -34,19 +34,19 @@
   padding: 1.25rem 1.5rem;
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight-medium);
-  color: var(--color-dark);
+  color: var(--color-text); /* Texte blanc */
   text-align: left;
   cursor: pointer;
   position: relative;
   border: none;
-  background: var(--color-light);
+  background: var(--color-light-alt); /* Fond sombre alternatif */
   transition: var(--transition-base);
   border-bottom: 1px solid var(--color-border);
 }
 
 .faq-question:hover {
   color: var(--color-primary);
-  background: var(--color-light-alt);
+  background: var(--color-light); /* Fond encore plus sombre au hover */
 }
 
 /* Pure CSS +/- toggle icon */

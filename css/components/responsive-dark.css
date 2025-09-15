@@ -1,0 +1,182 @@
+/* =========================================
+   Responsive Dark Theme Optimizations
+   ========================================= */
+
+/* Amélioration des contrastes pour l'accessibilité */
+:root {
+  --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.4);
+  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Optimisations pour les petits écrans */
+@media (max-width: 768px) {
+  /* Header mobile amélioré */
+  .header {
+    padding: 0 1rem;
+  }
+  
+  .nav {
+    height: 60px; /* Réduction pour mobile */
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  /* Services grid responsive */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Stats responsive */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    padding: 1.5rem 1rem;
+  }
+  
+  .stat-item .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  /* FAQ responsive */
+  .faq-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .faq-question {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Testimonials responsive */
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+  
+  /* Boutons responsive */
+  .btn {
+    min-width: auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Optimisations pour très petits écrans */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Stats en colonne unique sur très petits écrans */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-item .stat-number {
+    font-size: 1.6rem;
+  }
+}
+
+/* Améliorations pour les écrans moyens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .faq-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Optimisations pour grands écrans */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Améliorations de l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible amélioré */
+.btn:focus-visible,
+.nav-link:focus-visible,
+.faq-question:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Amélioration du contraste pour les liens */
+a:not(.btn):not(.nav-link) {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+a:not(.btn):not(.nav-link):hover {
+  color: var(--color-primary-light);
+}
+
+/* Optimisation des images pour le thème sombre */
+img {
+  border-radius: var(--border-radius-base);
+}
+
+/* Amélioration des formulaires pour le thème sombre */
+input, textarea, select {
+  background: var(--color-light-alt);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: var(--border-radius-base);
+  padding: 0.75rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 140, 66, 0.2);
+}
+

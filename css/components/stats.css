@@ -3,7 +3,7 @@
    ========================================= */
 
 .stat-item {
-  background-color: var(--color-light);
+  background-color: var(--color-light-alt); /* Fond sombre alternatif */
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-large);
   box-shadow: var(--box-shadow-base);
@@ -15,6 +15,7 @@
 .stat-item:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-hover);
+  border-color: var(--color-primary); /* Bordure orange au hover */
 }
 
 .stat-item .stat-number {
