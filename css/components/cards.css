@@ -5,7 +5,7 @@
 /* Service and contact cards */
 .service-card,
 .contact-card {
-  background: var(--color-light);
+  background: var(--color-light-alt); /* Fond sombre alternatif */
   border-radius: var(--border-radius-large);
   text-align: center;
   padding: 2.5rem 2rem;
@@ -14,14 +14,14 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border); /* Bordure visible */
 }
 
 .service-card:hover,
 .contact-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-hover);
-  border-color: var(--color-border);
+  border-color: var(--color-primary); /* Bordure orange au hover */
 }
 
 .service-icon,
@@ -47,7 +47,7 @@
 
 /* Visual service cards (with image) */
 .service-card-visual {
-  background-color: var(--color-light);
+  background-color: var(--color-light-alt); /* Fond sombre alternatif */
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-large);
   box-shadow: var(--box-shadow-base);
