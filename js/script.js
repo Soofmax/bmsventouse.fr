@@ -452,7 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Hover-out delay for Services submenu (prevents accidental close)
   const setupServicesHoverDelay = () => {
-    const item = document.querySelector('.nav-item.has-submenu');
+    const item = document.querySelector('.nav-item.has-dropdown');
     if (!item) return;
     let timer = null;
 
@@ -472,9 +472,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     item.addEventListener('mouseenter', open);
     item.addEventListener('mouseleave', close);
-    // Ensure keyboard users keep it open on focus within
+    // Keyboard
     item.addEventListener('focusin', open);
     item.addEventListener('focusout', close);
+
+    // Mobile: toggle on click
+    const link = item.querySelector('.nav-link');
+    if (link) {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const isOpen = item.classList.contains('open');
+          item.classList.toggle('open', !isOpen);
+          link.setAttribute('aria-expanded', String(!isOpen));
+        }
+      });
+    }
   };
 
   // ==========================================================================

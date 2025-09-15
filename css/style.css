@@ -452,26 +452,24 @@ body.dark-theme .header {
   align-items: center;
 }
 
-/* Submenu (dropdown) */
+/* Dropdown (new API) */
 .nav-item { position: relative; }
-.has-submenu > .nav-link::after {
-  content: '▾';
-  margin-left: .35rem;
-  font-size: .8em;
-  color: currentColor;
+
+.has-dropdown > .nav-link .icon-chevron-down {
+  display: inline-block;
+  transition: transform .2s ease;
+  font-style: normal;
 }
 
-/* Force submenu to be an absolutely-positioned dropdown below the Services item */
-.nav-links > .has-submenu { position: relative; }
-.nav-links > .has-submenu > .submenu {
-  position: absolute !important;
-  top: 100% !important;
-  left: 50% !important;
-  transform: translateX(-50%) translateY(8px) !important;
-  min-width: 320px;
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 280px;
   background: var(--color-light);
   border: 1px solid var(--color-border);
-  border-radius: 10px;
+  border-radius: var(--border-radius-large);
   box-shadow: 0 10px 24px rgba(0,0,0,0.10);
   padding: .5rem;
   opacity: 0;
@@ -480,18 +478,50 @@ body.dark-theme .header {
   z-index: calc(var(--z-header) + 1);
 }
 
-.submenu-heading {
-  font-size: .75rem;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--color-text-muted);
-  padding: .35rem .65rem .15rem;
+.has-dropdown:hover > .dropdown-menu,
+.has-dropdown:focus-within > .dropdown-menu,
+.has-dropdown.open > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(4px);
 }
 
-.submenu-divider {
-  height: 1px;
-  background: var(--color-border);
-  margin: .25rem 0;
+.has-dropdown:hover > .nav-link .icon-chevron-down,
+.has-dropdown.open > .nav-link .icon-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* Links inside dropdown */
+.dropdown-menu li { list-style: none; }
+.dropdown-link {
+  display: block;
+  padding: .55rem .75rem;
+  color: var(--color-dark);
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.dropdown-link:hover,
+.dropdown-link:focus {
+  background: var(--color-light-alt);
+  color: var(--color-primary);
+}
+
+/* Mobile: dropdown behaves inline (no hover) */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    border: none;
+    box-shadow: none;
+    padding: .25rem 0;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+  }
+  .has-dropdown.open > .dropdown-menu {
+    display: block;
+  }
 }
 
 /* Show dropdown only while hovering/focusing the Services item */

@@ -25,120 +25,21 @@
       <nav id="navigation" role="navigation" aria-label="Main navigation">
         <ul id="navLinks" class="nav-links">
           <li><a href="/" class="nav-link{% if activeNav == 'home' %} active{% endif %}">Accueil</a></li>
-          <li class="nav-item has-submenu">
-            <a href="/services/" class="nav-link{% if activeNav == 'services' %} active{% endif %}" aria-haspopup="true" aria-expanded="false">Services</a>
-            <div class="submenu" aria-label="Sous-menu Services">
-              <div class="services-menu">
-                <!-- Lien général -->
-                <div class="menu-top">
-                  <a href="/services/" class="menu-all">
-                    <span class="all-icon">📚</span>
-                    <span>Tous les services</span>
-                  </a>
-                </div>
-
-                <!-- Les plus demandés -->
-                <div class="menu-section featured">
-                  <h4 class="section-title"><span class="section-icon">🔥</span> LES PLUS DEMANDÉS</h4>
-                  <a href="/services/ventousage/" class="menu-item">
-                    <span class="item-icon">🚧</span>
-                    <div class="item-content">
-                      <span class="item-name">Ventousage</span>
-                      <span class="item-desc">Autorisations &amp; neutralisation</span>
-                    </div>
-                    <span class="item-badge popular">Populaire</span>
-                  </a>
-                  <a href="/services/securite-gardiennage/" class="menu-item">
-                    <span class="item-icon">🛡️</span>
-                    <div class="item-content">
-                      <span class="item-name">Sécurité plateau</span>
-                      <span class="item-desc">Gardiennage 24/7 spécialisé</span>
-                    </div>
-                    <span class="item-badge premium">Premium</span>
-                  </a>
-                </div>
-
-                <!-- Essentiels -->
-                <div class="menu-section">
-                  <h4 class="section-title"><span class="section-icon">⭐</span> ESSENTIELS</h4>
-                  <a href="/services/ventousage/" class="menu-item">
-                    <span class="item-icon">🚧</span>
-                    <div class="item-content">
-                      <span class="item-name">Ventousage</span>
-                      <span class="item-desc">Stationnement &amp; signalisation</span>
-                    </div>
-                  </a>
-                  <a href="/services/securite-gardiennage/" class="menu-item">
-                    <span class="item-icon">🛡️</span>
-                    <div class="item-content">
-                      <span class="item-name">Sécurité plateau</span>
-                      <span class="item-desc">Agents, contrôle d’accès</span>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- Techniques -->
-                <div class="menu-section">
-                  <h4 class="section-title"><span class="section-icon">🔧</span> TECHNIQUES</h4>
-                  <a href="/services/convoyage/" class="menu-item">
-                    <span class="item-icon">🚛</span>
-                    <div class="item-content">
-                      <span class="item-name">Convoyage</span>
-                      <span class="item-desc">Transport sécurisé</span>
-                    </div>
-                  </a>
-                  <a href="/services/regie-materiel/" class="menu-item">
-                    <span class="item-icon">🎬</span>
-                    <div class="item-content">
-                      <span class="item-name">Régie &amp; matériel</span>
-                      <span class="item-desc">Coordination technique</span>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- Complémentaires -->
-                <div class="menu-section">
-                  <h4 class="section-title"><span class="section-icon">➕</span> COMPLÉMENTAIRES</h4>
-                  <a href="/services/loges-confort/" class="menu-item">
-                    <span class="item-icon">🏠</span>
-                    <div class="item-content">
-                      <span class="item-name">Loges</span>
-                      <span class="item-desc">Espaces talents &amp; équipes</span>
-                    </div>
-                  </a>
-                  <a href="/services/cantine-catering/" class="menu-item">
-                    <span class="item-icon">🍽️</span>
-                    <div class="item-content">
-                      <span class="item-name">Cantine</span>
-                      <span class="item-desc">Restauration plateau</span>
-                    </div>
-                  </a>
-                  <a href="/services/logistique-evenementielle/" class="menu-item">
-                    <span class="item-icon">🎉</span>
-                    <div class="item-content">
-                      <span class="item-name">Événementiel</span>
-                      <span class="item-desc">Mode, pubs, galas</span>
-                    </div>
-                  </a>
-                  <a href="/services/solutions-packagees/" class="menu-item">
-                    <span class="item-icon">📦</span>
-                    <div class="item-content">
-                      <span class="item-name">Solutions packagées</span>
-                      <span class="item-desc">Offres tout-en-un</span>
-                    </div>
-                    <span class="item-badge new">Nouveau</span>
-                  </a>
-                </div>
-
-                <!-- CTA -->
-                <div class="menu-footer">
-                  <a href="/contact/" class="menu-cta">
-                    <span class="cta-icon">⚡</span>
-                    <span>Devis gratuit sous 2h</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+          <li class="nav-item has-dropdown">
+            <a href="/services/" class="nav-link{% if activeNav == 'services' %} active{% endif %}" aria-haspopup="true" aria-expanded="false">
+              Services
+              <i class="icon-chevron-down" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu" aria-label="Sous-menu Services">
+              <li><a href="/services/#ventousage" class="dropdown-link">Ventousage</a></li>
+              <li><a href="/services/#securite-plateau" class="dropdown-link">Sécurité plateau</a></li>
+              <li><a href="/services/#convoyage" class="dropdown-link">Convoyage</a></li>
+              <li><a href="/services/#regie-technique" class="dropdown-link">Régie &amp; matériel</a></li>
+              <li><a href="/services/#loges-mobiles" class="dropdown-link">Loges</a></li>
+              <li><a href="/services/#catering" class="dropdown-link">Cantine</a></li>
+              <li><a href="/services/#evenementiel" class="dropdown-link">Événementiel</a></li>
+              <li><a href="/services/#solutions" class="dropdown-link">Solutions packagées</a></li>
+            </ul>
           </li>
               
           <li><a href="/realisations/" class="nav-link{% if activeNav == 'realisations' %} active{% endif %}">Références</a></li>
