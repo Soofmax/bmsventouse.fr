@@ -1445,7 +1445,20 @@ input:focus, textarea:focus, select:focus {
   color: #ffffff !important;
 }
 
-/* RESPONSIVE SOUS-MENU */
+/* MASQUER LES BOUTONS CTA EN DOUBLE DANS LE HERO */
+.hero .btn,
+.hero .cta-buttons,
+.hero [class*="btn"],
+.hero a[href*="contact"],
+.hero a[href*="whatsapp"] {
+  display: none !important;
+}
+
+/* GARDER SEULEMENT LE BOUTON HEADER */
+.nav-utilities .btn,
+header .btn {
+  display: inline-block !important;
+}
 @media (max-width: 768px) {
   .nav-dropdown .dropdown-menu {
     position: static !important;
