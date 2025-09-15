@@ -25,3 +25,10 @@
    ========================================= */
 
 @import url('./animations-fix.css');
+
+/* =========================================
+   RESPONSIVE DESIGN COMPLET - MOBILE FIRST
+   Correction de TOUS les problèmes responsive
+   ========================================= */
+
+@import url('./responsive-fix-complete.css');
