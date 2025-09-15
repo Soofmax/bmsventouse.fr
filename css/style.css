@@ -1,34 +1,16 @@
 /* =========================================
-   BMS VENTOUSE - TRANSFORMATION MOCKUP COMPLÈTE
-   Import du CSS de transformation pour reproduire les mockups
+   BMS VENTOUSE - CSS PRINCIPAL
    ========================================= */
 
+/* Import du CSS de base */
 @import url('./mockup-transform.css');
-
-/* =========================================
-   HEADER PROFESSIONNEL ULTRA-POLISH
-   Header moderne, élégant et parfaitement aligné
-   ========================================= */
-
 @import url('./header-professional.css');
-
-/* =========================================
-   SITE COMPLET ULTRA-PROFESSIONNEL
-   Cartes services, footer, boutons - tout cohérent
-   ========================================= */
-
 @import url('./site-complete-professional.css');
-
-/* =========================================
-   RESPONSIVE DESIGN COMPLET - MOBILE FIRST
-   Correction de TOUS les problèmes responsive
-   ========================================= */
-
 @import url('./responsive-fix-complete.css');
 
 /* =========================================
-   ANIMATIONS ET ICÔNES CORRIGÉES
-   Animations fluides + vraies icônes émojis/SVG
+   FORCE ICÔNES ET ANIMATIONS - PRIORITÉ ABSOLUE
+   CSS ultra-spécifique qui override TOUT
    ========================================= */
 
-@import url('./animations-icons-fix.css');
+@import url('./force-icons-animations.css');

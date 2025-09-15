@@ -1,0 +1,336 @@
+/* ========================================
+   FORCE ICÔNES ET ANIMATIONS - ULTRA SPÉCIFIQUE
+   CSS qui override TOUT pour forcer les icônes et animations
+   ======================================== */
+
+/* ========================================
+   FORCE ICÔNES SERVICES - ULTRA PRIORITÉ
+   ======================================== */
+
+/* Cibler TOUTES les cartes services possibles */
+.service-card,
+a.service-card,
+[class*="service"],
+[href*="ventousage"],
+[href*="gardiennage"],
+[href*="regie"],
+[href*="transport"],
+[href*="cantine"],
+[href*="logistique"] {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* SUPPRIMER les images existantes */
+.service-card img,
+a.service-card img,
+[class*="service"] img,
+[href*="ventousage"] img,
+[href*="gardiennage"] img,
+[href*="regie"] img {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* CRÉER les nouvelles icônes avec ::before */
+.service-card::before,
+a.service-card::before,
+[href*="ventousage"]::before,
+[href*="gardiennage"]::before,
+[href*="regie"]::before,
+[href*="transport"]::before,
+[href*="cantine"]::before,
+[href*="logistique"]::before {
+  content: "🔧" !important;
+  position: absolute !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 64px !important;
+  height: 64px !important;
+  background: linear-gradient(135deg, #FF8C42 0%, #e67a2e 100%) !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 2rem !important;
+  color: white !important;
+  z-index: 10 !important;
+  box-shadow: 0 8px 20px rgba(255, 140, 66, 0.3) !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+/* ICÔNES SPÉCIFIQUES PAR SERVICE */
+[href*="ventousage"]::before {
+  content: "🔧" !important;
+}
+
+[href*="gardiennage"]::before,
+[href*="securite"]::before {
+  content: "🛡️" !important;
+}
+
+[href*="regie"]::before,
+[href*="technique"]::before {
+  content: "📹" !important;
+}
+
+[href*="transport"]::before,
+[href*="convoyage"]::before {
+  content: "🚛" !important;
+}
+
+[href*="cantine"]::before,
+[href*="catering"]::before {
+  content: "🍽️" !important;
+}
+
+[href*="logistique"]::before {
+  content: "📋" !important;
+}
+
+[href*="location"]::before,
+[href*="loge"]::before {
+  content: "🏠" !important;
+}
+
+[href*="solutions"]::before,
+[href*="package"]::before {
+  content: "📦" !important;
+}
+
+/* ========================================
+   FORCE ANIMATIONS HOVER - ULTRA PRIORITÉ
+   ======================================== */
+
+/* Animations cartes services */
+.service-card,
+a.service-card,
+[class*="service"],
+[href*="ventousage"],
+[href*="gardiennage"],
+[href*="regie"] {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+  will-change: transform, box-shadow !important;
+}
+
+.service-card:hover,
+a.service-card:hover,
+[class*="service"]:hover,
+[href*="ventousage"]:hover,
+[href*="gardiennage"]:hover,
+[href*="regie"]:hover {
+  transform: translateY(-12px) scale(1.02) translateZ(0) !important;
+  box-shadow: 0 25px 50px rgba(255, 140, 66, 0.25) !important;
+  border: 2px solid #FF8C42 !important;
+}
+
+/* Animation des icônes au hover */
+.service-card:hover::before,
+a.service-card:hover::before,
+[href*="ventousage"]:hover::before,
+[href*="gardiennage"]:hover::before,
+[href*="regie"]:hover::before {
+  transform: translateX(-50%) scale(1.15) rotate(10deg) !important;
+  box-shadow: 0 15px 35px rgba(255, 140, 66, 0.4) !important;
+}
+
+/* ========================================
+   FORCE ESPACEMENT POUR ICÔNES
+   ======================================== */
+
+/* Ajouter de l'espace en haut pour les icônes */
+.service-card,
+a.service-card,
+[href*="ventousage"],
+[href*="gardiennage"],
+[href*="regie"] {
+  padding-top: 100px !important;
+  min-height: 300px !important;
+}
+
+/* Ajuster les titres pour éviter le chevauchement */
+.service-card h3,
+.service-card h2,
+a.service-card h3,
+a.service-card h2 {
+  margin-top: 20px !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+/* ========================================
+   FORCE ICÔNES HEADER
+   ======================================== */
+
+/* Logo avec icône */
+header a[href="/"]::before,
+header .logo::before {
+  content: "🎬 " !important;
+  margin-right: 0.5rem !important;
+  font-size: 1.2em !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+/* Toggle thème avec icônes */
+header button[title*="sombre"]::before {
+  content: "🌙" !important;
+  font-size: 1.2rem !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+header button[title*="clair"]::before {
+  content: "☀️" !important;
+  font-size: 1.2rem !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+/* ========================================
+   FORCE SUPPRESSION BOUTONS EN DOUBLE
+   ======================================== */
+
+/* Supprimer les boutons CTA en double */
+a[href*="devis"]:not(header a),
+[class*="cta"]:not(header [class*="cta"]),
+.btn:not(header .btn) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Garder seulement le bouton header */
+header a[href*="devis"] {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* ========================================
+   FORCE ANIMATIONS BOUTONS
+   ======================================== */
+
+/* Animations boutons header */
+header a[href*="devis"],
+header button {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  transform: translateZ(0) !important;
+}
+
+header a[href*="devis"]:hover {
+  transform: translateY(-3px) scale(1.05) translateZ(0) !important;
+  box-shadow: 0 12px 30px rgba(255, 140, 66, 0.4) !important;
+}
+
+header button:hover {
+  transform: rotate(180deg) scale(1.1) !important;
+  background: #FF8C42 !important;
+  color: white !important;
+}
+
+/* ========================================
+   FORCE ICÔNES FOOTER
+   ======================================== */
+
+/* Icônes footer */
+footer a[href*="tel"]::before {
+  content: "📞 " !important;
+  margin-right: 0.5rem !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+footer a[href*="mailto"]::before {
+  content: "✉️ " !important;
+  margin-right: 0.5rem !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+footer a[href*="whatsapp"]::before {
+  content: "💬 " !important;
+  margin-right: 0.5rem !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+/* ========================================
+   FORCE COHÉRENCE COULEURS
+   ======================================== */
+
+/* Uniformiser les couleurs des cartes */
+.service-card,
+a.service-card,
+[href*="ventousage"],
+[href*="gardiennage"],
+[href*="regie"] {
+  background: var(--bg-secondary, #f8f9fa) !important;
+  border: 1px solid var(--border-color, #e9ecef) !important;
+  color: var(--text-primary, #333) !important;
+}
+
+/* Mode sombre */
+[data-theme="dark"] .service-card,
+[data-theme="dark"] a.service-card,
+[data-theme="dark"] [href*="ventousage"],
+[data-theme="dark"] [href*="gardiennage"],
+[data-theme="dark"] [href*="regie"] {
+  background: #2d2d2d !important;
+  border: 1px solid #444 !important;
+  color: #fff !important;
+}
+
+/* ========================================
+   FORCE RESPONSIVE
+   ======================================== */
+
+/* Mobile */
+@media (max-width: 768px) {
+  .service-card::before,
+  a.service-card::before,
+  [href*="ventousage"]::before,
+  [href*="gardiennage"]::before,
+  [href*="regie"]::before {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.5rem !important;
+    top: 15px !important;
+  }
+  
+  .service-card,
+  a.service-card,
+  [href*="ventousage"],
+  [href*="gardiennage"],
+  [href*="regie"] {
+    padding-top: 80px !important;
+    min-height: 250px !important;
+  }
+}
+
+/* ========================================
+   FORCE PERFORMANCE
+   ======================================== */
+
+/* GPU Acceleration forcée */
+.service-card,
+.service-card::before,
+header a,
+header button {
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+  perspective: 1000px !important;
+  will-change: transform, opacity !important;
+}
+
+/* ========================================
+   DEBUG - VÉRIFICATION VISUELLE
+   ======================================== */
+
+/* Bordure temporaire pour voir si le CSS s'applique */
+.service-card {
+  outline: 2px solid red !important;
+  outline-offset: 2px !important;
+}
+
+/* Supprimer après vérification */
+/* .service-card { outline: none !important; } */
+
