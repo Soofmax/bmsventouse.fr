@@ -1,120 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 /* =========================================
-   Design Tokens (Variables & Themes)
+   DESIGN TOKENS - SYSTÈME DE THÈME COMPLET
    ========================================= */
 
-/* Import Google Fonts - Police Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
-
-/* Global variables - Light theme by default */
 :root {
-  /* Couleurs principales */
-  --color-primary: #FF8C42; /* Orange de référence */
-  --color-primary-dark: #e67a2e;
-  --color-primary-light: #ffaa70;
-  --color-dark: #1a1a1a; /* Fond sombre pour contraste */
-  --color-dark-lighten: #2d2d2d;
-  --color-light: #ffffff; /* Fond clair */
-  --color-light-alt: #f8f9fa; /* Fond clair alternatif */
-  --color-text: #1a1a1a; /* Texte sombre */
-  --color-text-muted: #6c757d; /* Texte gris */
-  --color-border: #e9ecef; /* Bordures claires */
-  --color-success: #28a745;
-  --color-error: #dc3545;
-  --color-warning: #ffc107;
-  --color-info: #17a2b8;
-  --color-link: var(--color-primary);
-
+  /* Couleurs primaires */
+  --color-primary: #FF8C42;
+  --color-primary-dark: #E67A35;
+  --color-primary-light: #FFB366;
+  
+  /* Couleurs secondaires */
+  --color-secondary: #2C3E50;
+  --color-accent: #3498DB;
+  
+  /* Système de thème - SOMBRE par défaut */
+  --color-bg: #1a1a1a;
+  --color-surface: #2d2d2d;
+  --color-text: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.8);
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  
+  /* Header */
+  --color-header-bg: #ffffff;
+  --color-header-text: #1a1a1a;
+  --color-header-border: rgba(26, 26, 26, 0.1);
+  
+  /* Footer */
+  --color-footer-bg: #1a1a1a;
+  --color-footer-text: #ffffff;
+  --color-footer-link: rgba(255, 255, 255, 0.8);
+  --color-footer-border: rgba(255, 255, 255, 0.1);
+  
+  /* Cartes et surfaces */
+  --color-card-bg: #2d2d2d;
+  --color-card-border: rgba(255, 255, 255, 0.1);
+  --color-card-hover: #3a3a3a;
+  
+  /* Boutons */
+  --color-btn-secondary-bg: transparent;
+  --color-btn-secondary-border: rgba(255, 255, 255, 0.3);
+  --color-btn-secondary-text: #ffffff;
+  
+  /* États et feedback */
+  --color-success: #10B981;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+  
   /* Typographie */
   --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-size-base: clamp(0.95rem, 1vw, 1rem);
-  --font-size-sm: clamp(0.8rem, 0.9vw, 0.875rem);
-  --font-size-h1: clamp(2.2rem, 6vw, 3.5rem);
-  --font-size-h2: clamp(1.8rem, 4vw, 2.5rem);
-  --font-size-h3: clamp(1.3rem, 3vw, 1.4rem);
-  --line-height-base: 1.7;
-  --line-height-heading: 1.3;
+  --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --font-weight-black: 800;
-
-  /* Layout */
-  --container-width: min(1200px, 95vw);
-  --spacing-section: clamp(60px, 8vh, 80px);
-  --header-height: 70px;
-  --promo-banner-height: 50px;
-  --footer-gap: 2rem;
-  --grid-gap: clamp(1.5rem, 3vw, 2rem);
-  --content-padding: clamp(1rem, 5vw, 2rem);
-
-  /* Composants */
-  --border-radius-base: 8px;
-  --border-radius-large: 12px;
-  --border-radius-pill: 32px;
-  --transition-base: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.08);
-  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.11);
-  --focus-outline-width: 3px;
-  --btn-hover-scale: 1.02;
-  --whatsapp-size: 60px;
-  --whatsapp-mobile-size: 48px;
-  --whatsapp-margin: 24px;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
   
-  /* z-index layers */
-  --z-below: -1;
+  /* Tailles de police responsive */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* Tailles de titres fluides */
+  --font-size-h1: clamp(2.5rem, 5vw, 4rem);
+  --font-size-h2: clamp(2rem, 4vw, 3rem);
+  --font-size-h3: clamp(1.5rem, 3vw, 2rem);
+  --font-size-h4: 1.25rem;
+  --font-size-h5: 1.125rem;
+  --font-size-h6: 1rem;
+  
+  /* Hauteurs de ligne */
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-heading: 1.2;
+  
+  /* Espacement fluide */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-section: clamp(3rem, 8vw, 6rem);
+  
+  /* Container et layout */
+  --container-width: min(1200px, 95vw);
+  --content-padding: clamp(1rem, 3vw, 2rem);
+  --header-height: 70px;
+  
+  /* Bordures et rayons */
+  --border-radius-sm: 0.25rem;
+  --border-radius-base: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-full: 9999px;
+  
+  /* Ombres avec contraste adapté */
+  --box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --box-shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --box-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions optimisées */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Z-index système */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
   --z-normal: 1;
-  --z-above: 10;
-  --z-fixed: 100;
-  --z-header: 1000;
-  --z-overlay: 1500;
-  --z-promo: 2000;
-  --z-toast: 3000;
-  --z-whatsapp: 2000;
+}
 
-  /* Footer palette (light theme) */
-  --color-footer-bg: #1a1a1a; /* Fond sombre pour footer */
+/* THÈME CLAIR */
+[data-theme="light"] {
+  --color-bg: #f8f6f0;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-secondary: rgba(26, 26, 26, 0.8);
+  --color-text-muted: rgba(26, 26, 26, 0.6);
+  
+  /* Header en thème clair */
+  --color-header-bg: #ffffff;
+  --color-header-text: #1a1a1a;
+  --color-header-border: rgba(26, 26, 26, 0.1);
+  
+  /* Footer reste sombre même en thème clair */
+  --color-footer-bg: #2d2d2d;
   --color-footer-text: #ffffff;
-  --color-footer-link: #b0b0b0;
-  --color-footer-border: #404040;
+  --color-footer-link: rgba(255, 255, 255, 0.8);
+  --color-footer-border: rgba(255, 255, 255, 0.1);
+  
+  /* Cartes en thème clair */
+  --color-card-bg: #ffffff;
+  --color-card-border: rgba(26, 26, 26, 0.1);
+  --color-card-hover: #f8f6f0;
+  
+  /* Boutons en thème clair */
+  --color-btn-secondary-bg: transparent;
+  --color-btn-secondary-border: rgba(26, 26, 26, 0.3);
+  --color-btn-secondary-text: #1a1a1a;
+  
+  /* Ombres adaptées au thème clair */
+  --box-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Dark theme via class or :has() */
-body.dark-theme,
-:root:has(body.dark-theme) {
-  --color-light: #1a202c;
-  --color-light-alt: #2d3748;
-  --color-text: #e2e8f0;
-  --color-text-muted: #b0c0d0;
-  --color-border: #4a5568;
-  --color-dark: #ffffff;
-  --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.2);
-  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.25);
+/* THÈME SOMBRE (par défaut) */
+[data-theme="dark"] {
+  --color-bg: #1a1a1a;
+  --color-surface: #2d2d2d;
+  --color-text: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.8);
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  
+  /* Ombres adaptées au thème sombre */
+  --box-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* System dark preference fallback */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-light: #1a202c;
-    --color-light-alt: #2d3748;
-    --color-text: #e2e8f0;
-    --color-text-muted: #b0c0d0;
-    --color-border: #4a5568;
-    --color-dark: #ffffff;
-    --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.2);
-    --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.25);
-  }
+/* Application globale avec optimisations */
+* {
+  box-sizing: border-box;
 }
 
-/* Support for html.dark-theme (anti-flash) */
-html.dark-theme, body.dark-theme {
-  --color-light: #1a202c;
-  --color-light-alt: #2d3748;
-  --color-text: #e2e8f0;
-  --color-text-muted: #b0c0d0;
-  --color-border: #4a5568;
-  --color-dark: #ffffff;
-  --box-shadow-base: 0 5px 20px rgba(0, 0, 0, 0.2);
-  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.25);
-  color-scheme: dark;
+html {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  transition: background-color var(--transition-base), color var(--transition-base);
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/* Amélioration de la lisibilité */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: var(--color-text-secondary);
+}
+
+/* Focus visible pour accessibilité */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Sélection de texte */
+::selection {
+  background: var(--color-primary);
+  color: white;
 }

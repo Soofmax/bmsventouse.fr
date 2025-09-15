@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
-  <title>Nos Références &amp; Productions | BMS Ventouse</title>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Nos Références &amp; Productions | BMS Ventouse</title>
 <meta name="description" content="Découvrez nos références prestigieuses en logistique audiovisuelle. Des clients internationaux comme Netflix nous font confiance pour nos solutions sur mesure.">
+<meta name="keywords" content="ventousage plateau, sécurisation tournage, logistique audiovisuelle, convoyage véhicules, gardiennage plateau, régie technique, transport spécialisé, autorisations tournage Paris">
+<meta name="author" content="BMS Ventouse">
 <meta name="theme-color" content="#FF8C42">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
 <link rel="canonical" href="https://www.bmsventouse.fr/realisations/">
 <link rel="alternate" hreflang="fr-FR" href="https://www.bmsventouse.fr/realisations/">
 <link rel="alternate" hreflang="x-default" href="https://www.bmsventouse.fr/realisations/">
+
+
 <script>
   (function(){
     try{
@@ -16,8 +25,9 @@
       var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
       var dark=s?s==='dark':m;
       if(dark){
-        document.documentElement.classList.add('dark-theme');
-        document.body&&document.body.classList&&document.body.classList.add('dark-theme');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     }catch(e){ void e; }
   })();
@@ -29,13 +39,16 @@
 <meta property="og:url" content="https://www.bmsventouse.fr/realisations/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="{{ site.url }}/images/realisations-hero-background-desktop.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="BMS Ventouse">
-
-
+<meta property="fb:app_id" content="">
 
 
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="">
+<meta name="twitter:creator" content="">
 <meta name="twitter:title" content="Nos Références &amp; Productions | BMS Ventouse">
 <meta name="twitter:description" content="Découvrez nos références prestigieuses en logistique audiovisuelle. Des clients internationaux comme Netflix nous font confiance pour nos solutions sur mesure.">
 <meta name="twitter:image" content="{{ site.url }}/images/realisations-hero-background-desktop.webp">
@@ -45,6 +58,8 @@
 
 
 <link rel="preload" as="image" href="/favicon-32x32.png">
+<link rel="preload" href="/css/style.bundle.css?v=fbe3c1f3fa" as="style">
+<link rel="preload" href="/js/animations.js?v=f8ea751f11" as="script">
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -54,10 +69,9 @@
 <link rel="shortcut icon" href="/favicon.ico">
 
 
-<link rel="stylesheet" href="/css/style.bundle.css?v=a07ac89ecc">
+<link rel="stylesheet" href="/css/style.bundle.css?v=fbe3c1f3fa">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=optional" rel="stylesheet">
 
 
 <script type="application/ld+json">
@@ -68,6 +82,7 @@
       "@type": "WebSite",
       "url": "https://www.bmsventouse.fr",
       "name": "BMS Ventouse",
+      "description": "",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://www.bmsventouse.fr/search/?q={search_term_string}",
@@ -79,10 +94,73 @@
       "name": "BMS Ventouse",
       "url": "https://www.bmsventouse.fr",
       "logo": "https://www.bmsventouse.fr/android-chrome-512x512.png",
+      "description": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR",
+        "addressLocality": "Paris",
+        "addressRegion": "Île-de-France"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33646005642",
+        "contactType": "customer service",
+        "availableLanguage": "French"
+      },
       "sameAs": [
         "https://www.linkedin.com/company/bms-ventouse",
         "https://www.facebook.com/bmsventouse"
       ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "BMS Ventouse",
+      "description": "Spécialiste en ventousage de plateau, sécurisation de tournage et logistique audiovisuelle en France",
+      "url": "https://www.bmsventouse.fr",
+      "telephone": "+33646005642",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR",
+        "addressLocality": "Paris",
+        "addressRegion": "Île-de-France"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "48.8566",
+        "longitude": "2.3522"
+      },
+      "openingHours": "Mo-Su 00:00-23:59",
+      "serviceArea": {
+        "@type": "Country",
+        "name": "France"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Ventousage de Plateau",
+      "description": "Service professionnel de ventousage et neutralisation de places de stationnement pour tournages",
+      "provider": {
+        "@type": "Organization",
+        "name": "BMS Ventouse"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Sécurisation de Tournage",
+      "description": "Gardiennage et sécurisation 24h/24 de plateaux de tournage par agents spécialisés",
+      "provider": {
+        "@type": "Organization",
+        "name": "BMS Ventouse"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -92,11 +170,25 @@
           "position": 1,
           "name": "Accueil",
           "item": "https://www.bmsventouse.fr/"
-        },]
+        }]
     }
   ]
 }
 </script>
+
+
+
+
+
+<meta name="format-detection" content="telephone=no">
+<meta name="msapplication-TileColor" content="#FF8C42">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
   
 </head>
 <body class="page-realisations">
@@ -388,6 +480,7 @@
   <a href="#" class="back-to-top" aria-label="Retour en haut" title="Retour en haut">↑</a>
   <script src="/js/script.js?v=06324c2b8a" defer></script>
   <script src="/js/theme-toggle.js?v=99c4c6d356" defer></script>
+  <script src="/js/animations.js?v=f8ea751f11" defer></script>
   <script src="/js/scroll-animations.js?v=8bc1587cd1" defer></script>
   <script src="/js/sw-register.js?v=abe93e254e" defer></script>
 </body>

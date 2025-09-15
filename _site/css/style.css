@@ -14,7 +14,10 @@
 @import url('./components/services.css');
 @import url('./components/footer.css');
 
-/* 4. Responsive design */
+/* 4. Animations et micro-interactions */
+@import url('./components/animations.css');
+
+/* 5. Responsive design */
 @import url('./components/responsive.css');
 
 /* 
@@ -26,6 +29,7 @@
    - hero.css: Section hero
    - services.css: Grille et cartes de services
    - footer.css: Footer et liens
+   - animations.css: Animations et micro-interactions
    - responsive.css: Media queries et responsive
    
    Pour modifier un composant:

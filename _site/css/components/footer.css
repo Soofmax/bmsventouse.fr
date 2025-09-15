@@ -1,11 +1,11 @@
 /* =========================================
-   FOOTER COMPONENT
+   FOOTER COMPONENT - UNE LIGNE OPTIMISÉE
    ========================================= */
 
 footer {
   background: var(--color-footer-bg);
   color: var(--color-footer-text);
-  padding: 3rem 0 1rem;
+  padding: 2rem 0 1rem;
   border-top: 2px solid var(--color-primary);
 }
 
@@ -17,35 +17,50 @@ footer .container {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: start;
 }
 
 .footer-section h3 {
   color: var(--color-primary);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: var(--font-weight-bold);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.footer-section p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  color: var(--color-footer-text);
 }
 
 .footer-section ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-section li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .footer-section a {
   color: var(--color-footer-link);
   text-decoration: none;
   transition: var(--transition-base);
+  font-size: 0.85rem;
+  display: block;
 }
 
 .footer-section a:hover {
   color: var(--color-primary);
+  transform: translateX(3px);
 }
 
 .footer-bottom {
@@ -53,14 +68,25 @@ footer .container {
   padding-top: 1rem;
   text-align: center;
   color: var(--color-footer-link);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive - Garder 4 colonnes le plus longtemps possible */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
+  }
+  
+  footer {
+    padding: 1.5rem 0 1rem;
   }
 }
 
