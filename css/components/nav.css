@@ -2,8 +2,6 @@
    Navigation Component (Header, Nav, Mobile Menu)
    ========================================= */
 
-
-
 /* Header */
 .header {
   position: sticky;
@@ -71,6 +69,9 @@ body.dark-theme .header { background: rgba(26,32,44,0.92); }
   gap: 1rem;
   list-style: none;
   align-items: center;
+  /* MODIFICATION : Centrage automatique des liens de navigation */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav-link {
@@ -232,6 +233,9 @@ body.dark-theme .nav-utility-link:hover {
     border-top: 1px solid var(--color-border);
     gap: 0;
     z-index: 1000;
+    /* MODIFICATION : Annulation des marges auto pour le menu mobile */
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .nav-links.active {
@@ -283,3 +287,12 @@ body:has(.nav-links.active) { overflow: hidden; }
 
 /* Ensure header remains above everything */
 .header { z-index: 1502 !important; }
+
+/* =========================================
+   MODIFICATION : Ajustements personnalisés
+   ========================================= */
+
+/* Masquer le sélecteur de langue et les utilitaires (téléphone) sur tous les écrans */
+.nav-utilities {
+  display: none !important;
+}
