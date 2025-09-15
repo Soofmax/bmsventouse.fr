@@ -26,7 +26,16 @@
       <nav id="navigation" role="navigation" aria-label="Navigation principale">
         <ul id="navLinks" class="nav-links">
           <li><a href="/" class="nav-link{% if activeNav == 'home' %} active{% endif %}">Accueil</a></li>
-          <li><a href="/services/" class="nav-link{% if activeNav == 'services' %} active{% endif %}">Services</a></li>
+          <li class="nav-dropdown">
+            <a href="/services/" class="nav-link{% if activeNav == 'services' %} active{% endif %}">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="/services/ventousage/">Ventousage</a></li>
+              <li><a href="/services/plateau-gardiennage/">Sécurité & Gardiennage</a></li>
+              <li><a href="/services/convoyage/">Transport & Convoyage</a></li>
+              <li><a href="/services/cantine-catering/">Cantine & Catering</a></li>
+              <li><a href="/services/loges-confort/">Régie & Matériel</a></li>
+            </ul>
+          </li>
           <li><a href="/realisations/" class="nav-link{% if activeNav == 'realisations' %} active{% endif %}">Références</a></li>
           <li><a href="/contact/" class="nav-link{% if activeNav == 'contact' %} active{% endif %}">Contact</a></li>
         </ul>
