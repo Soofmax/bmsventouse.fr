@@ -584,9 +584,199 @@ header a[href*="devis"]:hover {
   color: #FF8C42 !important;
 }
 
-[data-theme="dark"] header button[title*="thème"] {
-  background: #2d2d2d !important;
-  border-color: #444 !important;
+/* ========================================
+   HEADER SANS ICÔNES - EXACTEMENT COMME MOCKUPS
+   ======================================== */
+
+/* Supprimer toutes les icônes du header */
+header *::before,
+header *::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Logo simple - juste texte */
+header a[href="/"],
+header .logo {
+  display: flex !important;
+  align-items: center !important;
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  color: #FF8C42 !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+}
+
+/* Toggle thème - juste bouton sans icône */
+header button[title*="thème"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--border-color, #e9ecef) !important;
+  background: var(--bg-secondary, #f8f9fa) !important;
+  color: var(--text-primary, #333) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.8rem !important;
+}
+
+header button[title*="thème"]:hover {
+  background: #FF8C42 !important;
+  border-color: #FF8C42 !important;
+  color: white !important;
+  transform: scale(1.05) !important;
+}
+
+/* ========================================
+   FOOTER QUADRILLAGE 4 COLONNES PROPRE
+   Exactement comme dans les mockups
+   ======================================== */
+
+footer {
+  background: var(--bg-primary, #fff) !important;
+  border-top: 2px solid #FF8C42 !important;
+  padding: 3rem 0 2rem 0 !important;
+  margin-top: 4rem !important;
+}
+
+[data-theme="dark"] footer {
+  background: #1a1a1a !important;
+  border-top-color: #FF8C42 !important;
+}
+
+/* Container footer */
+footer .container,
+footer > div {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+}
+
+/* Grille 4 colonnes parfaite */
+footer .footer-grid,
+footer .footer-content {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Colonnes footer */
+footer .footer-column {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+/* Titres colonnes */
+footer .footer-column h3,
+footer .footer-column h4 {
+  color: #FF8C42 !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin: 0 0 1rem 0 !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 2px solid #FF8C42 !important;
+}
+
+/* Liens footer */
+footer .footer-column a {
+  color: var(--text-primary, #333) !important;
+  text-decoration: none !important;
+  padding: 0.5rem 0 !important;
+  transition: all 0.2s ease !important;
+  border-radius: 4px !important;
+}
+
+footer .footer-column a:hover {
+  color: #FF8C42 !important;
+  background: rgba(255, 140, 66, 0.1) !important;
+  padding-left: 0.5rem !important;
+  transform: translateX(4px) !important;
+}
+
+[data-theme="dark"] footer .footer-column a {
   color: #fff !important;
+}
+
+[data-theme="dark"] footer .footer-column a:hover {
+  color: #FF8C42 !important;
+  background: rgba(255, 140, 66, 0.2) !important;
+}
+
+/* Texte footer */
+footer .footer-column p {
+  color: var(--text-secondary, #666) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+[data-theme="dark"] footer .footer-column p {
+  color: #ccc !important;
+}
+
+/* Copyright footer */
+footer .footer-bottom {
+  text-align: center !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid var(--border-color, #e9ecef) !important;
+  color: var(--text-secondary, #666) !important;
+  font-size: 0.9rem !important;
+}
+
+[data-theme="dark"] footer .footer-bottom {
+  border-top-color: #444 !important;
+  color: #ccc !important;
+}
+
+/* ========================================
+   RESPONSIVE FOOTER
+   ======================================== */
+
+/* Tablette */
+@media (max-width: 1024px) {
+  footer .footer-grid,
+  footer .footer-content {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 0 1.5rem 0 !important;
+  }
+  
+  footer .footer-grid,
+  footer .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  footer .container,
+  footer > div {
+    padding: 0 0.75rem !important;
+  }
+}
+
+/* Très petit mobile */
+@media (max-width: 480px) {
+  footer {
+    padding: 1.5rem 0 1rem 0 !important;
+  }
+  
+  footer .footer-column h3,
+  footer .footer-column h4 {
+    font-size: 1rem !important;
+  }
+  
+  footer .container,
+  footer > div {
+    padding: 0 0.5rem !important;
+  }
 }
 
