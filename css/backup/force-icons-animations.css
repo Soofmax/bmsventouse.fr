@@ -1,0 +1,782 @@
+/* ========================================
+   FORCE ICÔNES ET ANIMATIONS - ULTRA SPÉCIFIQUE
+   CSS qui override TOUT pour forcer les icônes et animations
+   ======================================== */
+
+/* ========================================
+   FORCE ICÔNES SERVICES - ULTRA PRIORITÉ
+   ======================================== */
+
+/* Cibler TOUTES les cartes services possibles */
+.service-card,
+a.service-card,
+[class*="service"],
+[href*="ventousage"],
+[href*="gardiennage"],
+[href*="regie"],
+[href*="transport"],
+[href*="cantine"],
+[href*="logistique"] {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* SUPPRIMER COMPLÈTEMENT LES IMAGES/CARRÉS EXISTANTS */
+.service-card img,
+.service-card picture,
+.service-card svg,
+a.service-card img,
+a.service-card picture,
+a.service-card svg,
+[class*="service"] img,
+[class*="service"] picture,
+[class*="service"] svg,
+[href*="ventousage"] img,
+[href*="gardiennage"] img,
+[href*="regie"] img,
+div[style*="background-color"],
+.icon,
+[class*="icon"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* CRÉER les nouvelles icônes avec ::before */
+.service-card::before,
+a.service-card::before,
+[href*="ventousage"]::before,
+[href*="gardiennage"]::before,
+[href*="regie"]::before,
+[href*="transport"]::before,
+[href*="cantine"]::before,
+[href*="logistique"]::before {
+  content: "🔧" !important;
+  position: absolute !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 64px !important;
+  height: 64px !important;
+  background: linear-gradient(135deg, #FF8C42 0%, #e67a2e 100%) !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 2rem !important;
+  color: white !important;
+  z-index: 10 !important;
+  box-shadow: 0 8px 20px rgba(255, 140, 66, 0.3) !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+/* ICÔNES SPÉCIFIQUES PAR SERVICE - SÉLECTEURS CORRECTS */
+a[href*="ventousage"]::before {
+  content: "🔧" !important;
+}
+
+a[href*="plateau-gardiennage"]::before,
+a[href*="gardiennage"]::before,
+a[href*="securite"]::before {
+  content: "🛡️" !important;
+}
+
+a[href*="convoyage"]::before,
+a[href*="transport"]::before {
+  content: "🚛" !important;
+}
+
+a[href*="regie"]::before,
+a[href*="technique"]::before {
+  content: "📹" !important;
+}
+
+a[href*="cantine"]::before,
+a[href*="catering"]::before {
+  content: "🍽️" !important;
+}
+
+a[href*="logistique"]::before {
+  content: "📋" !important;
+}
+
+a[href*="location"]::before,
+a[href*="loge"]::before {
+  content: "🏠" !important;
+}
+
+a[href*="solutions"]::before,
+a[href*="package"]::before {
+  content: "📦" !important;
+}
+
+/* ========================================
+   FORCE ANIMATIONS HOVER - ULTRA PRIORITÉ
+   ======================================== */
+
+/* Animations cartes services */
+.service-card,
+a.service-card,
+[class*="service"],
+[href*="ventousage"],
+[href*="gardiennage"],
+[href*="regie"] {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+  will-change: transform, box-shadow !important;
+}
+
+.service-card:hover,
+a.service-card:hover,
+[class*="service"]:hover,
+[href*="ventousage"]:hover,
+[href*="gardiennage"]:hover,
+[href*="regie"]:hover {
+  transform: translateY(-12px) scale(1.02) translateZ(0) !important;
+  box-shadow: 0 25px 50px rgba(255, 140, 66, 0.25) !important;
+  border: 2px solid #FF8C42 !important;
+}
+
+/* Animation des icônes au hover */
+.service-card:hover::before,
+a.service-card:hover::before,
+[href*="ventousage"]:hover::before,
+[href*="gardiennage"]:hover::before,
+[href*="regie"]:hover::before {
+  transform: translateX(-50%) scale(1.15) rotate(10deg) !important;
+  box-shadow: 0 15px 35px rgba(255, 140, 66, 0.4) !important;
+}
+
+/* ========================================
+   FORCE ESPACEMENT POUR ICÔNES
+   ======================================== */
+
+/* Ajouter de l'espace en haut pour les icônes */
+.service-card,
+a.service-card,
+[href*="ventousage"],
+[href*="gardiennage"],
+[href*="regie"] {
+  padding-top: 100px !important;
+  min-height: 300px !important;
+}
+
+/* Ajuster les titres pour éviter le chevauchement */
+.service-card h3,
+.service-card h2,
+a.service-card h3,
+a.service-card h2 {
+  margin-top: 20px !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+/* ========================================
+   FORCE ICÔNES HEADER
+   ======================================== */
+
+/* Logo avec icône */
+header a[href="/"]::before,
+header .logo::before {
+  content: "🎬 " !important;
+  margin-right: 0.5rem !important;
+  font-size: 1.2em !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+/* Toggle thème avec icônes */
+header button[title*="sombre"]::before {
+  content: "🌙" !important;
+  font-size: 1.2rem !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+header button[title*="clair"]::before {
+  content: "☀️" !important;
+  font-size: 1.2rem !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+/* ========================================
+   FORCE SUPPRESSION BOUTONS EN DOUBLE
+   ======================================== */
+
+/* Supprimer les boutons CTA en double */
+a[href*="devis"]:not(header a),
+[class*="cta"]:not(header [class*="cta"]),
+.btn:not(header .btn) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Garder seulement le bouton header */
+header a[href*="devis"] {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* ========================================
+   FORCE ANIMATIONS BOUTONS
+   ======================================== */
+
+/* Animations boutons header */
+header a[href*="devis"],
+header button {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  transform: translateZ(0) !important;
+}
+
+header a[href*="devis"]:hover {
+  transform: translateY(-3px) scale(1.05) translateZ(0) !important;
+  box-shadow: 0 12px 30px rgba(255, 140, 66, 0.4) !important;
+}
+
+header button:hover {
+  transform: rotate(180deg) scale(1.1) !important;
+  background: #FF8C42 !important;
+  color: white !important;
+}
+
+/* ========================================
+   FORCE ICÔNES FOOTER
+   ======================================== */
+
+/* Icônes footer */
+footer a[href*="tel"]::before {
+  content: "📞 " !important;
+  margin-right: 0.5rem !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+footer a[href*="mailto"]::before {
+  content: "✉️ " !important;
+  margin-right: 0.5rem !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+footer a[href*="whatsapp"]::before {
+  content: "💬 " !important;
+  margin-right: 0.5rem !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+/* ========================================
+   FORCE COHÉRENCE COULEURS
+   ======================================== */
+
+/* Uniformiser les couleurs des cartes */
+.service-card,
+a.service-card,
+[href*="ventousage"],
+[href*="gardiennage"],
+[href*="regie"] {
+  background: var(--bg-secondary, #f8f9fa) !important;
+  border: 1px solid var(--border-color, #e9ecef) !important;
+  color: var(--text-primary, #333) !important;
+}
+
+/* Mode sombre */
+[data-theme="dark"] .service-card,
+[data-theme="dark"] a.service-card,
+[data-theme="dark"] [href*="ventousage"],
+[data-theme="dark"] [href*="gardiennage"],
+[data-theme="dark"] [href*="regie"] {
+  background: #2d2d2d !important;
+  border: 1px solid #444 !important;
+  color: #fff !important;
+}
+
+/* ========================================
+   FORCE RESPONSIVE
+   ======================================== */
+
+/* Mobile */
+@media (max-width: 768px) {
+  .service-card::before,
+  a.service-card::before,
+  [href*="ventousage"]::before,
+  [href*="gardiennage"]::before,
+  [href*="regie"]::before {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.5rem !important;
+    top: 15px !important;
+  }
+  
+  .service-card,
+  a.service-card,
+  [href*="ventousage"],
+  [href*="gardiennage"],
+  [href*="regie"] {
+    padding-top: 80px !important;
+    min-height: 250px !important;
+  }
+}
+
+/* ========================================
+   FORCE PERFORMANCE
+   ======================================== */
+
+/* GPU Acceleration forcée */
+.service-card,
+.service-card::before,
+header a,
+header button {
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+  perspective: 1000px !important;
+  will-change: transform, opacity !important;
+}
+
+/* ========================================
+   NAVIGATION HEADER ULTRA-PROPRE ET RESPONSIVE
+   Fini le style Excel et le scroll horizontal moche !
+   ======================================== */
+
+/* Container header principal */
+header {
+  background: var(--bg-primary, #fff) !important;
+  border-bottom: 2px solid #FF8C42 !important;
+  padding: 0 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+/* Layout header responsive */
+header > div,
+header .container,
+header .header-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+  height: 70px !important;
+  overflow: visible !important;
+}
+
+/* Navigation principale - FINI LE SCROLL ! */
+header nav,
+header .nav,
+header .navigation {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* Liens navigation - Style moderne */
+header nav a,
+header .nav a,
+header .navigation a {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  color: var(--text-primary, #333) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* Hover navigation */
+header nav a:hover,
+header .nav a:hover,
+header .navigation a:hover {
+  background: rgba(255, 140, 66, 0.1) !important;
+  border-color: #FF8C42 !important;
+  color: #FF8C42 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Logo section */
+header a[href="/"],
+header .logo {
+  display: flex !important;
+  align-items: center !important;
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  color: #FF8C42 !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+}
+
+/* Section droite (téléphone + toggle + bouton) */
+header .utilities,
+header .header-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  flex-shrink: 0 !important;
+}
+
+/* Téléphone */
+header a[href*="tel"] {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0.5rem !important;
+  color: var(--text-primary, #333) !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+header a[href*="tel"]:hover {
+  background: rgba(255, 140, 66, 0.1) !important;
+  color: #FF8C42 !important;
+}
+
+/* Toggle thème */
+header button[title*="thème"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--border-color, #e9ecef) !important;
+  background: var(--bg-secondary, #f8f9fa) !important;
+  color: var(--text-primary, #333) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+header button[title*="thème"]:hover {
+  background: #FF8C42 !important;
+  border-color: #FF8C42 !important;
+  color: white !important;
+  transform: scale(1.05) !important;
+}
+
+/* Bouton CTA principal */
+header a[href*="devis"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.75rem 1.5rem !important;
+  background: linear-gradient(135deg, #FF8C42 0%, #e67a2e 100%) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3) !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+header a[href*="devis"]:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 20px rgba(255, 140, 66, 0.4) !important;
+}
+
+/* ========================================
+   RESPONSIVE NAVIGATION - MOBILE FIRST
+   ======================================== */
+
+/* Tablette et mobile */
+@media (max-width: 1024px) {
+  header > div,
+  header .container {
+    padding: 0 0.75rem !important;
+  }
+  
+  header nav a,
+  header .nav a {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  header a[href*="devis"] {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header > div,
+  header .container {
+    padding: 0 0.5rem !important;
+    height: 60px !important;
+  }
+  
+  /* Navigation mobile - stack vertical si nécessaire */
+  header nav,
+  header .nav {
+    gap: 0.25rem !important;
+  }
+  
+  header nav a,
+  header .nav a {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  /* Masquer le téléphone sur très petit mobile */
+  header a[href*="tel"] {
+    display: none !important;
+  }
+  
+  header a[href*="devis"] {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  header button[title*="thème"] {
+    width: 35px !important;
+    height: 35px !important;
+  }
+}
+
+/* Très petit mobile */
+@media (max-width: 480px) {
+  header nav a,
+  header .nav a {
+    padding: 0.25rem 0.4rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  header a[href*="devis"] {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Mode sombre */
+[data-theme="dark"] header {
+  background: #1a1a1a !important;
+  border-bottom-color: #FF8C42 !important;
+}
+
+[data-theme="dark"] header nav a,
+[data-theme="dark"] header .nav a,
+[data-theme="dark"] header a[href*="tel"] {
+  color: #fff !important;
+}
+
+[data-theme="dark"] header nav a:hover,
+[data-theme="dark"] header .nav a:hover,
+[data-theme="dark"] header a[href*="tel"]:hover {
+  background: rgba(255, 140, 66, 0.2) !important;
+  color: #FF8C42 !important;
+}
+
+/* ========================================
+   HEADER SANS ICÔNES - EXACTEMENT COMME MOCKUPS
+   ======================================== */
+
+/* Supprimer toutes les icônes du header */
+header *::before,
+header *::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Logo simple - juste texte */
+header a[href="/"],
+header .logo {
+  display: flex !important;
+  align-items: center !important;
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  color: #FF8C42 !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+}
+
+/* Toggle thème - juste bouton sans icône */
+header button[title*="thème"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--border-color, #e9ecef) !important;
+  background: var(--bg-secondary, #f8f9fa) !important;
+  color: var(--text-primary, #333) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.8rem !important;
+}
+
+header button[title*="thème"]:hover {
+  background: #FF8C42 !important;
+  border-color: #FF8C42 !important;
+  color: white !important;
+  transform: scale(1.05) !important;
+}
+
+/* ========================================
+   FOOTER QUADRILLAGE 4 COLONNES PROPRE
+   Exactement comme dans les mockups
+   ======================================== */
+
+footer {
+  background: var(--bg-primary, #fff) !important;
+  border-top: 2px solid #FF8C42 !important;
+  padding: 3rem 0 2rem 0 !important;
+  margin-top: 4rem !important;
+}
+
+[data-theme="dark"] footer {
+  background: #1a1a1a !important;
+  border-top-color: #FF8C42 !important;
+}
+
+/* Container footer */
+footer .container,
+footer > div {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+}
+
+/* Grille 4 colonnes parfaite */
+footer .footer-grid,
+footer .footer-content {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Colonnes footer */
+footer .footer-column {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+/* Titres colonnes */
+footer .footer-column h3,
+footer .footer-column h4 {
+  color: #FF8C42 !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin: 0 0 1rem 0 !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 2px solid #FF8C42 !important;
+}
+
+/* Liens footer */
+footer .footer-column a {
+  color: var(--text-primary, #333) !important;
+  text-decoration: none !important;
+  padding: 0.5rem 0 !important;
+  transition: all 0.2s ease !important;
+  border-radius: 4px !important;
+}
+
+footer .footer-column a:hover {
+  color: #FF8C42 !important;
+  background: rgba(255, 140, 66, 0.1) !important;
+  padding-left: 0.5rem !important;
+  transform: translateX(4px) !important;
+}
+
+[data-theme="dark"] footer .footer-column a {
+  color: #fff !important;
+}
+
+[data-theme="dark"] footer .footer-column a:hover {
+  color: #FF8C42 !important;
+  background: rgba(255, 140, 66, 0.2) !important;
+}
+
+/* Texte footer */
+footer .footer-column p {
+  color: var(--text-secondary, #666) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+[data-theme="dark"] footer .footer-column p {
+  color: #ccc !important;
+}
+
+/* Copyright footer */
+footer .footer-bottom {
+  text-align: center !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid var(--border-color, #e9ecef) !important;
+  color: var(--text-secondary, #666) !important;
+  font-size: 0.9rem !important;
+}
+
+[data-theme="dark"] footer .footer-bottom {
+  border-top-color: #444 !important;
+  color: #ccc !important;
+}
+
+/* ========================================
+   RESPONSIVE FOOTER
+   ======================================== */
+
+/* Tablette */
+@media (max-width: 1024px) {
+  footer .footer-grid,
+  footer .footer-content {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 0 1.5rem 0 !important;
+  }
+  
+  footer .footer-grid,
+  footer .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  footer .container,
+  footer > div {
+    padding: 0 0.75rem !important;
+  }
+}
+
+/* Très petit mobile */
+@media (max-width: 480px) {
+  footer {
+    padding: 1.5rem 0 1rem 0 !important;
+  }
+  
+  footer .footer-column h3,
+  footer .footer-column h4 {
+    font-size: 1rem !important;
+  }
+  
+  footer .container,
+  footer > div {
+    padding: 0 0.5rem !important;
+  }
+}
+

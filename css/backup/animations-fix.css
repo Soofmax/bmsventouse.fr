@@ -1,0 +1,345 @@
+/* ========================================
+   ANIMATIONS PROFESSIONNELLES CORRIGÉES
+   ======================================== */
+
+/* VARIABLES D'ANIMATION */
+:root {
+  --animation-fast: 0.2s;
+  --animation-normal: 0.3s;
+  --animation-slow: 0.5s;
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* RÉDUCTION DES ANIMATIONS POUR ACCESSIBILITÉ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   ANIMATIONS CARTES SERVICES
+   ======================================== */
+
+/* SÉLECTEURS SPÉCIFIQUES POUR LES CARTES */
+.service-card,
+[class*="service"],
+.card,
+[class*="card"],
+article,
+.grid > div,
+.services-grid > div {
+  transition: all var(--animation-normal) var(--easing) !important;
+  transform: translateZ(0) !important;
+  will-change: transform, box-shadow !important;
+  backface-visibility: hidden !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+/* EFFET HOVER SUR LES CARTES */
+.service-card:hover,
+[class*="service"]:hover,
+.card:hover,
+[class*="card"]:hover,
+article:hover,
+.grid > div:hover,
+.services-grid > div:hover {
+  transform: translateY(-12px) scale(1.02) !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15) !important;
+  z-index: 10 !important;
+}
+
+/* ANIMATION BORDURE PROGRESSIVE */
+.service-card::before,
+[class*="service"]::before,
+.card::before,
+[class*="card"]::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  border: 3px solid transparent !important;
+  border-radius: inherit !important;
+  background: linear-gradient(45deg, var(--primary-orange), transparent, var(--primary-orange)) border-box !important;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0) !important;
+  mask-composite: xor !important;
+  -webkit-mask-composite: xor !important;
+  opacity: 0 !important;
+  transition: opacity var(--animation-normal) var(--easing) !important;
+  pointer-events: none !important;
+}
+
+.service-card:hover::before,
+[class*="service"]:hover::before,
+.card:hover::before,
+[class*="card"]:hover::before {
+  opacity: 1 !important;
+}
+
+/* IMAGES DANS LES CARTES */
+.service-card img,
+[class*="service"] img,
+.card img,
+[class*="card"] img {
+  transition: transform var(--animation-slow) var(--easing) !important;
+  will-change: transform !important;
+}
+
+.service-card:hover img,
+[class*="service"]:hover img,
+.card:hover img,
+[class*="card"]:hover img {
+  transform: scale(1.1) !important;
+}
+
+/* ========================================
+   ANIMATIONS BOUTONS
+   ======================================== */
+
+/* BOUTONS AVEC EFFET RIPPLE */
+.btn,
+button,
+[class*="btn"],
+a[class*="button"] {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all var(--animation-normal) var(--easing) !important;
+  transform: translateZ(0) !important;
+  will-change: transform, box-shadow !important;
+}
+
+.btn:hover,
+button:hover,
+[class*="btn"]:hover,
+a[class*="button"]:hover {
+  transform: translateY(-3px) scale(1.03) !important;
+  box-shadow: 0 12px 30px rgba(255, 140, 66, 0.4) !important;
+}
+
+.btn:active,
+button:active,
+[class*="btn"]:active,
+a[class*="button"]:active {
+  transform: translateY(-1px) scale(0.98) !important;
+  transition-duration: 0.1s !important;
+}
+
+/* EFFET RIPPLE */
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple-effect {
+  position: absolute !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  animation: ripple 0.6s linear !important;
+  pointer-events: none !important;
+}
+
+/* ========================================
+   ANIMATIONS AU SCROLL
+   ======================================== */
+
+/* ÉLÉMENTS À ANIMER AU SCROLL */
+.animate-on-scroll {
+  opacity: 0 !important;
+  transform: translateY(50px) !important;
+  transition: all var(--animation-slow) var(--easing) !important;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ANIMATIONS ÉCHELONNÉES */
+.animate-on-scroll:nth-child(1) { transition-delay: 0.1s !important; }
+.animate-on-scroll:nth-child(2) { transition-delay: 0.2s !important; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.3s !important; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.4s !important; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.5s !important; }
+.animate-on-scroll:nth-child(6) { transition-delay: 0.6s !important; }
+
+/* ========================================
+   ANIMATIONS STATISTIQUES
+   ======================================== */
+
+/* COMPTEURS ANIMÉS */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.stats-number,
+[class*="stats"] .number,
+[class*="stat"] {
+  animation: countUp var(--animation-slow) var(--bounce) !important;
+  font-weight: 800 !important;
+  color: var(--primary-orange) !important;
+  font-size: 2.5rem !important;
+}
+
+/* ICÔNES STATISTIQUES */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.stats-icon,
+[class*="stats"] .icon {
+  animation: pulse 2s ease-in-out infinite !important;
+  color: var(--primary-orange) !important;
+}
+
+/* ========================================
+   ANIMATIONS NAVIGATION
+   ======================================== */
+
+/* LIENS NAVIGATION AVEC SOULIGNEMENT */
+.nav-links a,
+header nav a:not(.btn) {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.nav-links a::after,
+header nav a:not(.btn)::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 3px !important;
+  background: var(--primary-orange) !important;
+  transition: width var(--animation-normal) var(--easing) !important;
+}
+
+.nav-links a:hover::after,
+header nav a:not(.btn):hover::after {
+  width: 100% !important;
+}
+
+/* ========================================
+   ANIMATIONS FORMULAIRES
+   ======================================== */
+
+/* INPUTS AVEC FOCUS */
+input, textarea, select {
+  transition: all var(--animation-normal) var(--easing) !important;
+  border: 2px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  padding: 0.75rem !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary-orange) !important;
+  box-shadow: 0 0 0 4px rgba(255, 140, 66, 0.2) !important;
+  transform: scale(1.02) !important;
+  outline: none !important;
+}
+
+/* ========================================
+   ANIMATIONS FAQ
+   ======================================== */
+
+.faq-item,
+[class*="faq"] {
+  transition: all var(--animation-normal) var(--easing) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.faq-item:hover,
+[class*="faq"]:hover {
+  background: var(--primary-orange-light) !important;
+  transform: translateX(8px) !important;
+  box-shadow: 0 4px 15px var(--shadow) !important;
+}
+
+/* ========================================
+   OPTIMISATIONS PERFORMANCE
+   ======================================== */
+
+/* GPU ACCELERATION */
+.service-card, .card, .btn, [class*="card"], [class*="btn"] {
+  will-change: transform, opacity !important;
+  backface-visibility: hidden !important;
+  perspective: 1000px !important;
+}
+
+/* CONTAINMENT POUR PERFORMANCE */
+.animate-on-scroll,
+.service-card:hover,
+.card:hover,
+.btn:hover {
+  contain: layout style paint !important;
+}
+
+/* ========================================
+   RESPONSIVE ANIMATIONS
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Réduction des animations sur mobile */
+  .service-card:hover,
+  [class*="service"]:hover,
+  .card:hover,
+  [class*="card"]:hover {
+    transform: translateY(-6px) scale(1.01) !important;
+  }
+  
+  .btn:hover,
+  button:hover {
+    transform: translateY(-2px) scale(1.01) !important;
+  }
+  
+  /* Animations tactiles */
+  .service-card:active,
+  .card:active {
+    transform: scale(0.98) !important;
+    transition-duration: 0.1s !important;
+  }
+}
+
+/* ========================================
+   ANIMATIONS THÈME
+   ======================================== */
+
+/* TRANSITION FLUIDE ENTRE THÈMES */
+html, body {
+  transition: background-color var(--animation-slow) var(--easing), 
+              color var(--animation-slow) var(--easing) !important;
+}
+
+/* ANIMATION SWITCH THÈME */
+@keyframes themeSwitch {
+  0% { opacity: 1; }
+  50% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+.theme-switching {
+  animation: themeSwitch var(--animation-normal) var(--easing) !important;
+}
+

@@ -1,0 +1,375 @@
+/* ========================================
+   ANIMATIONS ET ICÔNES CORRIGÉES
+   Animations fluides + vraies icônes SVG/émojis
+   ======================================== */
+
+/* ========================================
+   ANIMATIONS FLUIDES CORRIGÉES
+   ======================================== */
+
+/* ANIMATIONS HOVER CARTES */
+.service-card,
+.card,
+[class*="card"] {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  transform: translateZ(0) !important; /* Force GPU */
+  backface-visibility: hidden !important;
+  will-change: transform, box-shadow !important;
+}
+
+.service-card:hover,
+.card:hover,
+[class*="card"]:hover {
+  transform: translateY(-8px) translateZ(0) !important;
+  box-shadow: 0 20px 40px rgba(255, 140, 66, 0.2) !important;
+  border-color: var(--primary-orange) !important;
+}
+
+/* ANIMATIONS BOUTONS */
+.btn,
+.button,
+button,
+a[class*="btn"],
+[class*="cta"] {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  transform: translateZ(0) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.btn:hover,
+.button:hover,
+button:hover,
+a[class*="btn"]:hover,
+[class*="cta"]:hover {
+  transform: translateY(-2px) scale(1.02) translateZ(0) !important;
+  box-shadow: 0 8px 25px rgba(255, 140, 66, 0.3) !important;
+}
+
+/* EFFET RIPPLE BOUTONS */
+.btn::before,
+.button::before,
+button::before,
+a[class*="btn"]::before,
+[class*="cta"]::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-radius: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  transition: width 0.6s, height 0.6s !important;
+  pointer-events: none !important;
+}
+
+.btn:active::before,
+.button:active::before,
+button:active::before,
+a[class*="btn"]:active::before,
+[class*="cta"]:active::before {
+  width: 300px !important;
+  height: 300px !important;
+}
+
+/* ANIMATIONS NAVIGATION */
+header nav a {
+  position: relative !important;
+  transition: all 0.3s ease !important;
+}
+
+header nav a::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -2px !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: var(--primary-orange) !important;
+  transition: all 0.3s ease !important;
+  transform: translateX(-50%) !important;
+}
+
+header nav a:hover::after {
+  width: 100% !important;
+}
+
+/* ANIMATION TOGGLE THÈME */
+.theme-toggle {
+  transition: all 0.3s ease !important;
+}
+
+.theme-toggle:hover {
+  transform: rotate(180deg) scale(1.1) !important;
+  background: var(--primary-orange) !important;
+  color: white !important;
+}
+
+/* ========================================
+   VRAIES ICÔNES SERVICES
+   ======================================== */
+
+/* CONTENEUR ICÔNE */
+.service-card .icon,
+.card .icon,
+[class*="card"] .icon {
+  width: 64px !important;
+  height: 64px !important;
+  margin: 0 auto 1.5rem !important;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, #e67a2e 100%) !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 2rem !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 8px 20px rgba(255, 140, 66, 0.3) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* ICÔNES SPÉCIFIQUES PAR SERVICE */
+
+/* Ventousage */
+.service-card:nth-child(1) .icon::before,
+.card:nth-child(1) .icon::before,
+[href*="ventousage"] .icon::before {
+  content: "🔧" !important;
+  font-size: 2rem !important;
+}
+
+/* Gardiennage/Sécurité */
+.service-card:nth-child(2) .icon::before,
+.card:nth-child(2) .icon::before,
+[href*="gardiennage"] .icon::before,
+[href*="securite"] .icon::before {
+  content: "🛡️" !important;
+  font-size: 2rem !important;
+}
+
+/* Transport/Convoyage */
+.service-card:nth-child(3) .icon::before,
+.card:nth-child(3) .icon::before,
+[href*="transport"] .icon::before,
+[href*="convoyage"] .icon::before {
+  content: "🚛" !important;
+  font-size: 2rem !important;
+}
+
+/* Cantine/Catering */
+.service-card:nth-child(4) .icon::before,
+.card:nth-child(4) .icon::before,
+[href*="cantine"] .icon::before,
+[href*="catering"] .icon::before {
+  content: "🍽️" !important;
+  font-size: 2rem !important;
+}
+
+/* Régie/Matériel */
+.service-card:nth-child(5) .icon::before,
+.card:nth-child(5) .icon::before,
+[href*="regie"] .icon::before,
+[href*="materiel"] .icon::before {
+  content: "📹" !important;
+  font-size: 2rem !important;
+}
+
+/* Solutions Packagées */
+.service-card:nth-child(6) .icon::before,
+.card:nth-child(6) .icon::before,
+[href*="solutions"] .icon::before,
+[href*="package"] .icon::before {
+  content: "📦" !important;
+  font-size: 2rem !important;
+}
+
+/* Logistique */
+.service-card:nth-child(7) .icon::before,
+.card:nth-child(7) .icon::before,
+[href*="logistique"] .icon::before {
+  content: "📋" !important;
+  font-size: 2rem !important;
+}
+
+/* Location Loges */
+.service-card:nth-child(8) .icon::before,
+.card:nth-child(8) .icon::before,
+[href*="location"] .icon::before,
+[href*="loge"] .icon::before {
+  content: "🏠" !important;
+  font-size: 2rem !important;
+}
+
+/* ANIMATION ICÔNES */
+.service-card:hover .icon,
+.card:hover .icon {
+  transform: scale(1.1) rotate(5deg) !important;
+  box-shadow: 0 12px 30px rgba(255, 140, 66, 0.4) !important;
+}
+
+/* ========================================
+   ICÔNES FOOTER
+   ======================================== */
+
+/* Téléphone */
+footer a[href*="tel"]::before,
+a[href*="tel"]::before {
+  content: "📞 " !important;
+  margin-right: 0.5rem !important;
+}
+
+/* Email */
+footer a[href*="mailto"]::before,
+a[href*="mailto"]::before {
+  content: "✉️ " !important;
+  margin-right: 0.5rem !important;
+}
+
+/* WhatsApp */
+footer a[href*="whatsapp"]::before,
+a[href*="whatsapp"]::before {
+  content: "💬 " !important;
+  margin-right: 0.5rem !important;
+}
+
+/* ========================================
+   ICÔNES HEADER
+   ======================================== */
+
+/* Logo BMS */
+header .logo::before {
+  content: "🎬 " !important;
+  margin-right: 0.5rem !important;
+  font-size: 1.2em !important;
+}
+
+/* Toggle thème */
+.theme-toggle[title*="sombre"]::before {
+  content: "🌙" !important;
+  font-size: 1.2rem !important;
+}
+
+.theme-toggle[title*="clair"]::before {
+  content: "☀️" !important;
+  font-size: 1.2rem !important;
+}
+
+/* ========================================
+   ANIMATIONS AU SCROLL
+   ======================================== */
+
+/* Animation d'apparition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Application aux éléments */
+.service-card,
+.card,
+h1,
+h2,
+.stats {
+  animation: fadeInUp 0.6s ease-out !important;
+  animation-fill-mode: both !important;
+}
+
+/* Délais échelonnés */
+.service-card:nth-child(1) { animation-delay: 0.1s !important; }
+.service-card:nth-child(2) { animation-delay: 0.2s !important; }
+.service-card:nth-child(3) { animation-delay: 0.3s !important; }
+.service-card:nth-child(4) { animation-delay: 0.4s !important; }
+.service-card:nth-child(5) { animation-delay: 0.5s !important; }
+.service-card:nth-child(6) { animation-delay: 0.6s !important; }
+
+/* ========================================
+   ICÔNES STATISTIQUES
+   ======================================== */
+
+/* Statistiques avec icônes */
+.stat-item::before,
+.statistic::before {
+  display: block !important;
+  font-size: 2rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.stat-item:nth-child(1)::before { content: "🎯" !important; }
+.stat-item:nth-child(2)::before { content: "⏰" !important; }
+.stat-item:nth-child(3)::before { content: "🇫🇷" !important; }
+.stat-item:nth-child(4)::before { content: "✅" !important; }
+
+/* ========================================
+   OPTIMISATIONS PERFORMANCE
+   ======================================== */
+
+/* GPU Acceleration */
+.service-card,
+.card,
+.btn,
+.button,
+header nav a {
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+  perspective: 1000px !important;
+}
+
+/* Réduction animations mobile */
+@media (max-width: 768px) {
+  .service-card:hover,
+  .card:hover {
+    transform: translateY(-4px) translateZ(0) !important;
+  }
+  
+  .btn:hover,
+  .button:hover {
+    transform: translateY(-1px) translateZ(0) !important;
+  }
+}
+
+/* Respect préférences utilisateur */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   CORRECTIONS SPÉCIFIQUES
+   ======================================== */
+
+/* Suppression des carrés jaunes moches */
+.service-card img,
+.card img,
+[class*="card"] img {
+  display: none !important;
+}
+
+/* Force l'affichage des nouvelles icônes */
+.service-card .icon,
+.card .icon {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, #e67a2e 100%) !important;
+  color: transparent !important;
+}
+
+/* Assure que les émojis s'affichent */
+.service-card .icon::before,
+.card .icon::before {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+}
+

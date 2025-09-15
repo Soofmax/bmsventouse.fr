@@ -1,0 +1,160 @@
+/* =========================================
+   SERVICES COMPONENT - DESIGN PROFESSIONNEL
+   ========================================= */
+
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: var(--grid-gap) !important;
+  margin: var(--spacing-section) 0 !important;
+}
+
+.service-card {
+  background: var(--color-light-alt) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--border-radius-large) !important;
+  padding: 2rem !important;
+  transition: var(--transition-smooth) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  text-decoration: none !important;
+  color: var(--color-text) !important;
+  display: block !important;
+  box-shadow: var(--box-shadow-base) !important;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 20px 40px rgba(255, 140, 66, 0.2) !important;
+  border-color: var(--color-primary) !important;
+}
+
+/* Icônes emoji professionnelles */
+.service-card::before {
+  content: "🔧" !important;
+  position: absolute !important;
+  top: 1.5rem !important;
+  right: 1.5rem !important;
+  font-size: 2.5rem !important;
+  opacity: 0.8 !important;
+  transition: var(--transition-base) !important;
+  z-index: 2 !important;
+}
+
+.service-card:hover::before {
+  transform: scale(1.2) rotate(10deg) !important;
+  opacity: 1 !important;
+}
+
+/* Icônes spécifiques par service */
+.service-card[href*="ventousage"]::before {
+  content: "🔧" !important;
+}
+
+.service-card[href*="gardiennage"]::before,
+.service-card[href*="plateau-gardiennage"]::before {
+  content: "🛡️" !important;
+}
+
+.service-card[href*="convoyage"]::before,
+.service-card[href*="transport"]::before {
+  content: "🚛" !important;
+}
+
+.service-card[href*="cantine"]::before,
+.service-card[href*="catering"]::before {
+  content: "🍽️" !important;
+}
+
+.service-card[href*="regie"]::before,
+.service-card[href*="technique"]::before {
+  content: "📹" !important;
+}
+
+.service-card[href*="location"]::before,
+.service-card[href*="loges"]::before {
+  content: "🏠" !important;
+}
+
+.service-card[href*="logistique"]::before {
+  content: "📋" !important;
+}
+
+.service-card[href*="solutions"]::before,
+.service-card[href*="packagées"]::before {
+  content: "📦" !important;
+}
+
+/* Masquer les anciennes icônes */
+.service-card img,
+.service-card .service-icon {
+  display: none !important;
+}
+
+.service-card h3 {
+  font-size: var(--font-size-h3) !important;
+  font-weight: var(--font-weight-bold) !important;
+  color: var(--color-text) !important;
+  margin-bottom: 1rem !important;
+  line-height: var(--line-height-heading) !important;
+}
+
+.service-card p {
+  color: var(--color-text-muted) !important;
+  line-height: 1.6 !important;
+  font-size: var(--font-size-base) !important;
+}
+
+/* CTA container */
+.cta-container {
+  text-align: center !important;
+  margin-top: 3rem !important;
+}
+
+.cta-container .btn {
+  padding: 1rem 2rem !important;
+  border-radius: var(--border-radius-pill) !important;
+  text-decoration: none !important;
+  font-weight: var(--font-weight-medium) !important;
+  transition: var(--transition-smooth) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.cta-container .btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)) !important;
+  color: white !important;
+  box-shadow: var(--box-shadow-base) !important;
+}
+
+.cta-container .btn-primary:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: var(--box-shadow-hover) !important;
+}
+
+.cta-container .btn-secondary {
+  background: var(--color-light-alt) !important;
+  color: var(--color-text) !important;
+  border: 2px solid var(--color-border) !important;
+}
+
+.cta-container .btn-secondary:hover {
+  background: var(--color-primary) !important;
+  color: white !important;
+  border-color: var(--color-primary) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .service-card {
+    padding: 1.5rem !important;
+  }
+}
+
