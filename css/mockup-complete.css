@@ -157,10 +157,15 @@ a.nav-link.active {
   color: #1a1a1a !important;
 }
 
-/* BOUTON CTA HEADER - FORCE OVERRIDE */
-.nav-cta,
-.btn.btn-primary,
-a.btn.btn-primary {
+/* MASQUER LE BOUTON CTA EN DOUBLE */
+.nav-utilities .nav-cta {
+  display: none !important;
+}
+
+/* GARDER SEULEMENT LE BOUTON CTA PRINCIPAL */
+.nav-cta:not(.nav-utilities .nav-cta),
+.btn.btn-primary:not(.nav-utilities .btn-primary),
+a.btn.btn-primary:not(.nav-utilities a.btn-primary) {
   background: #FF8C42 !important;
   color: #1a1a1a !important;
   padding: 0.75rem 1.5rem !important;
@@ -170,11 +175,14 @@ a.btn.btn-primary {
   transition: all 0.3s ease !important;
   border: none !important;
   box-shadow: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-.nav-cta:hover,
-.btn.btn-primary:hover,
-a.btn.btn-primary:hover {
+.nav-cta:hover:not(.nav-utilities .nav-cta),
+.btn.btn-primary:hover:not(.nav-utilities .btn-primary),
+a.btn.btn-primary:hover:not(.nav-utilities a.btn-primary) {
   background: #e67a2e !important;
   transform: translateY(-2px) !important;
   box-shadow: 0 4px 15px rgba(255, 140, 66, 0.4) !important;
