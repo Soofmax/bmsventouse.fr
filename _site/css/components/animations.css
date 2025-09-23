@@ -1,0 +1,408 @@
+/* =========================================
+   ANIMATIONS ET MICRO-INTERACTIONS AVANCÉES
+   ========================================= */
+
+/* Keyframes pour animations d'entrée */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classes d'animation pour Intersection Observer */
+.animate-on-scroll {
+  opacity: 1; /* VISIBLE PAR DÉFAUT */
+  transform: translateY(0); /* POSITION NORMALE PAR DÉFAUT */
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation d'entrée optionnelle */
+.animate-on-scroll.will-animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-on-scroll.will-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.animate-on-scroll.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.animate-on-scroll.delay-3 {
+  transition-delay: 0.3s;
+}
+
+.animate-on-scroll.delay-4 {
+  transition-delay: 0.4s;
+}
+
+/* Animations pour les cartes de services */
+.service-card {
+  transition: all var(--transition-smooth);
+  transform: translateY(0);
+  box-shadow: var(--box-shadow-card);
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.service-card .service-icon {
+  transition: all var(--transition-base);
+  transform: scale(1);
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+  animation: pulse 2s infinite;
+}
+
+/* Animations pour les boutons */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  transform: translateY(0);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Effet ripple pour les boutons */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Effet ripple via élément span (utilisé par JS) */
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(0);
+  animation: ripple 0.6s ease-out forwards;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* Animations pour le header */
+.header {
+  transition: all var(--transition-base);
+}
+
+.header.scrolled {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--box-shadow-base);
+}
+
+/* Animations pour les liens de navigation */
+.nav-link {
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width var(--transition-base);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Animations pour les statistiques */
+.stat-number {
+  font-weight: var(--font-weight-black);
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  transition: all var(--transition-base);
+}
+
+.stat-item.animate .stat-number {
+  animation: countUp 1s ease-out;
+}
+
+/* Animations pour la FAQ */
+.faq-item {
+  transition: all var(--transition-base);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.faq-question {
+  transition: all var(--transition-base);
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question:hover {
+  background: var(--color-card-hover);
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  transition: transform var(--transition-base);
+}
+
+.faq-item.open .faq-question::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow), padding var(--transition-base);
+  padding: 0 1rem;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding: 1rem;
+}
+
+/* Animations pour les témoignages */
+.testimonial-card {
+  transition: all var(--transition-smooth);
+  transform: scale(1);
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--box-shadow-hover);
+}
+
+/* Parallax subtil pour le hero */
+.hero-content {
+  transition: transform 0.1s ease-out;
+}
+
+/* Animations pour les icônes flottantes */
+.floating-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.floating-icon:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* Animations pour les formulaires */
+.form-group {
+  position: relative;
+}
+
+.form-input {
+  transition: all var(--transition-base);
+  border: 2px solid transparent;
+}
+
+.form-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-label {
+  transition: all var(--transition-base);
+  transform-origin: left top;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-1.5rem) scale(0.8);
+  color: var(--color-primary);
+}
+
+/* Animations pour les modales */
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  transform: scale(0.9) translateY(-50px);
+  transition: all var(--transition-base);
+}
+
+.modal.show .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* Optimisations performance */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Réduction des animations pour les utilisateurs qui préfèrent */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Animations responsive */
+@media (max-width: 768px) {
+  .service-card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  .testimonial-card:hover {
+    transform: scale(1.02);
+  }
+}
+

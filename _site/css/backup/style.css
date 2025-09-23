@@ -1,0 +1,9 @@
+/* =========================================
+   BMS VENTOUSE - CSS PRINCIPAL PROPRE
+   ========================================= */
+
+/* Import des tokens CSS (variables) */
+@import url('./tokens.css');
+
+/* Import du CSS unifié et propre */
+@import url('./bms-ventouse-clean.css');

@@ -1,0 +1,582 @@
+/* ========================================
+   RESPONSIVE DESIGN COMPLET - MOBILE FIRST
+   Correction de TOUS les problèmes responsive
+   ======================================== */
+
+/* ========================================
+   VARIABLES RESPONSIVE
+   ======================================== */
+
+:root {
+  /* Breakpoints */
+  --mobile-max: 767px;
+  --tablet-min: 768px;
+  --tablet-max: 1023px;
+  --desktop-min: 1024px;
+  
+  /* Espacements responsive */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Tailles de police fluides */
+  --font-xs: clamp(0.75rem, 2vw, 0.875rem);
+  --font-sm: clamp(0.875rem, 2.5vw, 1rem);
+  --font-md: clamp(1rem, 3vw, 1.125rem);
+  --font-lg: clamp(1.125rem, 3.5vw, 1.25rem);
+  --font-xl: clamp(1.25rem, 4vw, 1.5rem);
+  --font-2xl: clamp(1.5rem, 5vw, 2rem);
+  --font-3xl: clamp(2rem, 6vw, 2.5rem);
+}
+
+/* ========================================
+   RESET ET BASE RESPONSIVE
+   ======================================== */
+
+* {
+  box-sizing: border-box !important;
+}
+
+html {
+  font-size: 16px !important;
+  -webkit-text-size-adjust: 100% !important;
+  -ms-text-size-adjust: 100% !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
+  min-width: 320px !important;
+  font-size: var(--font-sm) !important;
+  line-height: 1.6 !important;
+}
+
+/* Conteneurs responsive */
+.container,
+main,
+section,
+article {
+  max-width: 100% !important;
+  padding-left: var(--spacing-sm) !important;
+  padding-right: var(--spacing-sm) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ========================================
+   HEADER RESPONSIVE COMPLET
+   ======================================== */
+
+/* Header principal */
+header {
+  width: 100% !important;
+  min-height: 60px !important;
+  padding: var(--spacing-xs) var(--spacing-sm) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Logo responsive */
+header .logo,
+header a[href="/"] {
+  font-size: var(--font-lg) !important;
+  font-weight: 700 !important;
+  color: var(--primary-orange) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* Navigation principale responsive */
+header nav,
+header .nav,
+header ul {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--spacing-xs) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Liens navigation responsive */
+header nav a,
+header .nav a,
+header ul a {
+  font-size: var(--font-xs) !important;
+  font-weight: 500 !important;
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
+  padding: var(--spacing-xs) !important;
+  border-radius: 6px !important;
+  white-space: nowrap !important;
+  transition: all 0.3s ease !important;
+  flex-shrink: 0 !important;
+}
+
+/* Téléphone responsive */
+header a[href^="tel"] {
+  font-size: var(--font-xs) !important;
+  color: var(--text-secondary) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* Toggle thème responsive */
+header button[title*="thème"],
+header .theme-toggle {
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  border: none !important;
+  background: var(--bg-secondary) !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+}
+
+/* Bouton CTA header responsive */
+header a[href*="devis"],
+header .btn-cta {
+  font-size: var(--font-xs) !important;
+  padding: var(--spacing-xs) var(--spacing-sm) !important;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, #e67a2e 100%) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 6px !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* ========================================
+   GRILLES ET CARTES RESPONSIVE
+   ======================================== */
+
+/* Grilles services responsive */
+.services-grid,
+.grid,
+[class*="grid"] {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: var(--spacing-md) !important;
+  padding: var(--spacing-md) var(--spacing-sm) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* Cartes responsive */
+.service-card,
+.card,
+[class*="card"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: var(--spacing-md) !important;
+  margin: 0 !important;
+  border-radius: 12px !important;
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+
+/* Icônes cartes responsive */
+.service-card .icon,
+.card .icon,
+[class*="card"] img {
+  width: 48px !important;
+  height: 48px !important;
+  margin: 0 auto var(--spacing-sm) !important;
+  border-radius: 8px !important;
+}
+
+/* Titres cartes responsive */
+.service-card h3,
+.card h3,
+[class*="card"] h3 {
+  font-size: var(--font-md) !important;
+  font-weight: 600 !important;
+  margin: 0 0 var(--spacing-sm) 0 !important;
+  line-height: 1.3 !important;
+}
+
+/* Descriptions cartes responsive */
+.service-card p,
+.card p,
+[class*="card"] p {
+  font-size: var(--font-sm) !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+/* ========================================
+   TYPOGRAPHIE RESPONSIVE
+   ======================================== */
+
+/* Titres principaux responsive */
+h1 {
+  font-size: var(--font-3xl) !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin: 0 0 var(--spacing-md) 0 !important;
+  text-align: center !important;
+  padding: 0 var(--spacing-sm) !important;
+}
+
+h2 {
+  font-size: var(--font-2xl) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  margin: var(--spacing-xl) 0 var(--spacing-md) 0 !important;
+  text-align: center !important;
+  padding: 0 var(--spacing-sm) !important;
+}
+
+h3 {
+  font-size: var(--font-xl) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  margin: 0 0 var(--spacing-sm) 0 !important;
+}
+
+/* Paragraphes responsive */
+p {
+  font-size: var(--font-sm) !important;
+  line-height: 1.6 !important;
+  margin: 0 0 var(--spacing-md) 0 !important;
+  padding: 0 var(--spacing-sm) !important;
+  text-align: center !important;
+  max-width: 100% !important;
+}
+
+/* ========================================
+   BOUTONS RESPONSIVE
+   ======================================== */
+
+/* Tous les boutons responsive */
+.btn,
+.button,
+button,
+a[class*="btn"],
+[class*="cta"] {
+  font-size: var(--font-sm) !important;
+  padding: var(--spacing-sm) var(--spacing-md) !important;
+  border-radius: 8px !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  min-height: 44px !important; /* Taille tactile minimum */
+  min-width: 44px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Boutons CTA responsive */
+.btn-primary,
+.btn-cta,
+[class*="cta"]:not(.theme-toggle) {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, #e67a2e 100%) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3) !important;
+}
+
+/* ========================================
+   FOOTER RESPONSIVE
+   ======================================== */
+
+footer {
+  padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-md) !important;
+  margin-top: var(--spacing-xl) !important;
+}
+
+footer > div,
+footer .container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: var(--spacing-lg) !important;
+  max-width: 100% !important;
+  text-align: center !important;
+}
+
+footer h4 {
+  font-size: var(--font-md) !important;
+  margin: 0 0 var(--spacing-sm) 0 !important;
+}
+
+footer ul {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: var(--spacing-xs) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+footer ul li a {
+  font-size: var(--font-sm) !important;
+  padding: var(--spacing-xs) !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* ========================================
+   SECTIONS SPÉCIALES RESPONSIVE
+   ======================================== */
+
+/* Section hero responsive */
+.hero,
+.hero-section {
+  padding: var(--spacing-xl) var(--spacing-sm) !important;
+  text-align: center !important;
+}
+
+/* Statistiques responsive */
+.stats,
+.statistics,
+[class*="stat"] {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: var(--spacing-md) !important;
+  padding: var(--spacing-lg) var(--spacing-sm) !important;
+  text-align: center !important;
+}
+
+/* FAQ responsive */
+.faq,
+.accordion {
+  padding: 0 var(--spacing-sm) !important;
+}
+
+.faq-item,
+.accordion-item {
+  margin-bottom: var(--spacing-sm) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+/* ========================================
+   BREAKPOINTS TABLETTE
+   ======================================== */
+
+@media (min-width: 768px) {
+  /* Header tablette */
+  header {
+    min-height: 70px !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+  }
+  
+  header nav {
+    gap: var(--spacing-sm) !important;
+  }
+  
+  header nav a {
+    font-size: var(--font-sm) !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+  }
+  
+  /* Grilles tablette */
+  .services-grid,
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--spacing-lg) !important;
+    padding: var(--spacing-lg) var(--spacing-md) !important;
+  }
+  
+  /* Statistiques tablette */
+  .stats,
+  .statistics {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Footer tablette */
+  footer > div {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--spacing-xl) !important;
+    text-align: left !important;
+  }
+  
+  /* Conteneurs tablette */
+  .container {
+    padding-left: var(--spacing-md) !important;
+    padding-right: var(--spacing-md) !important;
+  }
+}
+
+/* ========================================
+   BREAKPOINTS DESKTOP
+   ======================================== */
+
+@media (min-width: 1024px) {
+  /* Header desktop */
+  header {
+    min-height: 80px !important;
+    padding: var(--spacing-sm) var(--spacing-xl) !important;
+  }
+  
+  header nav {
+    gap: var(--spacing-md) !important;
+  }
+  
+  header nav a {
+    font-size: var(--font-md) !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+  }
+  
+  /* Grilles desktop */
+  .services-grid,
+  .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--spacing-xl) !important;
+    padding: var(--spacing-xl) var(--spacing-lg) !important;
+    max-width: 1200px !important;
+  }
+  
+  /* Statistiques desktop */
+  .stats,
+  .statistics {
+    grid-template-columns: repeat(4, 1fr) !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Footer desktop */
+  footer > div {
+    grid-template-columns: 2fr 1fr 1fr 1fr !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Conteneurs desktop */
+  .container {
+    max-width: 1200px !important;
+    padding-left: var(--spacing-lg) !important;
+    padding-right: var(--spacing-lg) !important;
+  }
+  
+  /* Typographie desktop */
+  p {
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* ========================================
+   CORRECTIONS SPÉCIFIQUES MOBILE
+   ======================================== */
+
+/* Éviter le débordement horizontal */
+* {
+  max-width: 100% !important;
+}
+
+img,
+video,
+iframe {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Navigation mobile sans débordement */
+@media (max-width: 767px) {
+  header nav {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  
+  header nav::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  /* Masquer éléments non essentiels sur très petit mobile */
+  @media (max-width: 480px) {
+    header a[href^="tel"] {
+      display: none !important;
+    }
+    
+    header nav a {
+      font-size: 0.75rem !important;
+      padding: 0.25rem 0.5rem !important;
+    }
+  }
+}
+
+/* ========================================
+   PERFORMANCE MOBILE
+   ======================================== */
+
+/* Optimisations tactiles */
+@media (hover: none) and (pointer: coarse) {
+  /* Suppression des hover effects sur mobile */
+  *:hover {
+    transform: none !important;
+  }
+  
+  /* Tailles tactiles minimales */
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+}
+
+/* Réduction des animations sur mobile */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   FIXES SPÉCIFIQUES
+   ======================================== */
+
+/* Correction débordement */
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+/* Correction zoom iOS */
+input,
+select,
+textarea {
+  font-size: 16px !important;
+}
+
+/* Correction touch iOS */
+* {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Correction scroll iOS */
+body {
+  -webkit-overflow-scrolling: touch !important;
+}
+

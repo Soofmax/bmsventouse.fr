@@ -28,7 +28,7 @@
     "lint:dupes": "node scripts/ci/check-dup-lines.js"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "^3.1.2",
     "@lhci/cli": "^0.13.0",
     "@nichoth/eleventy-plugin-sitemap": "^2.2.0",
     "axe-core": "^4.7.0",
@@ -50,9 +50,17 @@
     "vitest": "^1.6.0"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix"],
-    "*.njk": ["htmlhint"],
-    "*.css": ["stylelint --fix"],
-    "*.{md,json}": ["prettier --write"]
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.njk": [
+      "htmlhint"
+    ],
+    "*.css": [
+      "stylelint --fix"
+    ],
+    "*.{md,json}": [
+      "prettier --write"
+    ]
   }
 }

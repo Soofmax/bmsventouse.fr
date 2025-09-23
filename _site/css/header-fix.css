@@ -1,0 +1,299 @@
+/* ========================================
+   CORRECTION HEADER PROFESSIONNEL BMS VENTOUSE
+   ======================================== */
+
+/* RESET COMPLET DU HEADER */
+header, .header {
+  all: unset !important;
+  display: block !important;
+  background: var(--bg-primary) !important;
+  border-bottom: 3px solid var(--primary-orange) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 70px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* NAVIGATION CONTAINER */
+header nav,
+header > div,
+.nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 1rem 2rem !important;
+  height: 70px !important;
+  background: transparent !important;
+}
+
+/* LOGO SECTION */
+.logo,
+header .logo,
+[class*="logo"] {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  color: var(--text-primary) !important;
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  transition: transform 0.3s ease !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.logo:hover,
+header .logo:hover {
+  transform: scale(1.05) !important;
+  color: var(--primary-orange) !important;
+}
+
+.logo img {
+  width: 40px !important;
+  height: 40px !important;
+  margin-right: 12px !important;
+  object-fit: contain !important;
+}
+
+/* NAVIGATION LINKS */
+.nav-links,
+header .nav-links,
+nav ul {
+  display: flex !important;
+  align-items: center !important;
+  gap: 2rem !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+}
+
+.nav-links a,
+header nav a:not(.btn),
+nav ul li a {
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.nav-links a:hover,
+header nav a:not(.btn):hover,
+nav ul li a:hover {
+  color: var(--primary-orange) !important;
+  background: var(--primary-orange-light) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* NAVIGATION UTILITIES (téléphone + toggle + bouton) */
+.nav-utilities,
+header .nav-utilities {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* TÉLÉPHONE */
+.nav-utilities a[href*="tel"],
+header a[href*="tel"] {
+  color: var(--text-secondary) !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  padding: 0.5rem !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.nav-utilities a[href*="tel"]:hover,
+header a[href*="tel"]:hover {
+  color: var(--primary-orange) !important;
+  background: var(--primary-orange-light) !important;
+}
+
+/* THEME TOGGLE */
+[title*="thème"],
+.theme-toggle {
+  background: var(--bg-secondary) !important;
+  border: 2px solid var(--border-color) !important;
+  border-radius: 50% !important;
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  color: var(--text-primary) !important;
+  font-size: 1.2rem !important;
+  box-shadow: 0 2px 8px var(--shadow) !important;
+}
+
+[title*="thème"]:hover,
+.theme-toggle:hover {
+  border-color: var(--primary-orange) !important;
+  background: var(--primary-orange-light) !important;
+  transform: rotate(180deg) scale(1.1) !important;
+  box-shadow: 0 4px 16px rgba(255, 140, 66, 0.3) !important;
+}
+
+/* BOUTON CTA PRINCIPAL */
+.btn,
+header .btn,
+[class*="btn"] {
+  background: var(--primary-orange) !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+
+.btn:hover,
+header .btn:hover,
+[class*="btn"]:hover {
+  background: var(--primary-orange-hover) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 25px rgba(255, 140, 66, 0.4) !important;
+  color: white !important;
+}
+
+.btn:active,
+header .btn:active,
+[class*="btn"]:active {
+  transform: translateY(0) scale(0.98) !important;
+}
+
+/* HAMBURGER MENU (mobile) */
+.hamburger,
+[aria-label*="menu"] {
+  display: none !important;
+  background: none !important;
+  border: none !important;
+  color: var(--text-primary) !important;
+  font-size: 1.5rem !important;
+  cursor: pointer !important;
+  padding: 0.5rem !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+}
+
+.hamburger:hover,
+[aria-label*="menu"]:hover {
+  background: var(--primary-orange-light) !important;
+  color: var(--primary-orange) !important;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  /* Afficher le hamburger sur mobile */
+  .hamburger,
+  [aria-label*="menu"] {
+    display: block !important;
+  }
+  
+  /* Masquer la navigation sur mobile */
+  .nav-links,
+  header .nav-links {
+    display: none !important;
+  }
+  
+  /* Ajuster le container */
+  header nav,
+  header > div,
+  .nav {
+    padding: 1rem !important;
+  }
+  
+  /* Réduire les gaps */
+  .nav-utilities {
+    gap: 0.5rem !important;
+  }
+  
+  /* Ajuster le bouton CTA */
+  .btn,
+  header .btn {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Masquer le téléphone sur très petit écran */
+  @media (max-width: 480px) {
+    .nav-utilities a[href*="tel"] {
+      display: none !important;
+    }
+  }
+}
+
+/* ANIMATIONS FLUIDES */
+header * {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* CORRECTION SPÉCIFIQUE POUR LES CONFLITS */
+header, header * {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* FORCE LA HAUTEUR CORRECTE */
+header {
+  min-height: 70px !important;
+  max-height: 70px !important;
+}
+
+/* SUPPRESSION DES STYLES INDÉSIRABLES */
+header .promo-banner,
+header [class*="promo"],
+header [class*="banner"] {
+  display: none !important;
+}
+
+/* ALIGNEMENT PARFAIT */
+header nav,
+header > div {
+  align-items: center !important;
+  height: 70px !important;
+}
+
+.nav-utilities {
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.nav-utilities > * {
+  margin: 0 !important;
+  vertical-align: middle !important;
+}
+

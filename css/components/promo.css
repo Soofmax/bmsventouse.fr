@@ -2,7 +2,7 @@
    Promo Banner
    ========================================= */
 
-/* Make the promo banner fixed so it doesn't shift layout (reduces CLS) */
+/* Fixed promo banner with reserved space to avoid CLS */
 .promo-banner {
   position: fixed;
   top: 0;
@@ -10,21 +10,23 @@
   right: 0;
   z-index: var(--z-promo);
   height: var(--promo-banner-height);
+  line-height: var(--promo-banner-height);
   background-color: var(--color-primary-dark);
   color: var(--color-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
+  display: block;
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
+  padding: 0; /* keep exact height */
+  white-space: nowrap; /* prevent wrap changing height */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .promo-banner a {
   color: #fff;
   text-decoration: underline;
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
 }
 
 .promo-banner a:hover {
